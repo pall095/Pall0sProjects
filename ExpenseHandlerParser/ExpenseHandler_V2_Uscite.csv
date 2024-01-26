@@ -1,0 +1,1304 @@
+Date,Valore,Description,Categoria,Tag,Fissa?,Commenti,M
+7 mag 2023,"€ 2,70",Limette unghie,CuraPersonale,Oggetti per la cura del corpo,FALSE,,"5,00"
+8 mag 2023,"€ 8,00",Tabacco e Filtri,Fumo,Sigarette,FALSE,,"5,00"
+8 mag 2023,"€ 12,80",Poke,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"5,00"
+8 mag 2023,"€ 3,99",Noleggio Star Wars,IntrattenimentoEVacanze,Cinema&Cultura&Eventi,FALSE,,"5,00"
+9 mag 2023,"€ 9,99",Cerotti per Mamma,Altro,Regali&SpeseAltrui,FALSE,,"5,00"
+9 mag 2023,"€ 10,99",Custodia Cuffiette,Shopping,Oggettistica,FALSE,,"5,00"
+9 mag 2023,"€ 10,00",Carnet Bus,Trasporti,Mobilità&Micromobilità,FALSE,,"5,00"
+9 mag 2023,"€ 6,80",Pizza,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"5,00"
+9 mag 2023,"€ 14,65",Prenotazione BnB - Le Cave,IntrattenimentoEVacanze,Viaggi,FALSE,,"5,00"
+9 mag 2023,"€ 83,45",Traghetto Piombino-Isola D'Elba,IntrattenimentoEVacanze,Viaggi,FALSE,,"5,00"
+10 mag 2023,"€ 55,68",Prenotazione BnB - Rio nell'Elba,IntrattenimentoEVacanze,Viaggi,FALSE,,"5,00"
+11 mag 2023,"€ 45,00",Appuntamento Unobravo,CuraPersonale,Psicologo,FALSE,,"5,00"
+11 mag 2023,"€ 2,80",Birrette da passeggio,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"5,00"
+11 mag 2023,"€ 8,00",Spritz B Evolution,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"5,00"
+11 mag 2023,"€ 24,50",Cena Sonamu,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"5,00"
+12 mag 2023,"€ 27,10",Base sigaretta elettronica,Fumo,E-Cig,FALSE,,"5,00"
+12 mag 2023,"€ 9,65",Resistenze sigaretta elettronica,Fumo,E-Cig,FALSE,,"5,00"
+12 mag 2023,"€ 32,45",Spesa,GestioneCasa,Cibo&ProdottiCasa,TRUE,,"5,00"
+12 mag 2023,"€ 3,50",Cartine e filtri,Fumo,Sigarette,FALSE,,"5,00"
+12 mag 2023,"€ 14,00",Drink Affini,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"5,00"
+12 mag 2023,"€ 8,50",Drink Flora,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"5,00"
+12 mag 2023,"€ 33,00",Cena Cocos,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"5,00"
+12 mag 2023,"€ 10,00",Wawa,Fumo,Sigarette,FALSE,,"5,00"
+12 mag 2023,"€ 8,00",Drink Gorilla,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"5,00"
+12 mag 2023,"€ 20,00",Taxi,Trasporti,Mobilità&Micromobilità,FALSE,,"5,00"
+13 mag 2023,"€ 26,13",Cena Prosciutteria,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"5,00"
+13 mag 2023,"€ 18,00",Drink Flora,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"5,00"
+13 mag 2023,"€ 4,94",Cooltra,Trasporti,Mobilità&Micromobilità,FALSE,,"5,00"
+14 mag 2023,"€ 3,50",Dott,Trasporti,Mobilità&Micromobilità,FALSE,,"5,00"
+14 mag 2023,"€ 1,20",Caffe,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"5,00"
+14 mag 2023,"€ 3,00",Gelato,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"5,00"
+14 mag 2023,"€ 5,00",Spritz Valentino,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"5,00"
+14 mag 2023,"€ 28,00",Sushi,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"5,00"
+14 mag 2023,"€ 0,99",Amazon Papà,Altro,Regali&SpeseAltrui,FALSE,,"5,00"
+15 mag 2023,"€ 35,50",Caffe,GestioneCasa,Cibo&ProdottiCasa,FALSE,,"5,00"
+15 mag 2023,"€ 12,32",Regalo Fra,Altro,Regali&SpeseAltrui,FALSE,,"5,00"
+15 mag 2023,"€ 9,99",La Fisica Del Diavolo Libro,Shopping,Libri,FALSE,,"5,00"
+16 mag 2023,"€ 3,49",Dott,Trasporti,Mobilità&Micromobilità,FALSE,,"5,00"
+16 mag 2023,"€ 4,00",Birra Jumping Jester,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"5,00"
+17 mag 2023,"€ 48,74",Spesa,GestioneCasa,Cibo&ProdottiCasa,TRUE,,"5,00"
+17 mag 2023,"€ 9,00",Preservativi,CuraPersonale,Oggetti per la cura del corpo,FALSE,,"5,00"
+18 mag 2023,"€ 10,70",Tabbacco cartine e filtri,Fumo,Sigarette,FALSE,,"5,00"
+19 mag 2023,"€ 33,00",Cena Sacra Birra,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"5,00"
+19 mag 2023,"€ 3,50",Acqua Sacra Birra,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"5,00"
+20 mag 2023,"€ 45,00",Gasolio C3,Trasporti,Carburante Auto,TRUE,,"5,00"
+21 mag 2023,"€ 3,00",Gelato,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"5,00"
+21 mag 2023,"€ 2,40",Caffé,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"5,00"
+21 mag 2023,"€ 10,50",Spritz Pastis,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"5,00"
+21 mag 2023,"€ 5,64",Enjoy,Trasporti,Mobilità&Micromobilità,FALSE,,"5,00"
+21 mag 2023,"€ 12,26",Spesa Olimpiadi Alcoliche,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"5,00"
+22 mag 2023,"€ 25,80",Scottex,GestioneCasa,Cibo&ProdottiCasa,TRUE,,"5,00"
+22 mag 2023,"€ 24,50",Cena Indiano,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"5,00"
+24 mag 2023,"€ 2,50",Birra Valentino,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"5,00"
+24 mag 2023,"€ 10,00",Wawa,Fumo,Sigarette,FALSE,,"5,00"
+24 mag 2023,"€ 5,33",Spesa serata Pippo,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"5,00"
+25 mag 2023,"€ 51,51",Bolletta Fastweb,GestioneCasa,Bollette & Utenze,TRUE,,"5,00"
+25 mag 2023,"€ 45,00",Psicologo,CuraPersonale,Psicologo,FALSE,,"5,00"
+25 mag 2023,"€ 17,50",Birrerira ROL,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"5,00"
+26 mag 2023,"€ 556,00",Affitto Giugno 2023,GestioneCasa,Affitto e Riscaldamento,TRUE,,"5,00"
+26 mag 2023,"€ 124,00",Regalo Mamma,Altro,Regali&SpeseAltrui,FALSE,,"5,00"
+26 mag 2023,"€ 1,30",Caffé,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"5,00"
+26 mag 2023,"€ 1,50",Biglietto Regalo Mamma,Altro,Regali&SpeseAltrui,FALSE,,"5,00"
+26 mag 2023,"€ 3,50",Pass Dott,Trasporti,Mobilità&Micromobilità,FALSE,,"5,00"
+26 mag 2023,"€ 10,00",Wawa,Fumo,Sigarette,FALSE,,"5,00"
+26 mag 2023,"€ 11,80",Kebab - Kebabo,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"5,00"
+26 mag 2023,"€ 2,50",Birra Tipografia,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"5,00"
+27 mag 2023,"€ 6,70",Tabacco,Fumo,Sigarette,FALSE,,"5,00"
+27 mag 2023,"€ 19,00",Cena Crocca,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"5,00"
+27 mag 2023,"€ 12,00",Biglietti Museo Cinema,IntrattenimentoEVacanze,Cinema&Cultura&Eventi,FALSE,,"5,00"
+28 mag 2023,"€ 4,90",Colazione Mole,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"5,00"
+28 mag 2023,"€ 15,80",Pranzo Montaditos,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"5,00"
+28 mag 2023,"€ 15,00",Caffé Shakerato - Clarissa Bar,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"5,00"
+28 mag 2023,"€ 8,50",Birra Bangladino,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"5,00"
+29 mag 2023,"€ 29,50",Spesa (con parecchie birre),GestioneCasa,Cibo&ProdottiCasa,TRUE,,"5,00"
+29 mag 2023,"€ 32,00",Aperitivo Piazza Carducci,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"5,00"
+29 mag 2023,"€ 20,50",Pizza Rustico,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"5,00"
+31 mag 2023,"€ 13,00",Gasolio C3,Trasporti,Carburante Auto,TRUE,,"5,00"
+31 mag 2023,"€ 24,70",Magliette Defqon,Shopping,Vestiti e Abbigliamento,FALSE,,"5,00"
+31 mag 2023,"€ 5,00",Aperitivo con Spo,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"5,00"
+31 mag 2023,"€ 12,93",Spesa per Isola D'Elba,IntrattenimentoEVacanze,Viaggi,FALSE,,"5,00"
+31 mag 2023,"€ 37,25",Cena Mamacita,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"5,00"
+1 giu 2023,"€ 0,60",Commisioni Giroconto,Altro,Commissioni,FALSE,,"6,00"
+3 giu 2023,"€ 35,00",costume,Shopping,Vestiti e Abbigliamento,FALSE,,"6,00"
+4 giu 2023,"€ 9,99",Posate da campeggio ,Shopping,Oggettistica,FALSE,,"6,00"
+4 giu 2023,"€ 278,24",Totale costo vacanza Isola D'Elba,IntrattenimentoEVacanze,Viaggi,FALSE,,"6,00"
+5 giu 2023,"€ 10,00",Regalo Baby Ortalda,Altro,Regali&SpeseAltrui,FALSE,,"6,00"
+5 giu 2023,"€ 1,92",Acqua Aereoporto,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"6,00"
+6 giu 2023,"€ 3,14",Birra Albergo Inghilterra,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"6,00"
+6 giu 2023,"€ 2,90",Chai Latte Triangle,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"6,00"
+7 giu 2023,"€ 2,38",Caffe Triangle,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"6,00"
+8 giu 2023,"€ 0,99",Libro Papà,Altro,Regali&SpeseAltrui,FALSE,,"6,00"
+8 giu 2023,"€ 2,39",Caffe,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"6,00"
+8 giu 2023,"€ 78,69",Gicca Land Rover,Shopping,Vestiti e Abbigliamento,FALSE,,"6,00"
+8 giu 2023,"€ 37,29",Lego Batman,Shopping,Oggettistica,FALSE,,"6,00"
+8 giu 2023,"€ 4,43",Birra Aeroporto,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"6,00"
+9 giu 2023,"€ 70,99",Zaino Dechatlong,Shopping,Oggettistica,FALSE,,"6,00"
+9 giu 2023,"€ 11,00",Aroma Siga Elettronica,Fumo,E-Cig,FALSE,,"6,00"
+9 giu 2023,"€ 11,65",Spesa Tigotà,CuraPersonale,Oggetti per la cura del corpo,FALSE,,"6,00"
+9 giu 2023,"€ 21,00",Aperitivo,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"6,00"
+9 giu 2023,"€ 7,50",Drink Steve,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"6,00"
+9 giu 2023,"€ 10,00",Drink Milly,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"6,00"
+10 giu 2023,"€ 14,61",Benzina Moto,Trasporti,Carburante Moto,FALSE,,"6,00"
+10 giu 2023,"€ 3,50",Spremuta Ceva,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"6,00"
+10 giu 2023,"€ 14,24",Adattatore multipresa,Shopping,Oggettistica,FALSE,,"6,00"
+10 giu 2023,"€ 6,70",Tabacco,Fumo,Sigarette,FALSE,,"6,00"
+10 giu 2023,"€ 31,00",Birre None,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"6,00"
+10 giu 2023,"€ 26,00",Cena None,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"6,00"
+10 giu 2023,"€ 3,60",Caramelle None,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"6,00"
+11 giu 2023,"€ 12,63",Spesa,GestioneCasa,Cibo&ProdottiCasa,TRUE,,"6,00"
+11 giu 2023,"€ 17,50",Pranzo Baloon,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"6,00"
+11 giu 2023,"€ 5,00",Granita Mercato Centrale,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"6,00"
+11 giu 2023,"€ 3,00",Coca cola Quadrilatero,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"6,00"
+11 giu 2023,"€ 7,00",Dott x 2,Trasporti,Mobilità&Micromobilità,FALSE,,"6,00"
+11 giu 2023,"€ 4,20",Acqua Imbarchino,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"6,00"
+11 giu 2023,"€ 3,20",Patatine,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"6,00"
+12 giu 2023,"€ 1,99",Libro Papà,Altro,Regali&SpeseAltrui,FALSE,,"6,00"
+12 giu 2023,"€ 79,00",Revisione C3,Trasporti,Documenti e Interventi Auto,TRUE,,"6,00"
+13 giu 2023,"€ 23,98",Pantaloncini Dechatlon,Shopping,Vestiti e Abbigliamento,FALSE,,"6,00"
+13 giu 2023,"€ 20,51",Roba papà su amazon,Altro,Regali&SpeseAltrui,FALSE,,"6,00"
+13 giu 2023,"€ 11,00",Aperitivo Aldo's,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"6,00"
+14 giu 2023,"€ 7,99",Libro Amazon,Shopping,Libri,FALSE,,"6,00"
+14 giu 2023,"€ 15,00",Soldi per Grigliata Pacci,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"6,00"
+14 giu 2023,"€ 8,99",Resistenze sigaretta elettronica,Fumo,E-Cig,FALSE,,"6,00"
+14 giu 2023,"€ 2,50",Gelatio Florio,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"6,00"
+15 giu 2023,"€ 9,00",Aperitivo con Laura,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"6,00"
+15 giu 2023,"€ 25,00",Baladen,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"6,00"
+15 giu 2023,"€ 9,00",Drink mago di Oz,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"6,00"
+16 giu 2023,"€ 3,58",Birre OK Market,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"6,00"
+16 giu 2023,"€ 15,00",Drink Milly,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"6,00"
+16 giu 2023,"€ 45,00",Psicologo,CuraPersonale,Psicologo,FALSE,,"6,00"
+17 giu 2023,"€ 5,00",Sigarette,Fumo,Sigarette,FALSE,,"6,00"
+17 giu 2023,"€ 1,00",Acqua Rena,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"6,00"
+17 giu 2023,"€ 9,00",Dolcetto Monesiglio,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"6,00"
+17 giu 2023,"€ 6,00",Shot Monesiglio,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"6,00"
+18 giu 2023,"€ 16,34",Benzina Moto,Trasporti,Carburante Moto,FALSE,,"6,00"
+18 giu 2023,"€ 33,01",Gasolio C3,Trasporti,Carburante Auto,TRUE,,"6,00"
+19 giu 2023,"€ 15,00",Spritz,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"6,00"
+19 giu 2023,"€ 10,00",Carnet,Trasporti,Mobilità&Micromobilità,FALSE,,"6,00"
+19 giu 2023,"€ 3,50",Dott,Trasporti,Mobilità&Micromobilità,FALSE,,"6,00"
+19 giu 2023,"€ 34,15",Sushi Laura,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"6,00"
+19 giu 2023,"€ 8,80",Tabacco e Cartine,Fumo,Sigarette,FALSE,,"6,00"
+19 giu 2023,"€ 116,18",Bolletta Luce&Gas mar-apr,GestioneCasa,Bollette & Utenze,TRUE,,"6,00"
+20 giu 2023,"€ 7,08",Dechatlon,Shopping,Oggettistica,FALSE,,"6,00"
+20 giu 2023,"€ 10,00",Wawa,Fumo,Sigarette,FALSE,,"6,00"
+21 giu 2023,"€ 0,60",Commisioni Giroconto,Altro,Commissioni,FALSE,,"6,00"
+21 giu 2023,"€ 9,99",Dechatlon,Shopping,Oggettistica,FALSE,,"6,00"
+25 giu 2023,"€ 37,90",Fastweb,GestioneCasa,Bollette & Utenze,TRUE,,"6,00"
+27 giu 2023,"€ 556,00",Affitto Luglio 2023,GestioneCasa,Affitto e Riscaldamento,TRUE,,"6,00"
+27 giu 2023,"€ 444,16",Spesa Totale Defqon,IntrattenimentoEVacanze,Viaggi,FALSE,,"6,00"
+27 giu 2023,"€ 2,00",Copia Chiave Cortile,GestioneCasa,Cibo&ProdottiCasa,FALSE,,"6,00"
+27 giu 2023,"€ 10,00",Fototessere per carta identità,CuraPersonale,Documenti&Richieste,TRUE,,"6,00"
+27 giu 2023,"€ 54,31",Spesa,GestioneCasa,Cibo&ProdottiCasa,TRUE,,"6,00"
+28 giu 2023,"€ 9,20",Tabacco e Cartine,Fumo,Sigarette,FALSE,,"6,00"
+28 giu 2023,"€ 10,00",Preservativi,CuraPersonale,Oggetti per la cura del corpo,FALSE,,"6,00"
+28 giu 2023,"€ 4,00",Birre Bangal,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"6,00"
+28 giu 2023,"€ 23,20",Cena Greco,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"6,00"
+29 giu 2023,"€ 9,30",Colazione Laura,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"6,00"
+29 giu 2023,"€ 3,10",Cartine e filtri,Fumo,Sigarette,FALSE,,"6,00"
+29 giu 2023,"€ 27,00",Richiesta CIE,CuraPersonale,Documenti&Richieste,TRUE,,"6,00"
+29 giu 2023,"€ 3,50",Aperitivo Rena,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"6,00"
+29 giu 2023,"€ 13,00",Gasoglio C3,Trasporti,Carburante Auto,TRUE,,"6,00"
+29 giu 2023,"€ 14,43",Benzina Moto,Trasporti,Carburante Moto,FALSE,,"6,00"
+29 giu 2023,"€ 3,00",Prosecco Rena,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"6,00"
+29 giu 2023,"€ 6,00",Birra Campo Sportivo,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"6,00"
+30 giu 2023,"€ 17,00",Pizza Maruziello,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"6,00"
+30 giu 2023,"€ 10,17",Spesa Rokkafest,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"6,00"
+30 giu 2023,"€ 49,90",Abbonamento Amazon Prime,AbbonamentiEIscrizioni,Amazon Prime,TRUE,,"6,00"
+1 lug 2023,"€ 7,00",Hambuger Rokkafest,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"7,00"
+1 lug 2023,"€ 4,00",Birra Rokkafest,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"7,00"
+1 lug 2023,"€ 20,00",Cambio Soldi Rokkafest,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"7,00"
+1 lug 2023,"€ 6,20",Focaccia per Mare,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"7,00"
+1 lug 2023,"€ 21,00",Aperitivo Rena,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"7,00"
+2 lug 2023,"€ 7,43",Foto Google ,Shopping,Oggettistica,FALSE,,"7,00"
+2 lug 2023,"€ 14,55",Cartoleria,GestioneCasa,Cibo&ProdottiCasa,FALSE,,"7,00"
+3 lug 2023,"€ 32,00",Abbonamento Palestra,AbbonamentiEIscrizioni,Palestra,TRUE,,"7,00"
+4 lug 2023,"€ 5,95",Spesa (frutta),GestioneCasa,Cibo&ProdottiCasa,TRUE,,"7,00"
+4 lug 2023,"€ 81,40",Cena Mercato centrale,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"7,00"
+5 lug 2023,"€ 7,00",Tabacco,Fumo,Sigarette,FALSE,,"7,00"
+5 lug 2023,"€ 29,00",Sushi,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"7,00"
+5 lug 2023,"€ 10,00",Aperitivo Coguaro,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"7,00"
+6 lug 2023,"€ 329,00",Stampante 3D,Shopping,Oggettistica,FALSE,,"7,00"
+6 lug 2023,"€ 5,00",Sigarette,Fumo,Sigarette,FALSE,,"7,00"
+6 lug 2023,"€ 14,75",Aperitivo Coguaro,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"7,00"
+6 lug 2023,"€ 37,00",Cena Aformisma,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"7,00"
+7 lug 2023,"€ 13,00",Aperitivo Rena,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"7,00"
+7 lug 2023,"€ 97,50",Cena Cucco,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"7,00"
+8 lug 2023,"€ 6,92",Acqua e Enigmistica,GestioneCasa,Cibo&ProdottiCasa,FALSE,,"7,00"
+8 lug 2023,"€ 1,70",Enigmistica,Shopping,Oggettistica,FALSE,,"7,00"
+8 lug 2023,"€ 23,00",Spiaggia,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"7,00"
+8 lug 2023,"€ 36,00",Aperitivo Rena e Prunetto,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"7,00"
+8 lug 2023,"€ 10,00",Regalo Oana,Altro,Regali&SpeseAltrui,FALSE,,"7,00"
+9 lug 2023,"€ 5,40",Brioches rena,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"7,00"
+9 lug 2023,"€ 36,50",Black Horse,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"7,00"
+9 lug 2023,"€ 30,01",Gasolio C3,Trasporti,Carburante Auto,FALSE,,"7,00"
+9 lug 2023,"€ 27,40",Sushi,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"7,00"
+9 lug 2023,"€ 19,99",Filamento Stampante,Shopping,Oggettistica,FALSE,,"7,00"
+10 lug 2023,"€ 92,62","Spesa, swiffer e filtri caraffa",GestioneCasa,Cibo&ProdottiCasa,TRUE,,"7,00"
+11 lug 2023,"€ 17,00",Aperitivo (coguaro e lingotto),IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"7,00"
+13 lug 2023,"€ 45,00",Psicologo,CuraPersonale,Psicologo,FALSE,,"7,00"
+13 lug 2023,"€ 32,50",Trasferta Bologna,Altro,Lavoro,TRUE,,"7,00"
+14 lug 2023,"€ 14,00",Aperitivo Quello Buono,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"7,00"
+14 lug 2023,"€ 21,00",Cena Rustico,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"7,00"
+14 lug 2023,"€ 3,50",Dott,Trasporti,Mobilità&Micromobilità,FALSE,,"7,00"
+14 lug 2023,"€ 8,50",Piadina Bologna,Altro,Lavoro,TRUE,,"7,00"
+15 lug 2023,"€ 27,50",Cena Osteria Fiat,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"7,00"
+15 lug 2023,"€ 2,50",Coca Cola Valentino,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"7,00"
+15 lug 2023,"€ 13,50",Kebab Horas,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"7,00"
+15 lug 2023,"€ 95,78",Costo festa compleanno,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"7,00"
+16 lug 2023,"€ 12,00",Birra Comala,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"7,00"
+16 lug 2023,"€ 43,23",Spesa,GestioneCasa,Cibo&ProdottiCasa,TRUE,,"7,00"
+16 lug 2023,"€ 5,00",Colazione,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"7,00"
+18 lug 2023,"€ 11,00","Tabacco, Cartine e Filtri",Fumo,Sigarette,FALSE,,"7,00"
+18 lug 2023,"€ 55,50",Medicine Emicrania,CuraPersonale,Medicinali,TRUE,,"7,00"
+19 lug 2023,"€ 30,00",Iscrizione Protezione Civile,AbbonamentiEIscrizioni,ProtezioneCivile,TRUE,,"7,00"
+19 lug 2023,"€ 12,00",Pizza Just Eat,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"7,00"
+20 lug 2023,"€ 11,60",Gelati e Granite,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"7,00"
+20 lug 2023,"€ 28,00",Cena Spirito Santo,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"7,00"
+20 lug 2023,"€ 9,80",Carta Vetro e Attack,Shopping,Oggettistica,FALSE,,"7,00"
+21 lug 2023,"€ 24,00",Drink Milly e Rena,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"7,00"
+22 lug 2023,"€ 16,80",Benzina Moto,Trasporti,Carburante Moto,FALSE,,"7,00"
+22 lug 2023,"€ 6,00",Mojito Bergeggi,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"7,00"
+23 lug 2023,"€ 5,80",Birra Mazut,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"7,00"
+23 lug 2023,"€ 15,13",Benzina Moto Mamma,Altro,Regali&SpeseAltrui,FALSE,,"7,00"
+23 lug 2023,"€ 15,44",Benzina Moto,Trasporti,Carburante Moto,FALSE,,"7,00"
+24 lug 2023,"€ 10,10",Tabacco Cartine e Filtri,Fumo,Sigarette,FALSE,,"7,00"
+24 lug 2023,"€ 13,70",Bevande Ospedale e Gleato,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"7,00"
+25 lug 2023,"€ 37,90",Bolletta Fastweb Luglio,GestioneCasa,Bollette & Utenze,TRUE,,"7,00"
+25 lug 2023,"€ 15,44",Benzina Moto,Trasporti,Carburante Moto,FALSE,,"7,00"
+25 lug 2023,"€ 1,19",Coca cola per mamma,Altro,Regali&SpeseAltrui,FALSE,,"7,00"
+25 lug 2023,"€ 109,99",Orologio Garmin,Shopping,Oggettistica,FALSE,,"7,00"
+26 lug 2023,"€ 2,60",Caffé Autogrill,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"7,00"
+26 lug 2023,"€ 556,00",Affitto Agosto,GestioneCasa,Affitto e Riscaldamento,TRUE,,"7,00"
+27 lug 2023,"€ 18,00",Drink Steve,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"7,00"
+27 lug 2023,"€ 2,30",Latte,GestioneCasa,Cibo&ProdottiCasa,FALSE,,"7,00"
+28 lug 2023,"7,2",Aperitivo Rena,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"7,00"
+28 lug 2023,"€ 5,00",Birra e Acqua Prato,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"7,00"
+28 lug 2023,"€ 8,00",Panini Saliceto,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"7,00"
+28 lug 2023,"€ 40,00",Birre Saliceto,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"7,00"
+28 lug 2023,"€ 14,00",Pagamento Padel a Sammy,IntrattenimentoEVacanze,Sport,FALSE,,"7,00"
+29 lug 2023,"€ 18,02",Benzina Moto,Trasporti,Carburante Moto,FALSE,,"7,00"
+29 lug 2023,"€ 59,50",Pranzo Cantinone Mare,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"7,00"
+29 lug 2023,"€ 50,01",Gasolio C3,Trasporti,Carburante Auto,TRUE,,"7,00"
+29 lug 2023,"€ 6,70",Tabacco,Fumo,Sigarette,FALSE,,"7,00"
+30 lug 2023,"€ 7,18",Spesa Camminata,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"7,00"
+30 lug 2023,"€ 6,00",Colazione e Birra Camminata,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"7,00"
+30 lug 2023,"€ 16,15",Spesa,GestioneCasa,Cibo&ProdottiCasa,TRUE,,"7,00"
+31 lug 2023,"€ 6,93",Oust,GestioneCasa,Cibo&ProdottiCasa,FALSE,,"7,00"
+31 lug 2023,"€ 130,94",Telepass Luglio,Trasporti,Autostrada Auto,TRUE,,"7,00"
+31 lug 2023,"€ 12,00",Apertitivo Coguaro,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"7,00"
+1 ago 2023,"€ 45,00",Psicologo,CuraPersonale,Psicologo,FALSE,,"8,00"
+1 ago 2023,"€ 8,00",Aperitivo Quello Buono,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"8,00"
+2 ago 2023,"€ 1,80",Cartine e filtri,Fumo,Sigarette,FALSE,,"8,00"
+2 ago 2023,"€ 22,00",Cena Cotoletteria,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"8,00"
+3 ago 2023,"€ 3,00",Cono La Romana,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"8,00"
+3 ago 2023,"€ 9,00",Cinema,IntrattenimentoEVacanze,Cinema&Cultura&Eventi,FALSE,,"8,00"
+3 ago 2023,"€ 5,40",Acqua Cinema,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"8,00"
+4 ago 2023,"€ 28,14",Cena fuori e kebab,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"8,00"
+4 ago 2023,"€ 9,96",Dott e Coltra,Trasporti,Mobilità&Micromobilità,FALSE,,"8,00"
+4 ago 2023,"€ 8,00",Drink,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"8,00"
+4 ago 2023,"€ 10,00",Wawa,Fumo,Sigarette,FALSE,,"8,00"
+5 ago 2023,"€ 51,66",Spesa,GestioneCasa,Cibo&ProdottiCasa,TRUE,,"8,00"
+6 ago 2023,"€ 27,80",Sushi,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"8,00"
+7 ago 2023,"€ 34,90",Palestra,AbbonamentiEIscrizioni,Palestra,TRUE,,"8,00"
+7 ago 2023,"€ 10,50",Tabacco e Cartine,Fumo,Sigarette,FALSE,,"8,00"
+7 ago 2023,"€ 20,00",Pizza,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"8,00"
+8 ago 2023,"€ 4,00",Cartine e filtri,Fumo,Sigarette,FALSE,,"8,00"
+8 ago 2023,"€ 2,40",Ghiaccioli,GestioneCasa,Cibo&ProdottiCasa,FALSE,,"8,00"
+9 ago 2023,"€ 39,90",Cena Siriano,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"8,00"
+10 ago 2023,"€ 60,00",Abbonamento Disney Plus,AbbonamentiEIscrizioni,DisneyPlus,TRUE,,"8,00"
+10 ago 2023,"€ 11,90",Vino cena Carmelo,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"8,00"
+11 ago 2023,"€ 1,45",Caffè e Acqua,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"8,00"
+11 ago 2023,"€ 82,96",Roba Dechatlon,Shopping,Vestiti e Abbigliamento,FALSE,,"8,00"
+11 ago 2023,"€ 6,72",Acqua Casa Millesimo,Altro,Regali&SpeseAltrui,FALSE,,"8,00"
+11 ago 2023,"€ 13,00",Padel,IntrattenimentoEVacanze,Sport,FALSE,,"8,00"
+11 ago 2023,"€ 8,00",Drink Steve,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"8,00"
+12 ago 2023,"€ 33,70",Aperitivo e Serata Ranzi,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"8,00"
+12 ago 2023,"€ 25,00",Cena Ranzi,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"8,00"
+13 ago 2023,"€ 13,68",Benzina Moto,Trasporti,Carburante Moto,FALSE,,"8,00"
+13 ago 2023,"€ 2,50",Ginger Beer Steve,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"8,00"
+14 ago 2023,"€ 9,99",Kindle Unlimited,AbbonamentiEIscrizioni,Amazon e Kindle,FALSE,,"8,00"
+14 ago 2023,"€ 5,80",Ingresso Piscina,IntrattenimentoEVacanze,SportEHobby,FALSE,,"8,00"
+14 ago 2023,"€ 8,75",Birra e Patatine Piscina,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"8,00"
+14 ago 2023,"€ 23,50",Cena Messicano,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"8,00"
+14 ago 2023,"€ 4,00",Cartine e Filtri,Fumo,Sigarette,FALSE,,"8,00"
+15 ago 2023,"€ 34,72",Spesa per Ferragosto,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"8,00"
+19 ago 2023,"€ 340,14",Vaiggio Ardeche,IntrattenimentoEVacanze,Viaggi,FALSE,,"8,00"
+19 ago 2023,"€ 15,48",Dechatlon,Shopping,Oggettistica,FALSE,,"8,00"
+19 ago 2023,"€ 16,95",Libro,Shopping,Libri,FALSE,,"8,00"
+19 ago 2023,"€ 45,24",Spesa,GestioneCasa,Cibo&ProdottiCasa,TRUE,,"8,00"
+19 ago 2023,"€ 800,00",Lavori C3,Trasporti,Documenti e Interventi Auto,TRUE,,"8,00"
+20 ago 2023,"€ 67,89",Listerine e Caffé,GestioneCasa,Cibo&ProdottiCasa,TRUE,,"8,00"
+20 ago 2023,"€ 11,00",Ingresso Piscina,IntrattenimentoEVacanze,SportEHobby,FALSE,,"8,00"
+20 ago 2023,"€ 32,40",Sushi,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"8,00"
+21 ago 2023,"€ 10,00",Laura Ticket,Altro,Regali&SpeseAltrui,FALSE,,"8,00"
+21 ago 2023,"€ 5,61",Patatine,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"8,00"
+21 ago 2023,"€ 10,00",Wawa,Fumo,Sigarette,FALSE,,"8,00"
+22 ago 2023,"€ 7,00",Tabacco,Fumo,Sigarette,FALSE,,"8,00"
+22 ago 2023,"€ 12,00",Birre partita Pallavolo,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"8,00"
+22 ago 2023,"€ 20,00",Biglietti Pallavolo,IntrattenimentoEVacanze,SportEHobby,FALSE,,"8,00"
+22 ago 2023,"€ 5,00",Cibo Serata Pallavolo,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"8,00"
+24 ago 2023,"€ 20,70",Mc Bum,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"8,00"
+24 ago 2023,"€ 13,00",Padel,IntrattenimentoEVacanze,SportEHobby,FALSE,,"8,00"
+25 ago 2023,"€ 37,90",Fastweb,GestioneCasa,Bollette & Utenze,TRUE,,"8,00"
+25 ago 2023,"€ 47,43",Spesa,GestioneCasa,Cibo&ProdottiCasa,TRUE,,"8,00"
+26 ago 2023,"€ 556,00",Affitto Settembre 2023,GestioneCasa,Affitto e Riscaldamento,TRUE,,"8,00"
+25 ago 2023,"€ 28,90",Spesa per Pic Nic,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"8,00"
+26 ago 2023,"€ 16,72",Cooltra,Trasporti,Mobilità&Micromobilità,FALSE,,"8,00"
+26 ago 2023,"€ 10,50",Pizze,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"8,00"
+27 ago 2023,"€ 0,20",Commissioni,Altro,Commissioni,FALSE,,"8,00"
+27 ago 2023,"€ 20,00",Greco,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"8,00"
+28 ago 2023,"€ 6,70",Tabacco,Fumo,Sigarette,FALSE,,"8,00"
+29 ago 2023,"€ 136,09",Bolletta Eni,GestioneCasa,Bollette & Utenze,TRUE,,"8,00"
+29 ago 2023,"€ 15,00",Parrucchiere,CuraPersonale,Cura del corpo,FALSE,,"8,00"
+29 ago 2023,"€ 2,50",Cartine e Filtri,Fumo,Sigarette,FALSE,,"8,00"
+29 ago 2023,"€ 39,71",Spesa,GestioneCasa,Cibo&ProdottiCasa,TRUE,,"8,00"
+30 ago 2023,"€ 45,00",Psicologo,CuraPersonale,Psicologo,FALSE,,"8,00"
+31 ago 2023,"€ 50,00",Move-In,Trasporti,Documenti e Interventi Moto,FALSE,,"8,00"
+31 ago 2023,"€ 2,20",Filtri,Fumo,Sigarette,FALSE,,"8,00"
+31 ago 2023,"€ 24,15",Old Wild West,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"8,00"
+31 ago 2023,"€ 4,49",Birra,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"8,00"
+31 ago 2023,"€ 11,40",Cinema,IntrattenimentoEVacanze,Cinema&Cultura&Eventi,FALSE,,"8,00"
+1 set 2023,"€ 34,90",Palestra,AbbonamentiEIscrizioni,Palestra,TRUE,,"9,00"
+1 set 2023,"€ 26,50",Cena Siriano,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"9,00"
+2 set 2023,"€ 5,70",Starbucks,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"9,00"
+2 set 2023,"€ 18,00",Fumeto Zero Calcare,Shopping,Libri,FALSE,,"9,00"
+2 set 2023,"€ 19,50",Spesa,GestioneCasa,Cibo&ProdottiCasa,TRUE,,"9,00"
+2 set 2023,"€ 21,75",Cena ROL,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"9,00"
+3 set 2023,"€ 7,00",Yogurt,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"9,00"
+3 set 2023,"€ 5,00",Wawa,Fumo,Sigarette,FALSE,,"9,00"
+3 set 2023,"€ 3,50",Dott,Trasporti,Mobilità&Micromobilità,FALSE,,"9,00"
+5 set 2023,"€ 14,00",Padel,IntrattenimentoEVacanze,SportEHobby,FALSE,,"9,00"
+5 set 2023,"€ 5,00",Kebab,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"9,00"
+6 set 2023,"€ 3,50",Dott,Trasporti,Mobilità&Micromobilità,FALSE,,"9,00"
+6 set 2023,"€ 42,00",Sushi,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"9,00"
+7 set 2023,"€ 21,90",Cover Telefono,Shopping,Oggettistica,FALSE,,"9,00"
+7 set 2023,"€ 45,00",Psicologo,CuraPersonale,Psicologo,FALSE,,"9,00"
+7 set 2023,"€ 6,20",Tabacco,Fumo,Sigarette,FALSE,,"9,00"
+7 set 2023,"€ 20,00",Riparazione Bici,Trasporti,Mobilità&Micromobilità,FALSE,,"9,00"
+7 set 2023,"€ 9,90",Annuncio Subito,AbbonamentiEIscrizioni,Generic,FALSE,,"9,00"
+8 set 2023,"€ 150,00",Gomme Auto,Trasporti,Documenti e Interventi Auto,TRUE,,"9,00"
+8 set 2023,"€ 3,00",Granita,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"9,00"
+8 set 2023,"€ 37,16",Drink,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"9,00"
+9 set 2023,"€ 65,01",Gasolio C3,Trasporti,Carburante Auto,TRUE,,"9,00"
+9 set 2023,"€ 3,90",Autogrill,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"9,00"
+9 set 2023,"€ 73,00",Drink e Aperitivo Milano,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"9,00"
+9 set 2023,"€ 63,50","Cena, Panino e colazione Milano",IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"9,00"
+9 set 2023,"€ 5,00",Wawa,Fumo,Sigarette,FALSE,,"9,00"
+10 set 2023,"€ 4,40",Metro Milano,Trasporti,Mobilità&Micromobilità,FALSE,,"9,00"
+10 set 2023,"€ 4,50",Parcheggio Famagosta,Trasporti,Autostrada&Parcheggio Auto,FALSE,,"9,00"
+10 set 2023,"€ 43,82",Spesa,GestioneCasa,Cibo&ProdottiCasa,TRUE,,"9,00"
+10 set 2023,"€ 3,00",Cornetto,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"9,00"
+12 set 2023,"€ 11,00",Birra Baladen,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"9,00"
+13 set 2023,"€ 6,16",Spesa,GestioneCasa,Cibo&ProdottiCasa,TRUE,,"9,00"
+13 set 2023,"€ 20,00",Ticket Laura,Altro,Regali&SpeseAltrui,FALSE,,"9,00"
+13 set 2023,"€ 20,00",Wawa,Fumo,Sigarette,FALSE,,"9,00"
+14 set 2023,"€ 11,69",Glovo,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"9,00"
+15 set 2023,"€ 229,71",Multe,Trasporti,Multe,TRUE,,"9,00"
+16 set 2023,"€ 3,20",Caffe,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"9,00"
+16 set 2023,"€ 45,00",Multa Simone Sardo,Trasporti,Multe,TRUE,,"9,00"
+16 set 2023,"€ 11,00",Tabacco ecc.,Fumo,Sigarette,FALSE,,"9,00"
+16 set 2023,"€ 16,08",Cinese,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"9,00"
+16 set 2023,"€ 6,00",Birra,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"9,00"
+16 set 2023,"€ 3,49",Dott,Trasporti,Mobilità&Micromobilità,FALSE,,"9,00"
+17 set 2023,"€ 39,88",Spesa,GestioneCasa,Cibo&ProdottiCasa,TRUE,,"9,00"
+17 set 2023,"€ 85,89",Scarpe Intinfortunistiche,Shopping,Vestiti e Abbigliamento,FALSE,,"9,00"
+17 set 2023,"€ 20,00",Ramen,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"9,00"
+20 set 2023,"€ 16,60",Cena Rustico,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"9,00"
+21 set 2023,"€ 2,00",Brioche Autogrill,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"9,00"
+21 set 2023,"€ 17,06",Pranzo Rossopomodoro,Altro,Lavoro,TRUE,,"9,00"
+21 set 2023,"€ 19,19",Organizzatori da Viaggio,Shopping,Oggettistica,FALSE,,"9,00"
+22 set 2023,"€ 65,12",Jeans,Shopping,Vestiti e Abbigliamento,FALSE,,"9,00"
+22 set 2023,"€ 42,50",Drink,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"9,00"
+22 set 2023,"€ 2,00",Focaccia,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"9,00"
+23 set 2023,"€ 44,00",Minimoto,IntrattenimentoEVacanze,SportEHobby,FALSE,,"9,00"
+23 set 2023,"€ 7,00",Drink Steve,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"9,00"
+24 set 2023,"€ 18,93",Benzina Moto,Trasporti,Carburante Moto,FALSE,,"9,00"
+24 set 2023,"€ 7,00",Tabacco,Fumo,Sigarette,FALSE,,"9,00"
+24 set 2023,"€ 29,00",Trasferta Bologna,Altro,Lavoro,TRUE,,"9,00"
+24 set 2023,"€ 3,00",Granita Spotorno,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"9,00"
+24 set 2023,"€ 4,50",Ape Rena,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"9,00"
+25 set 2023,"€ 37,90",Fastweb,GestioneCasa,Bollette & Utenze,TRUE,,"9,00"
+25 set 2023,"€ 180,00",Denitsta,CuraPersonale,Cura del corpo,FALSE,,"9,00"
+25 set 2023,"€ 13,00",Padel,IntrattenimentoEVacanze,SportEHobby,FALSE,,"9,00"
+26 set 2023,"€ 556,00",Affitto,GestioneCasa,Affitto e Riscaldamento,TRUE,,"9,00"
+28 set 2023,"€ 15,00",Ticket Laura,Altro,Regali&SpeseAltrui,FALSE,,"9,00"
+30 set 2023,"€ 11,70","Cartine, Filtri e Tabacco",Fumo,Sigarette,FALSE,,"9,00"
+30 set 2023,"€ 30,04",Benzina Audi,Trasporti,Carburante Auto,FALSE,,"9,00"
+30 set 2023,"€ 17,39",Benzina Moto,Trasporti,Carburante Moto,FALSE,,"9,00"
+30 set 2023,"€ 44,10",Bere Tartufo,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"9,00"
+30 set 2023,"€ 40,50",Cibo Tartufo,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"9,00"
+30 set 2023,"€ 15,00",Roba Ferrata,IntrattenimentoEVacanze,SportEHobby,FALSE,,"9,00"
+1 ott 2023,"€ 62,04",Gasolio C3,Trasporti,Carburante Auto,TRUE,,"10,00"
+1 ott 2023,"€ 395,62",Riscaldamento Prima rata,GestioneCasa,Affitto e Riscaldamento,TRUE,,"10,00"
+1 ott 2023,"€ 46,74",Spesa,GestioneCasa,Cibo&ProdottiCasa,TRUE,,"10,00"
+1 ott 2023,"€ 34,90",Palestra,AbbonamentiEIscrizioni,Palestra,FALSE,,"10,00"
+2 ott 2023,"€ 45,00",Psicologo,CuraPersonale,Psicologo,FALSE,,"10,00"
+2 ott 2023,"€ 39,00",Sushi,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"10,00"
+3 ott 2023,"€ 3,50",Birretta,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"10,00"
+3 ott 2023,"€ 50,00",Cena Carne,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"10,00"
+4 ott 2023,"€ 7,00",Aperitivo Laura,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"10,00"
+4 ott 2023,"€ 3,49",Dott,Trasporti,Mobilità&Micromobilità,FALSE,,"10,00"
+5 ott 2023,"€ 10,00",Wawa,Fumo,Sigarette,FALSE,,"10,00"
+6 ott 2023,"€ 54,86",Spesa,GestioneCasa,Cibo&ProdottiCasa,TRUE,,"10,00"
+7 ott 2023,"€ 3,50",Acqua Rifugio,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"10,00"
+7 ott 2023,"€ 9,50",Biglietto Bus,Trasporti,Mobilità&Micromobilità,FALSE,,"10,00"
+7 ott 2023,"€ 24,00",Birre Mercato Centr,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"10,00"
+7 ott 2023,"€ 19,00",Cena Mercato Centr,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"10,00"
+7 ott 2023,"€ 7,00",Tabacco,Fumo,Sigarette,FALSE,,"10,00"
+8 ott 2023,"€ 1,00",Caffé ,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"10,00"
+8 ott 2023,"€ 13,50",Cena Pescaria,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"10,00"
+9 ott 2023,"€ 11,90",Faretto Bagno,GestioneCasa,Manutenzione,TRUE,,"10,00"
+9 ott 2023,"€ 9,92",Birre e Patatine,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"10,00"
+11 ott 2023,"€ 4,70",Cartine e Filtri,Fumo,Sigarette,FALSE,,"10,00"
+11 ott 2023,"€ 6,80",Deodorante,CuraPersonale,Cura del corpo,FALSE,,"10,00"
+12 ott 2023,"€ 35,00",Sella Bici,Trasporti,Mobilità&Micromobilità,FALSE,,"10,00"
+12 ott 2023,"€ 2,35",Donazione Wikipedia,Altro,Regali&SpeseAltrui,FALSE,,"10,00"
+13 ott 2023,"€ 9,99",Libro,Shopping,Libri,FALSE,,"10,00"
+13 ott 2023,"€ 22,00",Cambio Gomme,Trasporti,Documenti e Interventi Moto,FALSE,,"10,00"
+13 ott 2023,"€ 8,70",Acqua e Latte,GestioneCasa,Cibo&ProdottiCasa,FALSE,,"10,00"
+13 ott 2023,"€ 16,00",Drink Steve,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"10,00"
+14 ott 2023,"€ 9,99",Abbondamento Kindle Unlimited,AbbonamentiEIscrizioni,Amazon e Kindle,FALSE,,"10,00"
+14 ott 2023,"€ 19,73",Ape e Serata,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"10,00"
+15 ott 2023,"€ 50,00",Gasolio C3,Trasporti,Carburante Auto,TRUE,,"10,00"
+15 ott 2023,"€ 1,10",Caffé,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"10,00"
+15 ott 2023,"€ 8,60",Tabacco e Cartine,Fumo,Sigarette,FALSE,,"10,00"
+15 ott 2023,"€ 13,00",Dolci Rena,Altro,Regali&SpeseAltrui,FALSE,,"10,00"
+15 ott 2023,"€ 73,00",Volo Lisbona,IntrattenimentoEVacanze,Viaggi,FALSE,,"10,00"
+15 ott 2023,"€ 15,50",Poke,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"10,00"
+17 ott 2023,"€ 158,23",Bolletta Gas & Luce,GestioneCasa,Bollette & Utenze,TRUE,,"10,00"
+17 ott 2023,"€ 1,15",Pressione Pneumatici Gaydon,Altro,Lavoro,FALSE,,"10,00"
+17 ott 2023,"€ 16,25",Birre Hotel,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"10,00"
+18 ott 2023,"€ 50,29",Regali Laura,Altro,Regali&SpeseAltrui,FALSE,,"10,00"
+18 ott 2023,"€ 11,99",Libro Segan,Shopping,Libri,FALSE,,"10,00"
+18 ott 2023,"€ 102,10",Giacca JLR,Shopping,Vestiti e Abbigliamento,FALSE,,"10,00"
+19 ott 2023,"€ 25,41",Laser Game,IntrattenimentoEVacanze,SportEHobby,FALSE,,"10,00"
+20 ott 2023,"€ 37,31",Spesa,GestioneCasa,Cibo&ProdottiCasa,TRUE,,"10,00"
+20 ott 2023,"€ 48,00",Serata TVB,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"10,00"
+21 ott 2023,"€ 29,51",Spesa per Serata,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"10,00"
+21 ott 2023,"€ 3,27",Mollettine Fot,Shopping,Oggettistica,FALSE,,"10,00"
+22 ott 2023,"€ 45,00",Serata Balera,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"10,00"
+22 ott 2023,"€ 17,00",Pizza,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"10,00"
+22 ott 2023,"€ 16,50",Taxi,Trasporti,Mobilità&Micromobilità,FALSE,,"10,00"
+22 ott 2023,"€ 11,40",Tabacco cartine e filtri,Fumo,Sigarette,FALSE,,"10,00"
+23 ott 2023,"€ 35,00",Bologna,Altro,Lavoro,TRUE,,"10,00"
+23 ott 2023,"€ 22,00",Pizza Aforisma,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"10,00"
+25 ott 2023,"€ 37,90",Fastweb,GestioneCasa,Bollette & Utenze,TRUE,,"10,00"
+26 ott 2023,"€ 9,60",Caffe,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"10,00"
+26 ott 2023,"€ 55,04",Pranzi e Cene Bologna,Altro,Lavoro,TRUE,,"10,00"
+26 ott 2023,"€ 671,00",Affito & Riscaldamento,GestioneCasa,Affitto e Riscaldamento,TRUE,,"10,00"
+26 ott 2023,"€ 45,00",Psicologo,CuraPersonale,Psicologo,FALSE,,"10,00"
+27 ott 2023,"€ 3,60",Focaccia e Caffé Girasole,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"10,00"
+27 ott 2023,"€ 10,00",Wawa,Fumo,Sigarette,FALSE,,"10,00"
+27 ott 2023,"€ 15,00",Drink,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"10,00"
+27 ott 2023,"€ 12,00",Iscrzione Arci,AbbonamentiEIscrizioni,Generic,FALSE,,"10,00"
+27 ott 2023,"€ 16,50",Taxi,Trasporti,Mobilità&Micromobilità,FALSE,,"10,00"
+27 ott 2023,"€ 26,27",Spesa,GestioneCasa,Cibo&ProdottiCasa,TRUE,,"10,00"
+27 ott 2023,"€ 28,00",Soldi Bologna Gianluca,Altro,Lavoro,TRUE,,"10,00"
+28 ott 2023,"€ 114,00",Cena Compleanno Laura,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"10,00"
+29 ott 2023,"€ 3,80",Biglietti Bus,Trasporti,Mobilità&Micromobilità,FALSE,,"10,00"
+29 ott 2023,"€ 7,00",Tabacco,Fumo,Sigarette,FALSE,,"10,00"
+29 ott 2023,"€ 19,00",Yogurt e Crazy Dumpling,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"10,00"
+29 ott 2023,"€ 3,00",Birra,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"10,00"
+30 ott 2023,"€ 15,99",Tamponi Covid,CuraPersonale,Cura del corpo,FALSE,,"10,00"
+31 ott 2023,"€ 135,39",Telepass,Trasporti,Autostrada&Parcheggio Auto,TRUE,,"10,00"
+31 ott 2023,"€ 29,60",Cena Panche,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"10,00"
+31 ott 2023,"€ 6,25",Cooltra,Trasporti,Mobilità&Micromobilità,FALSE,,"10,00"
+1 nov 2023,"€ 14,18",Prosecco,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"11,00"
+3 nov 2023,"€ 21,80",Birre e Patatine,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"11,00"
+4 nov 2023,"€ 29,22",Spesa,GestioneCasa,Cibo&ProdottiCasa,TRUE,,"11,00"
+5 nov 2023,"€ 11,00",Sigarette Cartine e Filtri,Fumo,Sigarette,FALSE,,"11,00"
+5 nov 2023,"€ 12,00",Vin Brulé,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"11,00"
+5 nov 2023,"€ 22,16",Pranzo BOL,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"11,00"
+5 nov 2023,"€ 52,00",Evento Lavazza,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"11,00"
+6 nov 2023,"€ 37,99",Caffé,GestioneCasa,Cibo&ProdottiCasa,FALSE,,"11,00"
+7 nov 2023,"€ 10,00",Ape fra,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"11,00"
+7 nov 2023,"€ 7,60",Ape fra,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"11,00"
+7 nov 2023,"€ 10,00",Regalo Brussi,Altro,Regali&SpeseAltrui,FALSE,,"11,00"
+8 nov 2023,"€ 11,95",Prova,Fumo,E-Cig,FALSE,,"11,00"
+8 nov 2023,"€ 6,00",Birre JJ,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"11,00"
+9 nov 2023,"€ 16,00",Serata Compleanno Brussi,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"11,00"
+9 nov 2023,"€ 29,00",Cena Compleanno Brussi,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"11,00"
+9 nov 2023,"€ 3,49",Dott,Trasporti,Mobilità&Micromobilità,FALSE,,"11,00"
+10 nov 2023,"€ 37,93",Spesa,GestioneCasa,Cibo&ProdottiCasa,TRUE,,"11,00"
+10 nov 2023,"€ 29,50",Liquido,Fumo,E-Cig,FALSE,,"11,00"
+10 nov 2023,"€ 18,00",Drink,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"11,00"
+10 nov 2023,"€ 36,70",Sushi,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"11,00"
+11 nov 2023,"€ 2,58",Parcheggio,Trasporti,Autostrada&Parcheggio Auto,FALSE,,"11,00"
+11 nov 2023,"€ 3,80",Biglietti Bus,Trasporti,Mobilità&Micromobilità,FALSE,,"11,00"
+11 nov 2023,"€ 25,00",Drink,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"11,00"
+12 nov 2023,"€ 15,50",Pizze,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"11,00"
+13 nov 2023,"€ 62,00",Gasolio,Trasporti,Carburante Auto,TRUE,,"11,00"
+13 nov 2023,"€ 23,00",Cena,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"11,00"
+13 nov 2023,"€ 2,99",Libro Papà,Altro,Regali&SpeseAltrui,FALSE,,"11,00"
+25 nov 2023,"€ 37,90",Fastweb,GestioneCasa,Bollette & Utenze,TRUE,,"11,00"
+14 nov 2023,"€ 9,99",Kindle Unlimited,AbbonamentiEIscrizioni,Amazon e Kindle,FALSE,,"11,00"
+14 nov 2023,"€ 9,58",Medicine ,CuraPersonale,Medicinali,TRUE,,"11,00"
+14 nov 2023,"€ 7,00",Tabacco,Fumo,Sigarette,FALSE,,"11,00"
+17 nov 2023,"€ 18,31",Spesa,GestioneCasa,Cibo&ProdottiCasa,TRUE,,"11,00"
+17 nov 2023,"€ 3,49",Dott,Trasporti,Mobilità&Micromobilità,FALSE,,"11,00"
+18 nov 2023,"€ 12,20",Treno Asti,Trasporti,Mobilità&Micromobilità,FALSE,,"11,00"
+18 nov 2023,"€ 16,22",Cena Samu,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"11,00"
+18 nov 2023,"€ 7,00",Cena Samu,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"11,00"
+19 nov 2023,"€ 21,50",Cuffie Fra,Altro,Regali&SpeseAltrui,FALSE,,"11,00"
+19 nov 2023,"€ 24,50",Liquido,Fumo,E-Cig,FALSE,,"11,00"
+19 nov 2023,"€ 11,50",Ape,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"11,00"
+20 nov 2023,"€ 31,75",Cena Lavoro,Altro,Lavoro,TRUE,,"11,00"
+20 nov 2023,"€ 45,00",Gasolio,Trasporti,Carburante Auto,TRUE,,"11,00"
+21 nov 2023,"€ 80,00",Hotel,Altro,Lavoro,TRUE,,"11,00"
+21 nov 2023,"€ 6,50",Piadina Lavoro,Altro,Lavoro,TRUE,,"11,00"
+22 nov 2023,"€ 6,73",Brufen,CuraPersonale,Medicinali,TRUE,,"11,00"
+23 nov 2023,"€ 10,00",Regalo Jacopo Treviso,Altro,Regali&SpeseAltrui,FALSE,,"11,00"
+23 nov 2023,"€ 9,56",Spesa per cena fra,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"11,00"
+24 nov 2023,"€ 11,95",Resistenze,Fumo,E-Cig,FALSE,,"11,00"
+23 nov 2023,"€ 14,00",Birre Comala,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"11,00"
+23 nov 2023,"€ 6,50",Birroteca,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"11,00"
+23 nov 2023,"€ 3,50",Dott,Trasporti,Mobilità&Micromobilità,FALSE,,"11,00"
+25 nov 2023,"€ 29,82",Spesa,GestioneCasa,Cibo&ProdottiCasa,TRUE,,"11,00"
+25 nov 2023,"€ 59,00",Tari,GestioneCasa,Bollette & Utenze,TRUE,,"11,00"
+25 nov 2023,"€ 671,00",Affito e Riscaldamento Ottobre,GestioneCasa,Affitto e Riscaldamento,TRUE,,"11,00"
+25 nov 2023,"€ 2,99",Libro,Shopping,Libri,FALSE,,"11,00"
+25 nov 2023,"€ 6,00",Cinema,IntrattenimentoEVacanze,Cinema&Cultura&Eventi,FALSE,,"11,00"
+25 nov 2023,"€ 3,00",Caffé,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"11,00"
+25 nov 2023,"€ 17,50",Cena,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"11,00"
+25 nov 2023,"€ 11,99",Borraccia Dechatlon,Shopping,Oggettistica,FALSE,,"11,00"
+26 nov 2023,"€ 7,00",Pastis,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"11,00"
+26 nov 2023,"€ 1,90",Biglietto Bus,Trasporti,Mobilità&Micromobilità,FALSE,,"11,00"
+27 nov 2023,"€ 17,99",Hero Clip,Shopping,Oggettistica,FALSE,,"11,00"
+27 nov 2023,"€ 57,75",Biglietto Reload,IntrattenimentoEVacanze,Cinema&Cultura&Eventi,FALSE,,"11,00"
+28 nov 2023,"€ 45,00",Psicologo,CuraPersonale,Psicologo,FALSE,,"11,00"
+28 nov 2023,"€ 24,50",Liquidi,Fumo,E-Cig,FALSE,,"11,00"
+29 nov 2023,"€ 2,58",Spesina Cena Fra,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"11,00"
+29 nov 2023,"€ 3,49",Dott,Trasporti,Mobilità&Micromobilità,FALSE,,"11,00"
+30 nov 2023,"€ 9,60",Pranzo Agrisano,Altro,Lavoro,TRUE,,"11,00"
+14 dic 2023,"€ 146,30",Bolletta Luce e Gas,GestioneCasa,Bollette & Utenze,TRUE,,"12,00"
+1 dic 2023,"€ 0,60",Commissioni,Altro,Commissioni,FALSE,,"12,00"
+1 dic 2023,"€ 19,48",Regalo Secret Santa,Altro,Regali&SpeseAltrui,FALSE,,"12,00"
+1 dic 2023,"€ 25,00",Taglio Capelli,CuraPersonale,Cura del corpo,FALSE,,"12,00"
+1 dic 2023,"€ 30,01",Spesa Ape,GestioneCasa,Cibo&ProdottiCasa,FALSE,,"12,00"
+1 dic 2023,"€ 10,50",Pizza,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"12,00"
+2 dic 2023,"€ 8,00",Torino Film Festival,IntrattenimentoEVacanze,Cinema&Cultura&Eventi,FALSE,,"12,00"
+2 dic 2023,"€ 12,50",Ape e Birra,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"12,00"
+2 dic 2023,"€ 9,00",Cena Mulo,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"12,00"
+3 dic 2023,"€ 18,90",Regalo Papà,Altro,Regali&SpeseAltrui,FALSE,,"12,00"
+3 dic 2023,"€ 3,50",Drink Steve,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"12,00"
+4 dic 2023,"€ 50,01",Gasolio C3,Trasporti,Carburante Auto,TRUE,,"12,00"
+4 dic 2023,"€ 4,86",Tigotà,CuraPersonale,Cura del corpo,FALSE,,"12,00"
+7 dic 2023,"€ 410,90",Vacanza Aosta,IntrattenimentoEVacanze,Viaggi,FALSE,,"12,00"
+5 dic 2023,"€ 8,00",Scaldacollo,Shopping,Vestiti e Abbigliamento,FALSE,,"12,00"
+8 dic 2023,"€ 13,00",Serata Three Dome,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"12,00"
+8 dic 2023,"€ 10,00",Regalo Three Dome,Altro,Regali&SpeseAltrui,FALSE,,"12,00"
+9 dic 2023,"€ 33,00",Sushi,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"12,00"
+9 dic 2023,"€ 3,50",Birra Steve,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"12,00"
+10 dic 2023,"€ 9,10",Medicine Mamma,Altro,Regali&SpeseAltrui,TRUE,,"12,00"
+11 dic 2023,"€ 20,00",Museo del Cinema,IntrattenimentoEVacanze,Cinema&Cultura&Eventi,TRUE,,"12,00"
+25 dic 2023,"€ 37,90",Fastweb,GestioneCasa,Bollette & Utenze,TRUE,,"12,00"
+12 dic 2023,"€ 16,78",Filamento Stampante,Shopping,Oggettistica,FALSE,,"12,00"
+14 dic 2023,"€ 9,99",Kindle Unlimited,AbbonamentiEIscrizioni,Amazon e Kindle,FALSE,,"12,00"
+14 dic 2023,"€ 19,00",Aperitivo e Birretta,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"12,00"
+15 dic 2023,"€ 23,75",Libri,Shopping,Libri,FALSE,,"12,00"
+15 dic 2023,"€ 2,19",Insalta,GestioneCasa,Cibo&ProdottiCasa,FALSE,,"12,00"
+15 dic 2023,"€ 3,70",Bus,Trasporti,Mobilità&Micromobilità,FALSE,,"12,00"
+15 dic 2023,"€ 46,66",Medicine,CuraPersonale,Medicinali,TRUE,,"12,00"
+15 dic 2023,"€ 1,50",Acqua,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"12,00"
+15 dic 2023,"€ 24,90",Cena PC,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"12,00"
+15 dic 2023,"€ 4,00",Dott,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"12,00"
+15 dic 2023,"€ 3,49",Birra,Trasporti,Mobilità&Micromobilità,FALSE,,"12,00"
+16 dic 2023,"€ 20,00",Aperitivo Rena,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"12,00"
+16 dic 2023,"€ 45,00",Cena Panta,IntrattenimentoEVacanze,Ristoranti e Delivery,FALSE,,"12,00"
+17 dic 2023,"€ 1,20",Marocchino,IntrattenimentoEVacanze,Bar & Drink & Serate,FALSE,,"12,00"
+17 dic 2023,"€ 10,00",Regalo Alessio,Altro,Regali&SpeseAltrui,FALSE,,"12,00"
+19 dic 2023,"€ 17,50",Copia Chiavi Millesimo,GestioneCasa,Manutenzione,FALSE,,"12,00"
+19 dic 2023,"€ 9,49",Cozze,Altro,Regali&SpeseAltrui,FALSE,,"12,00"
+19 dic 2023,"€ 11,50",Gaviscon,CuraPersonale,Medicinali,TRUE,,"12,00"
+19 dic 2023,"€ 50,00",Regalo Papà,Altro,Regali&SpeseAltrui,TRUE,,"12,00"
+19 dic 2023,"€ 10,44",Multi USB,Shopping,Oggettistica,FALSE,,"12,00"
+20 dic 2023,"€ 3,24",Acqua Millesimo,Altro,Regali&SpeseAltrui,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,"12,00"
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
+,,,,,FALSE,,
