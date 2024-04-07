@@ -8,6 +8,7 @@ class ImagePoint :
         self.red = float( red )
         self.green = float( green )
         self.blue = float( blue)
+        self.isUsed = False 
         
         
     def print( self ) :
