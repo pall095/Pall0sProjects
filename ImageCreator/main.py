@@ -1,48 +1,58 @@
 import cv2 as cv
-import time
 from DatabaseHandler import *
+import os
+import copy
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
+    
+    
 
-    output_size = ( 1000 , 1000 )
-    delay = int( 0.1 * 1000 )
-    num_blocks = 10
+    size = 1000
+    output_size = ( size , size )
+    num_blocks = 50
     block_size = int( output_size[ 0 ] / num_blocks )
     
-    database_path = r"C:\Users\matte\Desktop\Git\Pall0sProjects\ImageCreator\output\output_full.txt"
-    database_folder = r"C:\Users\matte\Desktop\Git\Pall0sProjects\ImageCreator\Database\Portogallo 19-26 Marzo 2024"
+    database_path = r"C:\Users\matte\Desktop\Git\Pall0sProjects\ImageCreator\database.txt"
 
 
     img_original = cv.imread( "Image.jpg" )
-    img = cv.resize( img_original , dsize = output_size )
+    img_original = cv.resize( img_original , dsize = output_size )
 
     rectangle_color = ( 0 , 255 , 0 )
     rectangle_thickness = 1
     
     dbHandler = DatabaseHandler( )
     dbHandler.loadFromFile( database_path )
-    #dbHandler.createFromFolder( database_folder )
-    #dbHandler.saveDatabase( "output_redgreen.txt")
-    dbHandler.printDatabase()
 
-    for col in range( 0 , output_size[ 0 ] , block_size ):
-        for row in range( 0 , output_size[ 1 ] , block_size ):
 
-            print( f"Row: {row}")
-            print( f"Col: {col}")
-            img_show = img_original
-            new_image = img_original
-            img_show = cv.rectangle( img_show , ( row , col ) , ( row + block_size , col + block_size )  , rectangle_color , rectangle_thickness )   
-            roi = img_original[ row : row + block_size , col : col + block_size ]
-            substitute = dbHandler.findClosest( roi )
-            substitute = cv.resize( substitute , dsize = ( block_size ,  block_size ) )
-            new_image[ col : col + block_size , row : row + block_size ] = substitute 
-            cv.imshow( "Roi" ,  img_show )
-            cv.imshow( "Substitute" , substitute )
-            cv.waitKey( delay )
+    try :
 
-    cv.destroyWindow( "Roi" )
-    cv.destroyWindow( "Substitute")
+        for row in range( 0 , output_size[ 0 ] , block_size ):
+            for col in range( 0 , output_size[ 1 ] , block_size ):
+    
+                img_show = img_original
+                roi = copy.deepcopy( img_original[ row : row + block_size , col : col + block_size ] )
+                substitute = cv.resize( dbHandler.findClosest( roi , allow_repetition = True ) , dsize = ( block_size ,  block_size ) )
+                img_show[ row : row + block_size , col : col + block_size ] = substitute 
+                cv.imshow( "Image" ,  img_show )
+                k = cv.waitKey( 1 )          
+                print( f"Percentage completion: {round( (row * size + col) / (size * size ) * 100 , 2 )} %")         
+                if k == 27 :        
+                    cv.waitKey( 0 )
+                    cv.destroyAllWindows( )
+                    break
+                cv.waitKey( 1 )
+            if k == 27 :
+                break                       
+        cv.waitKey( 0 )
+        cv.destroyAllWindows( )
+        
+    except Exception as s:
+        
+        print( s )
+        cv.waitKey( 0 )
+        cv.destroyAllWindows( )
+
 
 

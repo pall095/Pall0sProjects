@@ -2,7 +2,7 @@ from ImagePoint import *
 import cv2 as cv
 import os
 import math
-
+import time
 
 class DatabaseHandler :
     
@@ -17,31 +17,53 @@ class DatabaseHandler :
         self.databaseList = [ ]
         
     
+    def checkDatabaseUsage( self ) :
+        counter = 0 
+        for image_point in self.databaseList :   
+            if image_point.isUsed == True :
+                counter = counter + 1   
+        return counter / len( self.databaseList ) 
+    
+    def resetDatabase( self ) :
+        
+        for image_point in self.databaseList :
+            image_point.isUsed = False
+        
+  
     def printDatabase( self ) :
         
         for point in self.databaseList :
-            
             print( f"Filename: {point.name} - R : {point.red} - G : {point.green} - B : {point.blue}" )
             
     def calculateDistance( self , pointA , pointB ) :
         
-        return math.sqrt( ( pointA.red - pointB.red )**2 + ( pointA.green - pointB.green )**2 + ( pointA.blue - pointB.blue )**2 )
+        return math.sqrt(  ( ( pointA.red - pointB.red )**2 + ( pointA.green - pointB.green )**2 + ( pointA.blue - pointB.blue )**2 ) / len( self.databaseList )  )
     
-    def findClosest( self , reference_image ) :
+    def findClosest( self , reference_image , allow_repetition = True ) :
         
-        min_distance = 1000000000
+        min_distance = 100000
         [ ref_blue , ref_green , ref_red , garbage ] = cv.mean( reference_image ) 
-        reference_point = ImagePoint( "" , ref_red , ref_green , ref_blue )      
-        
-        for image in self.databaseList :
+        reference_point = ImagePoint( "" , ref_red , ref_green , ref_blue )  
+
+        for image_point in self.databaseList :
             
-            current_distance = self.calculateDistance( reference_point , image )
+            current_distance = self.calculateDistance( reference_point , image_point )
             
-            if current_distance < min_distance :
+ 
+            if self.checkDatabaseUsage( ) == 1 : 
+                print( "Resetting database..." )
+                self.resetDatabase( )
+                      
+            if allow_repetition == False :
+                if image_point.isUsed == True :
+                    continue 
+            
+            if current_distance < min_distance : 
                 min_distance = current_distance
-                substitute = image
-                
-                # TO DO - qua devi metterci il path alla sorgente, devi gestire diversametne il db e scriverci almeno nella prima riga la sorgente.
+                substitute = image_point
+         
+        substitute.isUsed = True # Sfrutto che substitute ha lo stesso riferimento alla image_point che effetivamente uso.
+        print( f"\t \t \t Current database usage: {round( self.checkDatabaseUsage() * 100 , 2 ) } %" )
         return cv.imread( self.sourcePath + "\\" + substitute.name )
     
     def parseDatabase( self ):
@@ -81,11 +103,13 @@ class DatabaseHandler :
         
         for image in image_list :
             
+            if "mp4" in image: continue
+            
             current_image = cv.imread( folder_path + "\\" + image )
             name = image
             [ blue , green , red , garbage ] = cv.mean( current_image ) 
             point = ImagePoint( name , red , green , blue )
-            point.print( )
+            print( f"Creating database - completion percentage: { round( len(self.databaseList) / len( image_list ) * 100 , 2 )} %")
             self.databaseList.append( point )
             
         self.databasePath = folder_path
