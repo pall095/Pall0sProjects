@@ -10,7 +10,7 @@ if __name__ == '__main__':
 
     size = 1000
     output_size = ( size , size )
-    num_blocks = 50
+    num_blocks = 200
     block_size = int( output_size[ 0 ] / num_blocks )
     
     database_path = r"C:\Users\matte\Desktop\Git\Pall0sProjects\ImageCreator\database.txt"
