@@ -9,7 +9,7 @@ from googleapiclient.errors import HttpError
 SCOPES = ["https://www.googleapis.com/auth/spreadsheets"]
 SPREADSHEET_ID = "1jSLvSyspQRZC67MSTdkDfyq-SWDBgvl29l3JopIaKuA"
 
-def getValues( ) :
+def getValues( max_row ) :
     
     credentials = None
     
@@ -35,7 +35,7 @@ def getValues( ) :
         service = build( "sheets" , "v4" ,  credentials = credentials )
         sheets = service.spreadsheets( )
         
-        result = sheets.values().get( spreadsheetId = SPREADSHEET_ID ,  range = "Uscite!A1:M225" ).execute( )
+        result = sheets.values().get( spreadsheetId = SPREADSHEET_ID ,  range = f"Uscite!A1:M{max_row}" ).execute( )
         values  = result.get( "values" , [ ] )
         
         return values 

@@ -1,10 +1,10 @@
 
 
 class Entry :
-    
-    
+
     def __init__( self , entryList ) :
         
+
         self.date = entryList[ 0 ]
         self.value = entryList[ 1 ]
         self.descr = entryList[ 2 ]
@@ -13,7 +13,7 @@ class Entry :
         self.fixed = entryList[ 5 ]
         self.comments = entryList[ 6 ]
         self.month = entryList[ 7 ] 
-        
+            
         
     def printEntry( self ) :
         
