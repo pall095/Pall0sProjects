@@ -1,13 +1,31 @@
 import streamlit as st
 from streamlit_gsheets import GSheetsConnection
 import pandas as pd
+import time 
 
-
-
-
-   
 # Selfmade depenendices
 import utils as utl
+
+    
+
+def findMatch_onClick( input_descr , expense_database  ) :
+
+    
+    match = utl.findMatch( input_descr , expense_database ) 
+    print( f"Input Description: { input_descr} ")
+
+
+    if match != None :
+        print( f"Category: {match[0]}" )
+        print( f"Category: {match[1]}" )
+        print( f"Fixed: {match[2]}" )
+        st.session_state[ 'cat' ] = match[ 0 ]
+        time.sleep( 0.1 )
+        st.session_state[ 'subcat' ] = match[ 1 ]
+        time.sleep( 0.1 )
+        st.session_state[ 'Fixed' ] = match[ 2 ]
+    else:
+        print( "No match!")
 
 # Data management
 categories_file = r"C:\Users\matte\Desktop\Git\Pall0sProjects\gSheetAutomation-Streamlit\UsciteCTRL_19Mag2024.csv"
@@ -32,5 +50,7 @@ expense_subcategory = st.selectbox( "Subcategory" ,  options = cat_database[ exp
 expense_fixed = st.checkbox( label = "Fixed?" , key = "Fixed" )
 
 
-add_button = st.button( label = "Add expense" )
-match_button = st.button( label = "Match expense" ) 
+
+
+add_button = st.button( label = "Add expense"  )
+match_button = st.button( label = "Match expense" , on_click = findMatch_onClick , args = [ st.session_state.descr , expense_database ] ) 

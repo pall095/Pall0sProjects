@@ -4,7 +4,7 @@ class Entry :
         
         self.date = date 
         self.value = value 
-        self.descr = descr 
+        self.descr =str( descr )
         self.cat = cat
-        self.sucat = subcat
+        self.subcat = subcat
         self.fixed = fixed 
