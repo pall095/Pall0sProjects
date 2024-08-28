@@ -7,6 +7,9 @@ import pygame
 GAME_TIME = 0.05
 SIZE = ( 700 , 700 )
 
+def close( ) :
+    root.destroy()
+    root.quit()
 
 root = Tk()  # create a root widget
 root.title("Main Window")
@@ -24,5 +27,8 @@ spawn.pack( )
 
 kill_game = Button( root , text = "Kill!" , command = game.stop )
 kill_game.pack( )
+
+quit_all = Button( root , text = "Quit!" , command = close )
+quit_all.pack( )
 
 root.mainloop()

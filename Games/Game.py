@@ -20,20 +20,31 @@ class Game :
         self.isRunning = False
         self.thread = None
         
+    def __del__( self ) :
+        print( "Destructor called!")
+        
     def stop( self ) :
         self.isRunning = False
-        self.isRunning = False # <-- For safety also assgning the flag but not needed
-        pygame.quit( )
         self.thread.join( )
+        print( self.thread.is_alive() )
+        return
+        #pygame.quit( )
+
         
     def start( self ) :
+        if self.isRunning == False :
+            self.isRunning == True 
+        
         self.thread = Thread( target = self.game_loop )
         self.thread.setDaemon( True )
         self.thread.start()
+        pygame.init()
+        print( self.thread.is_alive() )
 
     def game_loop( self ) :
         
         pygame.init()
+        
         
         WIDTH = self.size[ 0 ]
         HEIGHT = self.size[ 1 ]
@@ -72,10 +83,12 @@ class Game :
         self.isRunning = True
         while self.isRunning:
         
+            print( "In game check: " + str( self.thread.is_alive() ) )
             # Did the user click the window close button?
             for event in pygame.event.get():
-                if event.type == pygame.QUIT:
-                    self.stop( )
+                if event.type == pygame.QUIT or self.isRunning == False:
+                    pygame.quit()
+                    sys.exit( )
                     break
         
             # Fill the background with white
@@ -92,8 +105,10 @@ class Game :
             # Flip the display
             pygame.display.flip()
             time.sleep( self.game_speed )
+         
+        return
         
             
         
         # Done! Time to quit.
-        self.stop( )
+        #self.stop( )
