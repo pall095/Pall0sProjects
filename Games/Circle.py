@@ -4,10 +4,9 @@ import pygame
 
 class Circle:
     
-    circleList = [ ]
     vectorMultiplier = 2 
     
-    def __init__( self , screen , initial_pos : list , r , mass , rgb : list , speed = [ 0, 0 ] , acc = [ 0 , 0 ] , check_collision = False ) :
+    def __init__( self , screen , initial_pos : list , r , mass , rgb : list , speed = [ 0, 0 ] , acc = [ 0 , 0 ] , check_collision = False , check_gravity = True ) :
         
         self.xc = initial_pos[ 0 ]
         self.yc = initial_pos[ 1 ]
@@ -22,9 +21,9 @@ class Circle:
         
         self.screen = screen
         self.check_collision = check_collision 
+        self.check_gravity = check_gravity
         
         self.rgb = rgb
-        self.circleList.append( self )
         
         
     def printState( self ) :
@@ -45,14 +44,41 @@ class Circle:
         self.drawAcc( ) 
         
         
-    def updateSpeed( self ) :
+    # Update cinematis.
+    # Speed and position can be overriden by passing a list with new values. If not, they are computed.
+    # Acceleration, since is the "most derivated one" only takes new values.
+    def updateSpeed( self , new_speed  = None ) :
         
-        self.speed_x = self.speed_x + self.acc_x
-        self.speed_y = self.speed_y + self.acc_y
+        if new_speed == None :
+            self.speed_x = self.speed_x + self.acc_x
+            self.speed_y = self.speed_y + self.acc_y       
+        else:
+            self.speed_x = new_speed[ 0 ]
+            self.speed_y = new_speed[ 1 ]
+            
+    def updateAcc( self , new_acc = None ) :
+        
+        if new_acc == None:
+            print( "No new acceleration!" )
+            
+        else :
+            self.acc_x = new_acc[ 0 ]
+            self.acc_y = new_acc[ 1 ]
+            
+    def updatePos( self , new_pos = None ) :
+        
+        if new_pos == None :
+            self.xc = self.xc + self.speed_x
+            self.yc = self.yc + self.speed_y 
+        else:
+            self.xc = new_pos[ 0 ]
+            self.yc = new_pos[ 1 ]
+            
     
     def update( self ) :
         
-        self.updateSpeed()
+        self.updateSpeed( )
+        self.updatePos( )
         
         if self.check_collision :
         
@@ -62,6 +88,9 @@ class Circle:
             if ( self.yc + self.speed_y + self.r ) > self.screen.get_height() or ( self.yc + self.speed_y - self.r ) <= 0:
                 self.speed_y = -self.speed_y
             
-        self.xc = self.xc + self.speed_x
-        self.yc = self.yc + self.speed_y
+
         self.draw()
+        
+        
+    def center_to_list( self ) :
+        return [ self.xc , self.yc ]
