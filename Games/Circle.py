@@ -6,8 +6,9 @@ class Circle:
     
     vectorMultiplier = 2 
     
-    def __init__( self , screen , initial_pos : list , r , mass , rgb : list , speed = [ 0, 0 ] , acc = [ 0 , 0 ] , check_collision = False , check_gravity = True ) :
+    def __init__( self , screen , name , initial_pos : list , r , mass , rgb : list , speed = [ 0, 0 ] , acc = [ 0 , 0 ] , check_collision = False , check_gravity = True ) :
         
+        self.name = name 
         self.xc = initial_pos[ 0 ]
         self.yc = initial_pos[ 1 ]
         self.r = r
@@ -30,55 +31,67 @@ class Circle:
         
         print( f"X : { self.xc } - Y : { self.yc } - Vx : { self.speed_x } - Vy : { self.speed_y } - Ax : { self.acc_x } - Ay : { self.acc_y }" )
     
-    def drawSpeed( self ) :
-        pygame.draw.line( self.screen , [0 , 255 , 0 ] , ( self.xc , self.yc ) , ( self.xc + self.speed_x , self.yc + self.speed_y ) )
+    def drawSpeed( self , rescale_factor = 1 ) :
+        pygame.draw.line( self.screen , [0 , 255 , 0 ] , ( self.xc , self.yc ) , ( self.xc + self.speed_x * rescale_factor , self.yc + self.speed_y * rescale_factor ) )
     
-    def drawAcc( self ) :
+    def drawAcc( self , rescale_factor ) :
         
-        pygame.draw.line( self.screen , [255 , 0 , 0 ] , ( self.xc , self.yc ) , ( self.xc + self.acc_x , self.yc + self.acc_y ) )
+        pygame.draw.line( self.screen , [255 , 0 , 0 ] , ( self.xc , self.yc ) , ( self.xc + self.acc_x * rescale_factor , self.yc + self.acc_y * rescale_factor ) )
         
-    def draw( self ) :
+    def print_state( self ) :
         
-        pygame.draw.circle( self.screen, self.rgb , ( self.xc, self.yc ), self.r) 
-        self.drawSpeed()
-        self.drawAcc( ) 
+        print( f"Name: {self.name}" )
+        print( f"Position : x = {self.xc} - y = {self.yc}" )
+        print( f"Speed : x = {self.speed_x} - y = {self.speed_y}" )
+        print( f"Position : x = {self.acc_x} - y = {self.acc_y}" )
+        print( "---")
+    
+    
+    def draw( self , verbose = False , rescale_factor = 1 ) :
+        
+        pygame.draw.circle( self.screen, self.rgb , ( self.xc, self.yc ), self.r ) 
+        self.drawSpeed( rescale_factor )
+        self.drawAcc( rescale_factor ) 
+        
+        if verbose :    
+            self.print_state( )
         
         
-    # Update cinematis.
-    # Speed and position can be overriden by passing a list with new values. If not, they are computed.
-    # Acceleration, since is the "most derivated one" only takes new values.
-    def updateSpeed( self , new_speed  = None ) :
+    def update_speed( self ) :
         
-        if new_speed == None :
-            self.speed_x = self.speed_x + self.acc_x
-            self.speed_y = self.speed_y + self.acc_y       
-        else:
-            self.speed_x = new_speed[ 0 ]
-            self.speed_y = new_speed[ 1 ]
+        self.speed_x = self.speed_x + self.acc_x
+        self.speed_y = self.speed_y + self.acc_y
+
+    def impose_speed( self , new_speed  : list  ) :
+        
+        self.speed_x = new_speed[ 0 ]
+        self.speed_y = new_speed[ 1 ]
             
-    def updateAcc( self , new_acc = None ) :
+    
+    def impose_acc( self , new_acc : list ) :
+    
+        self.acc_x = new_acc[ 0 ]
+        self.acc_y = new_acc[ 1 ]
         
-        if new_acc == None:
-            print( "No new acceleration!" )
-            
-        else :
-            self.acc_x = new_acc[ 0 ]
-            self.acc_y = new_acc[ 1 ]
-            
-    def updatePos( self , new_pos = None ) :
+    def update_acc( self , new_acc : list ) :
         
-        if new_pos == None :
-            self.xc = self.xc + self.speed_x
-            self.yc = self.yc + self.speed_y 
-        else:
-            self.xc = new_pos[ 0 ]
-            self.yc = new_pos[ 1 ]
+            self.acc_x = self.acc_x + new_acc[ 0 ] 
+            self.acc_y = self.acc_y + new_acc[ 1 ] 
             
+    def update_pos( self ) :
+        
+        self.xc = self.xc + self.speed_x
+        self.yc = self.yc + self.speed_y
+        
+    def impose_pos( self , new_pos : list ) :
+        self.xc = new_pos[ 0 ]
+        self.yx = new_pos[ 1 ]
+                        
     
     def update( self ) :
         
-        self.updateSpeed( )
-        self.updatePos( )
+        self.update_speed( )
+        self.update_pos( )
         
         if self.check_collision :
         

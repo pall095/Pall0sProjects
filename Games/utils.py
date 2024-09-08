@@ -4,7 +4,7 @@ import math
 def dist( c1 , c2 ) :   
     return math.sqrt(( c1.xc - c2.xc ) **2 + ( c1.yc - c2.yc ) ** 2 )
 
-def gravityComp( c_center , c ) :
+def calculate_gravity( c , c_center ) :
     
     xc_rescaled = c.xc - c_center.xc
     yc_rescaled = c.yc - c_center.yc
@@ -13,10 +13,7 @@ def gravityComp( c_center , c ) :
     x_comp = - math.cos( angle )
     y_comp = - math.sin( angle )
     module = gravityModule( c_center, c )
-    
-    
-    print( f"X_comp : {x_comp * module} " )
-    print( f"Y_comp : {y_comp * module} " )
+
     
     return x_comp*module , y_comp*module
 
