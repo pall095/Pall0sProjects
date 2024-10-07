@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1727888606 source:c:\users\matte\desktop\polito\algorithms and data strucutres\programming\problemsolvingwarmup\exercise1\remove_zeros\main.c
+	<stdio.h>
+	<stdlib.h>
+

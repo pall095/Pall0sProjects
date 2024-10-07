@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1727984224 source:c:\users\matte\desktop\polito\algorithms and data strucutres\programming\problemsolvingwarmup\exercises\connecting_flights\main\main.c
+	<stdio.h>
+	<stdlib.h>
+

@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1728241778 source:c:\users\matte\desktop\git\pall0sprojects\c\myprojects\sudokusolver\sudokusolver\main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	"functions.h"
+
+1728241979 c:\users\matte\desktop\git\pall0sprojects\c\myprojects\sudokusolver\sudokusolver\functions.h
+	<math.h>
+
