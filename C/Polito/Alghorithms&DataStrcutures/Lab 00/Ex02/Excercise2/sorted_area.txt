@@ -1,0 +1,5 @@
+ID: rct2 - Area: 11.000000 - Perimeter: 15.000000 
+ID: trya - Area: 7.500000 - Perimeter: 13.000000 
+ID: ktkr - Area: 8.000000 - Perimeter: 12.000000 
+ID: abcd - Area: 2.500000 - Perimeter: 7.000000 
+ID: xxyy - Area: 2.000000 - Perimeter: 6.000000 

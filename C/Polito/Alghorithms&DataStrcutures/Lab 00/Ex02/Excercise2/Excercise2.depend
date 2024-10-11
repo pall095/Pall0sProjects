@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1728660726 source:c:\users\matte\desktop\git\pall0sprojects\c\polito\alghorithms&datastrcutures\lab 00\ex02\excercise2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
