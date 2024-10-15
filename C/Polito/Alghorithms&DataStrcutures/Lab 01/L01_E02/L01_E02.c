@@ -78,7 +78,6 @@ void sort_by( rectangle *database , int n , int method ){
         database[ max_index ] = temp_r ;
 
     }
-
 }
 
 

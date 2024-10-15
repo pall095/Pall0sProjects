@@ -1,0 +1,5 @@
+ID: rct2 - Base: 2.000000 - Heigth: 5.500000 - Area: 11.000000 - Perimeter: 15.000000 
+ID: ktkr - Base: 4.000000 - Heigth: 2.000000 - Area: 8.000000 - Perimeter: 12.000000 
+ID: trya - Base: 1.500000 - Heigth: 5.000000 - Area: 7.500000 - Perimeter: 13.000000 
+ID: abcd - Base: 1.000000 - Heigth: 2.500000 - Area: 2.500000 - Perimeter: 7.000000 
+ID: xxyy - Base: 2.000000 - Heigth: 1.000000 - Area: 2.000000 - Perimeter: 6.000000 
