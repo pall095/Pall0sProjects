@@ -13,10 +13,11 @@ class Grid:
     ROOT = 0
     WALL_THR = 0
     
-    def __init__( self , ROW , COL ) :
+    def __init__( self , ROW , COL , WALL_THR ) :
         
         self.ROW = ROW
         self.COL = COL
+        self.WALL_THR = WALL_THR 
         self.grid = [ ]
         self.start_x = 0
         self.start_y = 0
@@ -24,7 +25,7 @@ class Grid:
         self.end_y = 0
         self.queue = [ ]
         self.expandedNodes = 0
-        for x in range( self.ROW) : 
+        for x in range( self.ROW ) : 
             tmp = [ ]
             for y in range( self.COL ) :              
                 tmp.append( Cell( x , y , 0 , 0 ) )                      
