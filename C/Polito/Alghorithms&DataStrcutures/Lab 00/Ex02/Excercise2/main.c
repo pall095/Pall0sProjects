@@ -26,7 +26,7 @@ void save_output( char * , rectangle * , int n ) ;
 
 int main()
 {
-    char file_name[ ] = "rect_file.txt" ;
+    char file_name[ ] = "rect.txt" ;
     char output_area[ ] = "sorted_area.txt" ;
     char output_perim[ ] = "sorted_perim.txt" ;
     rectangle rectangle_db[ MAX_ROWS ] ;
@@ -48,7 +48,7 @@ void save_output( char *filename , rectangle *database , int n ){
     int i = 0 ;
 
     if( ptr == NULL ){
-        printf( "Unable to open output file!\n" ) ;
+        printf( "Unable to open output file %s!\n" , filename ) ;
         return ; 
     }
 
@@ -122,10 +122,12 @@ void read_file( char *file_name , rectangle *database , int *num_rectangle ){
     int found_index = 0 ;
     float dx , dy ;
 
+    
     if( file_ptr == NULL ){
-        printf( "Unable to read file! " );
+        printf( "Unable to read file %s!\n" , file_name );
         return ;
     }
+    
 
     while( fscanf( file_ptr , "%s  %f %f" , temp_rect.ID , &temp_rect.base_x , &temp_rect.height_y ) != EOF ){
 
