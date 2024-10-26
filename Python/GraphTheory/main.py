@@ -33,7 +33,7 @@ if __name__ == '__main__' :
     parser = argparse.ArgumentParser( ) 
     parser.add_argument( "method" , choices = [ "Astar_euclidean" , "breath" , "depth" , "man" , "rand"] , help = "Search method" )
     parser.add_argument( "--output" , dest = "output_flag" , action = "store_true" )
-    parser.add_argument( "--no_ouput" , dest = "output_flag" , action = "store_false" )
+    parser.add_argument( "--no_output" , dest = "output_flag" , action = "store_false" )
     parser.set_defaults( output_flag = False )
     parser.add_argument( "--wall_thr" , default = 0.9 , type = float  ) 
     args = parser.parse_args( )
