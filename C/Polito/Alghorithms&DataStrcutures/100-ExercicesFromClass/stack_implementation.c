@@ -40,17 +40,15 @@ void main( int argc , char **argv ){
     while( strcmp( command , "stop" ) != 0 ){
 
         printf( "-------------------------------\n") ;
-        printf( "Command list: \n" ) ;
-        printf( "Remove element = rm \n" ) ;
-        printf( "Print List = print \n"  ) ;
-        printf( "Find maximum value = max \n" ) ;
-        printf( "Check if empty = empty \n" ) ;
-        printf( "Sort list = sort \n" ) ;
-        printf( "Pop head = pop \n" ) ;
-        printf( "Push new element = push \n") ;
-        printf( "-------------------------------\n") ;
-
-        printf( "Input a command:" ) ;
+        printf( "-- COMMAND LIST -- \n" ) ;
+        printf( "\n- rm = remove element \n" ) ;
+        printf( "- print = print list \n"  ) ;
+        printf( "- max = find maximum \n" ) ;
+        printf( "- empty = check empty \n" ) ;
+        printf( "- sort = sort list \n" ) ;
+        printf( "- pop = pop head \n" ) ;
+        printf( "- push = push to head \n") ;
+        printf( "\nInput a command: " ) ;
         scanf( "%s" , command ) ;
 
         if( strcmp( command , "rm" ) == 0 ){
@@ -140,12 +138,10 @@ int find_max( list_t* head ){
     return max ; 
 }
 
-
 void remove_key( list_t **head , int k  , int verbose ){
     
     list_t *q = *head ;
     list_t *traversing_p = *head ;
-
 
     while( traversing_p != NULL ){
         if( traversing_p->key == k ){
