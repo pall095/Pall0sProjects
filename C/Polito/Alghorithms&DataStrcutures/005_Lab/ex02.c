@@ -30,19 +30,14 @@ void main( int argc , char **argv ){
 }
 
 void shift_and_insert( int **matrix , int depth ){
-
     int mirror_point = pow( 2 ,  depth );
-
     for( int j = depth ; j >= 0 ; j-- ){
-
         for( int i = 0 ; i < 2 * mirror_point ; i++ ){
-
             matrix[ i ][ j + 1 ] = matrix[ i ][ j ] ;
         }
     }
 
     for( int i = 0 ; i < 2 * mirror_point ; i ++ ){
-
         if( i >= mirror_point ){
             matrix[ i ][ 0 ] = 1 ;
         }else{
