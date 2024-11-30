@@ -25,7 +25,7 @@ void invert_string( char *s1 , char *s2 ){
 
     for( int i = 0 ; i < len ; i++ ){
         printf( "Insert the next char: \n" ) ;   
-        scanf( "%c" , &c ) ;
+        scanf( "%c\n" , &c ) ;
 
         if( c == '\n' ){
             i = i-1 ;
