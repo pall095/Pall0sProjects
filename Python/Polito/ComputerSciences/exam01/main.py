@@ -1,101 +1,52 @@
 
 
 
-def reformat_time( local_time , delta_time ) :
-
-    day = "Today"
-
-    if ":" in local_time :
-        local_time_hr , local_time_min = local_time.split( ":" )
-    else:
-        local_time_hr = local_time 
-        local_time_min = 0 
-
-    if ":" in delta_time :
-        delta_time_hr , delta_time_min = delta_time.split( ":" )
-    else :
-        delta_time_hr = delta_time 
-        delta_time_min = 0 
-
-    local_time_hr = int( local_time_hr ) 
-    local_time_min = int( local_time_min ) 
-    delta_time_hr = int( delta_time_hr ) 
-    delta_time_min = int( delta_time_min ) 
-
-    if delta_time_hr < 0 :
-        delta_time_min = -delta_time_min 
-
-    new_time_hr = local_time_hr - delta_time_hr 
-    new_time_min = local_time_min - delta_time_min 
+time_zone_dict = dict( ) 
 
 
-    if new_time_min > 60 :
-        new_time_hr = new_time_hr + new_time_min//60 
-        new_time_min = new_time_min%60 
-    elif new_time_min < 0 :
-        new_time_hr = new_time_hr - abs(new_time_min)//60 - 1
-        new_time_min = 60 - abs( new_time_min )%60
+with open( "timezones.lst" , "r" ) as timezone_file :
+    for line in timezone_file :
+        line = line.rstrip( )
 
-    if new_time_hr > 24 :
-        day = "Tomorrow" 
-        new_time_hr = new_time_hr%24
-    elif new_time_hr < 0 :
-        day = "Yesterday" 
-        new_time_hr = 24 + new_time_hr 
+        timezone , delta , dump = line.split( " " , maxsplit = 2) 
+        timezone = timezone.rstrip( ":" ) 
+        
+        delta = delta.strip ("UTC" )
 
-    return [ day , new_time_hr , new_time_min ]
-    
+        if ":" in delta :
+            hr , min = delta.split( ":")
+            hr = int( hr ) * 60 
+
+            if hr > 0 :
+                delta = hr + int( min ) 
+            else :
+                delta = -( abs( hr ) +  int( min ) )     
+        else :
+            delta = int( delta ) * 60 
+        time_zone_dict[ timezone ] = delta
 
     
 
+with open( "today.lst" , "r" ) as event_file :
 
-time_zone_dict = dict( )
-
-with open( "timezones.lst" , "r" ) as time_zone_info :
-
-
-    for line in time_zone_info :
+    for line in event_file :
 
         line = line.rstrip( )
-        timezone , delta , dump = line.split( " " , maxsplit = 2 ) 
-        
-        timezone = timezone.rstrip( ":" ) 
-        delta = delta.replace( "UTC" , "" )     
-        time_zone_dict[ timezone ] = delta 
+        current_time , zone , text = line.split( " " , maxsplit = 2 )
+        current_hr , current_min = current_time.split( ":" ) 
+        current_hr = int( current_hr ) * 60 
+        current_min = int( current_min) 
+        current_time = current_hr + current_min 
 
-time_zone_info.close( )
-
-
-with open( "today.lst" , "r" ) as today_file :
-
-    for line in today_file :
-        local_time , timezone , text = line.split( " " , maxsplit = 2 )
+        local_time = current_time - time_zone_dict[zone]
 
 
-        if timezone in time_zone_dict.keys( ) :
-            [ day , new_time_hr , new_time_min ] = reformat_time( local_time , time_zone_dict[ timezone ] )
-            print( f"{ day } { new_time_hr }:{ new_time_min } { text.rstrip( )}" ) 
+        if local_time < 0 :
+            print( f"Yesterday { 24 + local_time//60 }:{ local_time%60 } {text}" )
+        elif local_time > 24*60:
+            print( f"Tomorrow { local_time//60 - 24 }:{ local_time%60 } {text}")
+        else:
+            print( f"Today { local_time//60}:{ local_time%60 } {text}")
 
-
-
-
-
-
-
-
-
-            
-
-            
-            
-             
-
-
-
-
-
-            
-
-        
 
 
