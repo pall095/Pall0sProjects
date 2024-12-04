@@ -22,11 +22,9 @@ void swap( int* , int , int ) ;
 void main( int argc , char **argv ){
 
 
-    int arr[ ] = { 13 , 11 , 8 , 6 , 3 , 2 , 9 , 10 , 1 , 15 } ;
-    printf( "Array before being sorted: \n" ) ;
-    print_array( arr , ARRAY_SIZE ) ;
-    printf( "Array after being sorted: \n" ) ;
-    merge_sort( arr , ARRAY_SIZE ) ;
+    int arr[ ] = { 13 , 5 , 8 , 11 , 12 , 0 , 1 , 7 , 2 , 3} ;
+    //merge_sort( arr , ARRAY_SIZE ) ;
+    quick_sort( arr , ARRAY_SIZE ) ;
     print_array( arr , ARRAY_SIZE ) ;
 
 
@@ -43,9 +41,15 @@ void quick_sort_r( int *arr , int l , int r ){
     if( l >= r ){
         return ;
     }
+    
+    printf( "Pivot is: %d \n" , arr[ r ] ) ;
     int c = partition( arr , l , r ) ;
+    print_partial_array( arr , l , c - 1 ) ;
+    print_partial_array( arr , c + 1 , r ) ;
     quick_sort_r( arr , l , c - 1 ) ;
+    
     quick_sort_r( arr , c + 1 , r  );
+    
 
 }
 
@@ -62,8 +66,6 @@ int partition( int *arr , int l , int r ){
             swap( arr , i , j ) ;
         }
     }
-
-    printf( "i : %d - j : %d \n" , i , j ) ;
     swap( arr , i ,  r ) ;
     return i ;
 
