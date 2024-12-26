@@ -19,16 +19,13 @@ int* init_hash( int size ){
 }
 
 void display_hash( int *hash , int size ){
-    for( int i = 0 ; i < size ; i++ ){
-        printf( "%d " , i ) ;
-    }
 
-    printf( "\n" ) ;
 
     for( int i = 0 ; i < size ; i++ ){
-        printf( "%d " , hash[ i ] ) ;
+        printf( "%d : %d " , i , hash[ i ] ) ;
+        printf( "\n" ) ;
     }    
-    printf( "\n" ) ;
+    
 }
 
 int* insert( int *hash , int size , int new ){
