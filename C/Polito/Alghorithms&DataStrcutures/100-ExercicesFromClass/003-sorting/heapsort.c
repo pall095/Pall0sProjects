@@ -58,7 +58,8 @@ int* build_heap( int *arr , int size ){
 int* heapsort( int *arr , int size ){
     
     arr = build_heap( arr , size ) ;
-    
+    printf( "arr after build heap\n" ) ;
+    print_arr( arr , size  ) ;
     while( size > 0 ){
         print_arr( arr , SIZE ) ;
         arr = swap( arr , 0 , size - 1 ) ;
@@ -72,8 +73,8 @@ int* heapsort( int *arr , int size ){
 
 void main( ){
 
-    int arr[ ] = { 15 , 5 , 6 , 7 , 8 , 10 , 3 , 2 , 11 } ;
-    int size = 9 ;
+    int arr[ ] = { 2 , 1 , 6 , 3 , 13 , 15 , 21 , 9  } ;
+    int size = 8 ;
 
     int *arr2 = heapsort( arr , size ) ;
     print_arr( arr2 , size ) ;
