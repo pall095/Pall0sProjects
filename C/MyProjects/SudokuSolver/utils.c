@@ -4,9 +4,9 @@
 void display_grid( int **grid ){
 
     for( int i = 0 ; i < SIZE ; i++ ){
+        printf( "|" ) ;
         for( int j = 0 ; j < SIZE ; j++ ){
             printf( "%d " , grid[ i ][ j ] ) ;
-            
             if( ( j + 1 ) % 3 == 0 ){
                 printf( "|" ) ;
             }
