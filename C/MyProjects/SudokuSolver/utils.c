@@ -2,25 +2,37 @@
 #include "utils.h"
 
 void display_grid( int **grid ){
+    int extra_char = 5 ;
+
+    for( int k = 0 ; k < 2 * SIZE + extra_char ; k++ ){
+            printf( "-" ) ;
+        }   
+
+    printf( "\n" ) ;
 
     for( int i = 0 ; i < SIZE ; i++ ){
-        printf( "|" ) ;
+
+        printf( "| " ) ;
+
         for( int j = 0 ; j < SIZE ; j++ ){
+
             printf( "%d " , grid[ i ][ j ] ) ;
+
             if( ( j + 1 ) % 3 == 0 ){
-                printf( "|" ) ;
+                printf( "| " ) ;
             }
         }
-        
+
         printf( "\n" ) ;
+
         if( ( i + 1 ) % 3 == 0 ){
-            for( int k = 0 ; k < SIZE ; k++ ){
-                printf( " " ) ;
+            for( int k = 0 ; k < 2 * SIZE + 4 ; k++ ){
+                printf( "-" ) ;
             }   
             printf( "\n" ) ;
         }
-
     }
+
     return ;
 }
 
@@ -31,9 +43,7 @@ int** read_file( char *filename ){
     char *curr_line = ( char * ) calloc( SIZE + 1 , sizeof( char ) ) ;
     int row = 0 ;
     int col = 0 ;
-    char buf ;
-    
-    
+
     // Grid init
     grid = ( int ** ) calloc( SIZE , sizeof( int* ) ) ;
     for( int i = 0 ; i < SIZE ; i++ ){
@@ -114,18 +124,17 @@ int is_solved( int **grid ){
             }
         }
     }
-
     return 1 ;
-
 }
-
 
 void solve_r( int **grid , int r , int c ){
 
     if( c >= SIZE ){
         c = 0 ;
         r = r + 1 ;
-    }
+        solve_r( grid , r , c ) ;
+        return ;
+    }    
     
     if( r >= SIZE ){
         if( is_solved( grid ) == 1 ){
@@ -149,7 +158,4 @@ void solve_r( int **grid , int r , int c ){
     }else{
         solve_r( grid , r , c + 1 ) ;
     }
-
-
-
 }
