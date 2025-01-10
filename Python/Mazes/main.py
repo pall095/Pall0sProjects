@@ -41,8 +41,6 @@ if __name__ == '__main__' :
     grid.CANVAS = canvas
     grid.ROOT = root 
     grid.generateMaze( method = "random" )
-    #grid.saveMaze( "mazeMaster.txt" )
-    #grid.loadMaze( "mazeMaster.txt")
     solveState = 0 
 
     while solveState == 0 :
