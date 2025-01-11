@@ -50,6 +50,7 @@ void main( int argc , char **argv ){
 
     clock_t t = clock( ) ;
     int n = atoi( argv[ 1 ] ) ;
+    int verbose = atoi( argv[ 2 ] ) ;
     int *arr = ( int * ) calloc( n , sizeof( int ) ) ;
     printf( "%d\n" , n ) ;
 
