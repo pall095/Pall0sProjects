@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1727897002 source:c:\users\matte\desktop\polito\algorithms and data strucutres\programming\problemsolvingwarmup\exercises\matrix_comparator\main\main.c
-	<stdio.h>
-	<stdlib.h>
-	<stdbool.h>
-
