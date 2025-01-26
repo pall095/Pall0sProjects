@@ -2,12 +2,12 @@ import datetime
 
 class Note :
 	
-	def __init__( self , text , date : datetime.date , is_meeting : bool , is_todo : bool , deadline : datetime.date , tags : list ) :
+	def __init__( self , text , date : datetime.date , is_meeting, is_todo , deadline : datetime.date , tags : list ) :
 		self.text = text
 		self.tags = tags 
 		self.date = date 
-		self.is_meeting = is_meeting 
-		self.is_todo = is_todo 
+		self.is_meeting = is_meeting
+		self.is_todo = is_todo
 		self.deadline = deadline 
 
 	def print_note( self ) :
@@ -19,9 +19,9 @@ class Note :
 		print( f"Tags : { self.tags }" )
 
 	def print_note( self , new_line_char = "\n" ) :
-		print( f"Insertion Date : { self.date } - Meeting Note : { self.is_meeting } - To Do : Is to do : { self.is_todo } - Deadline : { self.deadline }" )
-		print( f"Tags : { self.tags }" )
+		print( f"Insertion Date : { self.date } | Meeting Note : { self.is_meeting } | To Do : { self.is_todo } - Deadline : { self.deadline } | Tags : { self.tags } |" )
 		print( f"Content : \n { self.text.replace( new_line_char , "\n" ) }" )
+		print( "                                " )
 	
 	def to_list( self ) :
 		return [ self.text , self.date , self.is_meeting , self.is_meeting , self.deadline , self.tags ]

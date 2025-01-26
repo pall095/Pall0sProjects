@@ -1,5 +1,5 @@
 {
-    "autoload" : 0 , 
+    "autoload" : 1 , 
     "autoload_path" : "note_db.txt" ,
     "autosave" : 1 ,
     "autofill_date" : 1 

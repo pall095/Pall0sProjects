@@ -4,14 +4,18 @@ import Logger as lg
 
 class NoteDB :
 
-    DELIMITER = "|"
-    TAGS_DELIMITER = ","
-    NEW_LINE_CHAR = "#"
+    # Delimiters and special chars
+    DELIMITER = "|" # <-- Separates note's attributes in db file (attribute1|attribute2|....)
+    TAGS_DELIMITER = "," # <-- Delimiter for tags in db file (tag1,tag2,... )
+    NEW_LINE_CHAR = "#" # <-- Substitutes carraige return in ddb file (i.e. aliases \n)
+    ANY_KW = "any" # <-- when querying db, keyword to indicate any value (i.e. no filter on that attribute )
+
+    # Settings dictionary keys.
     AUTOLOAD_KEY = "autoload"
     AUTOLOAD_PATH_KEY = "autoload_path"
     AUTOSAVE_KEY = "autosave" 
     AUTOFILL_DATE_KEY = "autofill_date"
-
+    
     def __init__( self ) :
         
         self.db_path = ""
@@ -47,7 +51,6 @@ class NoteDB :
 
 
     def load_from_file( self , path = "") :
-        
         self.logger.print_info( "Initializing db!" )
         self.is_initialzied = True
         self.db_path = path 
@@ -58,7 +61,7 @@ class NoteDB :
                 text , date , is_meeting , is_todo , deadline , tags = line.split( self.DELIMITER ) 
                 tags = tags.split( self.TAGS_DELIMITER )
                 self.update_unique( tags ) 
-                self.db_dict[ self.db_len ] = nt.Note( text , date , is_meeting , is_todo , deadline , tags )
+                self.db_dict[ self.db_len ] = nt.Note( text , date , int( is_meeting ) , int( is_todo ) , deadline , tags )
 
     # deletes an object by ID and re-generates the list of unique tags.
     def delete( self , id ) :
@@ -109,14 +112,55 @@ class NoteDB :
         else :
             self.logger.print_error( "DB not initialized!" )
             return 
+        
 
+    def find( self , content = "any" , tags = "any" , date = "any" , is_meeting = "any" , is_todo = "any" , deadline = "any" ) :
+
+        notes = list( self.db_dict.values( ) ) 
+        valid_notes = list( )
+
+        self.logger.print_info( f"Query pack : { content } - { tags } - { date } - { is_todo } - { is_meeting } - { deadline } " )
+
+        for note in notes  :
+
+            if content != self.ANY_KW :
+                if content not in note.text :
+                    continue 
+
+            if tags != self.ANY_KW :
+                if not( set( tags ) <= set( note.tags ) ) : #If query is not a substate of note tags
+                    continue
+            
+            if date != self.ANY_KW :
+                if date != note.date :
+                    continue
+            
+            if is_meeting != self.ANY_KW :
+                if is_meeting != note.is_meeting :
+                    continue 
+            
+            if is_todo != self.ANY_KW :
+                if is_todo != note.is_todo :
+                    continue 
+
+            if deadline != self.ANY_KW :
+                if deadline != note.deadline :
+                    continue 
+            
+            print( "appending")
+            valid_notes.append( note )
+
+
+        for note in valid_notes :
+            note.print_note( ) 
+        
+                
     # UTILITIES FUNCTIONS
     def print_dict( self ) :  
         for key in self.db_dict.keys( ) :
             note = self.db_dict[ key ]
             print( f"\t PRINTING NOTE WITH ID : { key }" ) 
             note.print_note( new_line_char = self.NEW_LINE_CHAR ) 
-            print( "---" ) 
 
     def print_unique_tags( self ) :
         for tag in self.unique_tags :

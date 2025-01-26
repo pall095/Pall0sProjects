@@ -118,6 +118,83 @@ def delete_on_click( root , note_db ) :
     delete_button.grid( row = 0 , column = 2 )
     close_button.grid( row = 0 , column = 3 )
 
+def get_selected_tags( tag_list ) :
+
+    selected = list( )
+    for i in tag_list.curselection( ) :
+        selected.append( tag_list.get( i ) )
+
+    if not selected :
+        return "any"
+    else :
+        return selected
+
+def invoke_find_window( root , note_db ) :
+
+    DEFAULT = "any"
+    slave = tk.Toplevel( root ) 
+    slave.minsize( 200 , 200 )
+
+    keyword_text = tk.StringVar( value = DEFAULT )
+    keyword_label = tk.Label( slave , text = "Type content :" )
+    keyword_entry = tk.Entry( slave , textvariable = keyword_text )
+
+    tags_label = tk.Label( slave , text = "Select Tags : " ) 
+    tag_list = tk.Listbox( slave , selectmode = "multiple" )
+    for tag in note_db.unique_tags :
+        tag_list.insert( tk.END , tag )
+
+    is_meeting_flag = tk.IntVar( slave )
+    is_meeting = tk.Checkbutton( slave , text = "Is meeting flag!" , variable = is_meeting_flag ) 
+    is_todo_flag = tk.IntVar( slave )
+    is_todo = tk.Checkbutton( slave , text = "Is to do!" , variable = is_todo_flag )
+
+    date_text = tk.StringVar( slave , value = DEFAULT )
+    date_label = tk.Label( slave , text = "Date :")
+    date_entry = tk.Entry( slave , textvariable = date_text )
+    
+    deadline_text = tk.StringVar( slave , value = DEFAULT )
+    deadline_label = tk.Label( slave , text = "Deadline :"  )
+    deadline_entry = tk.Entry( slave , textvariable = deadline_text )
+
+    find_button = tk.Button( slave , text = "Find" , command = lambda : note_db.find( content = keyword_text.get( ) , 
+                                                                                      tags = get_selected_tags( tag_list ) , 
+                                                                                      is_meeting = int( is_meeting_flag.get( ) ) ,
+                                                                                      is_todo = int( is_todo_flag.get( ) ) ,
+                                                                                      date = date_text.get( ) ,
+                                                                                      deadline = deadline_text.get( ) ) ) 
 
 
+    ROW = 0 
+    COL = 0
+    keyword_label.grid( row = ROW , column = COL )
+    COL = COL + 1 
+    keyword_entry.grid( row = ROW , column = COL )
 
+    ROW = ROW + 1
+    COL = 0 
+    tags_label.grid( row = ROW , column = COL ) 
+    COL = COL + 1 
+    tag_list.grid( row = ROW , column = COL )
+
+    ROW = ROW + 1
+    COL = 0 
+    date_label.grid( row = ROW , column = COL ) 
+    COL = COL + 1 
+    date_entry.grid( row = ROW , column = COL )
+
+    ROW = ROW + 1
+    COL = 0 
+    deadline_label.grid( row = ROW , column = COL ) 
+    COL = COL + 1 
+    deadline_entry.grid( row = ROW , column = COL )
+
+    ROW = ROW + 1 
+    COL = 0 
+    is_meeting.grid( row = ROW , column = COL )
+    COL = COL + 1 
+    is_todo.grid( row = ROW , column = COL )
+
+    ROW = ROW + 1
+    COL = 0 
+    find_button.grid( row = ROW , column = COL )

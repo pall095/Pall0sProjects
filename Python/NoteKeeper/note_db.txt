@@ -1,1 +1,6 @@
-ma#a capo#ci #erp andato?||0|0||
+ma#a capo#ci #erp andato?||1|1||
+Fammi aggiungere un po' di tag va|26-01-2025|0|0||VMM,Urgent
+Prova3|29-04-2025|1|1||LCA
+Ricordati di pingare Jitesh per requisit VMM|26-01-2025|1|1|02-04-2025|VMM,requirements
+Organizza un meeting con chirs per discutere le nuove cose che sono uscite in questi giorni.##1) Ora faccio una nota volutamente molto lunga per vedere cosa succede.#2) Secondo me, gi� ci siamo	|26-01-2025|1|1||allineamento
+Iniziare a convertire gli script MATLAB in Python.#Guardare Cython.|26-01-2025|0|0||
