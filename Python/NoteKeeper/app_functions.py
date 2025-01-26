@@ -2,6 +2,7 @@ import NoteDb as db
 import Note as nt
 from tkinter import filedialog
 import tkinter as tk 
+import datetime
 
 def load_on_click( note_db ) :
 
@@ -29,6 +30,9 @@ def add_note_on_click( root , note_db ) :
 
     date_label = tk.Label( slave , text = "Date :" )
     date = tk.Entry( slave )
+
+    if note_db.autofill_date :
+        date.insert( 0 , datetime.datetime.strftime( datetime.date.today() , format = "%d-%m-%Y" ) )
 
     is_meeting_flag = tk.IntVar( ) 
     is_meeting = tk.Checkbutton( slave , text = "Is meeting flag!" , variable = is_meeting_flag ) 
@@ -75,7 +79,45 @@ def add_note_on_click( root , note_db ) :
     ROW_SLAVE = ROW_SLAVE + 1
     is_todo.grid( row = ROW_SLAVE , column = COL_SLAVE ) 
     
-    
     ROW_SLAVE = ROW_SLAVE + 1
     save_button.grid( row = ROW_SLAVE , column = COL_SLAVE )
     slave.title( "New note window!" ) 
+
+
+# CURRENTLY NOT WORKING CORRECTLY
+def change_settings_on_click( root , note_db ) :
+
+    slave = tk.Toplevel( root )
+    autosave_flag = tk.IntVar( slave , value = note_db.autosave )
+    autosave = tk.Checkbutton( slave , text = "Autosave" , variable = autosave_flag , onvalue = 1 , offvalue = 0 ) 
+    autofilldate_flag = tk.IntVar( slave , value = note_db.autofill_date )
+    autofill = tk.Checkbutton( slave , text = "Autofill date" , variable = autofilldate_flag )
+
+    autosave.grid( row = 0 , column = 0 )
+    autofill.grid( row = 0 , column = 1 ) 
+
+
+def close_app( root , note_db ) :
+
+    if( note_db.autosave == True ) :
+        note_db.save_db( )
+
+    root.destroy( )
+
+
+def delete_on_click( root , note_db ) :
+
+    slave = tk.Toplevel( root )
+    id_label = tk.Label( slave , text = "Type the ID to remove :" )
+    id_entry = tk.Entry( slave )
+    delete_button = tk.Button( slave , text = "Delete!" , command = lambda : note_db.delete( int( id_entry.get( ) ) ) )
+    close_button = tk.Button( slave , text = "Close" , command = lambda : slave.destroy( ) )
+
+    id_label.grid( row = 0 , column = 0  )
+    id_entry.grid( row = 0 , column = 1  )
+    delete_button.grid( row = 0 , column = 2 )
+    close_button.grid( row = 0 , column = 3 )
+
+
+
+
