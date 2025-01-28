@@ -58,10 +58,10 @@ class NoteDB :
             for line in db_file :
                 self.db_len = self.db_len + 1
                 line = line.rstrip( )
-                text , date , is_meeting , is_todo , deadline , tags = line.split( self.DELIMITER ) 
+                text , date , is_todo , tags = line.split( self.DELIMITER ) 
                 tags = tags.split( self.TAGS_DELIMITER )
                 self.update_unique( tags ) 
-                self.db_dict[ self.db_len ] = nt.Note( text , date , int( is_meeting ) , int( is_todo ) , deadline , tags )
+                self.db_dict[ self.db_len ] = nt.Note( text , date , int( is_todo ) , tags )
 
     # deletes an object by ID and re-generates the list of unique tags.
     def delete( self , id ) :
@@ -114,12 +114,10 @@ class NoteDB :
             return 
         
 
-    def find( self , content = "any" , tags = "any" , date = "any" , is_meeting = "any" , is_todo = "any" , deadline = "any" ) :
+    def find( self , found_list , content = "any" , tags = "any" , date = "any" , is_todo = "any" ) :
 
         notes = list( self.db_dict.values( ) ) 
-        valid_notes = list( )
-
-        self.logger.print_info( f"Query pack : { content } - { tags } - { date } - { is_todo } - { is_meeting } - { deadline } " )
+        self.logger.print_info( f"Query pack : { content } - { tags } - { date } - { is_todo } " )
 
         for note in notes  :
 
@@ -135,25 +133,16 @@ class NoteDB :
                 if date != note.date :
                     continue
             
-            if is_meeting != self.ANY_KW :
-                if is_meeting != note.is_meeting :
-                    continue 
-            
             if is_todo != self.ANY_KW :
                 if is_todo != note.is_todo :
                     continue 
-
-            if deadline != self.ANY_KW :
-                if deadline != note.deadline :
-                    continue 
-            
+                
             print( "appending")
-            valid_notes.append( note )
+            found_list.append( note )
 
+        for note in found_list :
+            note.print_note( )
 
-        for note in valid_notes :
-            note.print_note( ) 
-        
                 
     # UTILITIES FUNCTIONS
     def print_dict( self ) :  

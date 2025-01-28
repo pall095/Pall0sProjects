@@ -1,5 +1,6 @@
 
 #include "utils.h"
+#include<stdio.h>
 
 void display_grid( int **grid ){
     int extra_char = 7 ;

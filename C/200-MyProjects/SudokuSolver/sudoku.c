@@ -1,4 +1,4 @@
-#include "utils.h"
+#include<stdio.h>
 
 void main( int argc , char **argv ){
     int **grid = read_file( argv[ 1 ] ) ;
