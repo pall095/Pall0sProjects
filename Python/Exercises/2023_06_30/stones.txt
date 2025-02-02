@@ -1,0 +1,4 @@
+Atlantis,Soul Stone,Sea Opal
+Great Barrier Reef,Black Coral,Moonstone,Pearl
+Mariana Trench,Topaz,Smoky Quartz,Pearl,Soul Stone
+Pacific Rim,Black Coral,Moonstone,Sea Opal

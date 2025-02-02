@@ -1,8 +1,7 @@
 #include<stdio.h>
-#include<stdlib.h>
-#include<string.h>
-#include<ctype.h>
+#include<stdio.h>
 
+<<<<<<< Updated upstream
 void f( int i , int j , int k ){
 
     if( i < 0 && j < 0 && k < 0 ){
@@ -29,4 +28,9 @@ void f( int i , int j , int k ){
 
 void main( ){
     f( 5 , 4 , 3 ) ;
+=======
+
+void main( ){
+    printf( "Tette" ) ;
+>>>>>>> Stashed changes
 }
