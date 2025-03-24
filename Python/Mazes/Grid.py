@@ -3,6 +3,8 @@ from Cell import Cell
 from tkinter import *
 from copy import deepcopy
 from math import dist
+from State import State
+from tkinter.filedialog import askopenfilename
 
 
 class Grid:
@@ -28,8 +30,9 @@ class Grid:
         for x in range( self.ROW ) : 
             tmp = [ ]
             for y in range( self.COL ) :              
-                tmp.append( Cell( x , y , 0 , 0 ) )                      
+                tmp.append( Cell( x , y , state = State.FREE , depth = 0 ) )                      
             self.grid.append( tmp )
+
     
     
     # ----------------------------------- GETTER & SETTER -----------------------------------  #
@@ -50,12 +53,12 @@ class Grid:
     def getDepth( self , x , y ) :
         return self.grid[ x ][ y ].depth 
      
-    def setStart( self , x_start , y_start ) :
+    def setStart( self , new_x , new_y ) :
         
-        self.setState( self.start_x , self.start_y , 0 )
-        self.start_x = x_start 
-        self.start_y = y_start
-        self.setState( self.start_x , self.start_y , 2 )
+        self.setState( self.start_x , self.start_y , State.FREE )
+        self.start_x = new_x 
+        self.start_y = new_y
+        self.setState( self.start_x , self.start_y , State.START )
         self.queue = [ ]
         self.queue.append( self.getCell( self.start_x , self.start_y ) )
 
@@ -75,9 +78,9 @@ class Grid:
             return -1
         else:
             currentCell = self.queue.pop( 0 )             
-        if currentCell.state == 4 :
+        if currentCell.state == State.EXPANDED :
             return 0         
-        if currentCell.state == 3 :
+        if currentCell.state == State.END :
             print( "SOLVED!  Solution found" )
             self.showSolution( currentCell )
             return 1
@@ -91,8 +94,8 @@ class Grid:
                 print( "---")
             self.expandCell2( currentCell , method )
             self.expandedNodes += 1 
-            if currentCell.state != 2 : 
-                self.setState( currentCell.row , currentCell.col , 4 )
+            if currentCell.state != State.START : 
+                self.setState( currentCell.row , currentCell.col , State.EXPANDED )
             self.ROOT.update( )
             return 0
         
@@ -113,7 +116,7 @@ class Grid:
                 temp.depth = self.getDepth( row , col ) + 1 
                 temp.path.append( ( row , col ) )
                 temp.cost = temp.depth + self.updateCost( temp.row , temp.col , method )
-                if temp.state != 4 and temp.state != 2 and temp.state != 1  :
+                if temp.state != State.EXPANDED and temp.state != State.START and temp.state != State.WALL  :
                     self.queue.append( temp )                      
         self.updateQueu( method )
         
@@ -128,8 +131,8 @@ class Grid:
         if x < 0 : return None
         if y >= self.COL : return None
         if y < 0 : return None
-        if self.getState( x , y ) == 1 : return None
-        if self.getState( x , y ) == 4 : return None    
+        if self.getState( x , y ) == State.WALL : return None
+        if self.getState( x , y ) == State.EXPANDED : return None    
         return self.getCell( x , y )
     
     # Update the cost of the given cell based on teh method passed as input argument.
@@ -138,11 +141,11 @@ class Grid:
     
         if method == "rand" :
             return rand.randint( 0 , 100 )
-        if method == "man" :
+        if method == "Astar Manhatthan" :
             return abs( x - self.end_x ) + abs( y - self.end_y )  
-        if method == "Astar_euclidean" :
+        if method == "Astar Euclidean" :
             return dist( [ x , y ] ,  [ self.end_x , self.end_y ] )
-        if method == "depth" or method == "breath" :
+        if method == "Depth First" or method == "Breath First" :
             return 0
         
     # Sorts the queue based on the search method.
@@ -167,17 +170,17 @@ class Grid:
         y1 = y * self.HEIGHT / self.ROW
         y2 = y1 + self.HEIGHT / self.ROW
           
-        if self.getState( x , y ) == 0 :
+        if self.getState( x , y ) == State.FREE :
             self.CANVAS.create_rectangle( x1 , y1 , x2 , y2 , fill = "white" )
-        elif self.getState( x , y ) == 1 :
+        elif self.getState( x , y ) == State.WALL :
             self.CANVAS.create_rectangle( x1 , y1 , x2 , y2 , fill = "black" )
-        elif self.getState( x , y ) == 2 :
+        elif self.getState( x , y ) == State.START :
             self.CANVAS.create_rectangle( x1 , y1 , x2 , y2 , fill = "green" )
-        elif self.getState( x , y ) == 3 :
+        elif self.getState( x , y ) == State.END :
             self.CANVAS.create_rectangle( x1 , y1 , x2 , y2 , fill = "red" )
-        elif self.getState( x , y ) == 4 :
+        elif self.getState( x , y ) == State.EXPANDED :
             self.CANVAS.create_rectangle( x1 , y1 , x2 , y2 , fill = "yellow" )    
-        elif self.getState( x , y ) == 5 :
+        elif self.getState( x , y ) == State.SOLUTION :
             self.CANVAS.create_rectangle( x1 , y1 , x2 , y2 , fill = "blue" )    
                        
         self.CANVAS.pack( )
@@ -186,7 +189,7 @@ class Grid:
     def showSolution( self , cell ) :  
         print( "Solution length: " + str( len( cell.path ) ) )
         for item in cell.path :      
-            if not( item[ 0 ] == self.start_x and item[ 1 ] == self.start_y ) : self.setState( item[ 0 ], item[ 1 ] , 5 )
+            if not( item[ 0 ] == self.start_x and item[ 1 ] == self.start_y ) : self.setState( item[ 0 ], item[ 1 ] , State.SOLUTION )
 
     
     # ----------------------------------- MAZE HANDLING -----------------------------------  #
@@ -194,15 +197,22 @@ class Grid:
     # Master method. Given the grid (self) and the method, calls the appropriate function to 
     # populate the grid.
     def generateMaze( self , method ) :      
+        
         if method == "random" :
             return self.generateRandomMaze( )
+        
+        elif method == "from file" :
+            input_file = askopenfilename( title = "Select input file" )
+            return self.loadMaze( inputFile = input_file )
+        
+
         
     #Saving the maze
     def saveMaze( self , outputFile ) :      
         f = open( outputFile , 'w' )
         for row in range( self.ROW  ):
             for col in range( self.COL ) :             
-                f.write( str( self.getState( row , col ) ) )
+                f.write( str( self.getState( row , col ).value ) )
             f.write( "\n" )
         f.close( )
     
@@ -219,13 +229,13 @@ class Grid:
                 self.COL = col 
                 col = 0  
             else:
-                state = int( char )
+                state = State( int( char ) ) 
                 self.setState( row , col , state )               
-                if state == 2 :
+                if state == State.START :
                     self.start_x = row 
                     self.start_y = col
-                    self.queue.append( self.getCell( self.start_x , self.start_y ) )               
-                if state == 3 :
+                    self.queue.append( self.getCell( self.start_x , self.start_y ) )             
+                if state == State.END :
                     self.end_x = row
                     self.end_y = col
                 col = col + 1               
@@ -237,12 +247,11 @@ class Grid:
         
         for x in range( self.ROW):
             for y in range( self.COL ):
-                
                 state_temp = rand.random( )
                 if state_temp > self.WALL_THR :
-                    self.setState( x , y , 1 ) 
+                    self.setState( x , y , State.WALL ) 
                 else :
-                    self.setState( x , y , 0 )
+                    self.setState( x , y , State.FREE )
                                    
         start_setted = False
         end_setted = False
@@ -255,15 +264,15 @@ class Grid:
             end_x = rand.randint( 0 , self.ROW - 1 )
             end_y = rand.randint( 0 , self.COL - 1 )
               
-            if self.getState( start_x , start_y ) == 0  and not( start_setted ) :
-                self.setState( start_x , start_y ,  2 )
+            if self.getState( start_x , start_y ) == State.FREE  and not( start_setted ) :
+                self.setState( start_x , start_y ,  State.START )
                 self.start_x = start_x 
                 self.start_y = start_y
                 self.queue.append( self.getCell( self.start_x , self.start_y ) )
                 start_setted = True
                 
-            if self.getState( end_x , end_y ) == 0  and not( end_setted ) :
-                self.setState( end_x , end_y ,  3 )
+            if self.getState( end_x , end_y ) == State.FREE  and not( end_setted ) :
+                self.setState( end_x , end_y ,  State.END )
                 self.end_x = end_x
                 self.end_y = end_y 
                 end_setted = True
