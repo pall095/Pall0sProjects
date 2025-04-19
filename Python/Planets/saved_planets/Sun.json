@@ -1,0 +1,14 @@
+{
+    "name": "Sun",
+    "mass": 100.0,
+    "radius": 10.0,
+    "rgb": "248:151:5",
+    "initial_pos_x": 0.0,
+    "initial_pos_y": 0.0,
+    "initial_speed_x": 0.0,
+    "initial_speed_y": 0.0,
+    "initial_acc_x": 0.0,
+    "initial_acc_y": 0.0,
+    "check_collision_flag": false,
+    "check_gravity_flag": false
+}

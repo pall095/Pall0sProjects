@@ -1,0 +1,14 @@
+{
+    "name": "Saturn",
+    "mass": 1.0,
+    "radius": 5.0,
+    "rgb": "135:126:124",
+    "initial_pos_x": -60.0,
+    "initial_pos_y": -60.0,
+    "initial_speed_x": -0.7,
+    "initial_speed_y": 0.5,
+    "initial_acc_x": 0.0,
+    "initial_acc_y": 0.0,
+    "check_collision_flag": false,
+    "check_gravity_flag": true
+}

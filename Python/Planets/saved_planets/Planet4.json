@@ -1,0 +1,14 @@
+{
+    "name": "Pluto",
+    "mass": 0.5,
+    "radius": 3.0,
+    "rgb": "200:200:246",
+    "initial_pos_x": 200.0,
+    "initial_pos_y": 200.0,
+    "initial_speed_x": 0,
+    "initial_speed_y": -0.1,
+    "initial_acc_x": 0.0,
+    "initial_acc_y": 0.0,
+    "check_collision_flag": false,
+    "check_gravity_flag": true
+}

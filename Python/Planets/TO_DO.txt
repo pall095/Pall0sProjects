@@ -1,0 +1,2 @@
+1) Fare in modo tale che quando chiudi il gioco si resettino i pianeti. Per ora azzero la lista che c'è nella classe Game (lo faccio quando chiamo il 
+distructor). Però, il problema, è che la lista di file (ovvero la lista che dichiaro nel main rimane costante).
