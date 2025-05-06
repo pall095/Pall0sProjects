@@ -9,7 +9,8 @@ import app_data.Configs.game_config as _GAME_CONFIG
 
 root = tk.Tk( )
 root.geometry( _APP_CONFIG.MAIN_WINDOW_SIZE )
-planet_dict_list = list(  )
+planet_dict_list = list( )
+game = Game( )
 
 #Define Image
 image = ImageTk.PhotoImage( Image.open( _APP_CONFIG.IMAGE_PATH ).resize( _APP_CONFIG.IMAGE_SIZE ) )
@@ -19,10 +20,10 @@ image_label = tk.Label( root , image = image )
 define_planet_button  = tk.Button( root , text = "Define a planet" , command = lambda : define_planet_window.define_planet_window( root ,  planet_dict_list ) ) 
 
 # Load Planets
-load_planets_button  = tk.Button( root , text = "Load planets" , command = lambda : define_planet_window.load_planets( planet_dict_list ) ) 
+load_planets_button  = tk.Button( root , text = "Load planets" , command = lambda : game.load_from_list( ) ) 
 
 # Start button
-start_button = tk.Button( root , text = "Start game" , command = lambda : start_game( planet_dict_list ) )
+start_button = tk.Button( root , text = "Start game" , command = lambda : game.start( ) )
 
 ROW = 0 
 COL = 0 

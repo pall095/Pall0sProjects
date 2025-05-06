@@ -65,18 +65,6 @@ def load_to_edit( name_var , rgb_var , mass_var , radius_var ,  pos_x_var , pos_
     gravity_flag_var.set( data[ _PLANET_CONFIG.CHECK_GRAVITY_KEY] )
 
 
-def load_planets( planet_dict_list  ) :
-
-    filenames = filedialog.askopenfilenames( ) 
-
-    for filename in filenames :
-        with open( filename , "r" ) as file :
-            data = json.load( file ) 
-            planet_dict_list.append( data )
-            print( f"Adding : { data[ _PLANET_CONFIG.NAME_KEY ] }" )
-    
-
-
 def define_planet_window( root , planet_dict_list ) :
 
     window = tk.Toplevel( root ) 

@@ -16,6 +16,8 @@ class Circle:
         self.speed_y = vy
         self.acc_x = ax
         self.acc_y = ay
+
+        self.trajectory_list = list( )
         
         self.check_collision = collision_flag
         self.check_gravity = gravity_flag
@@ -89,6 +91,11 @@ class Circle:
         
         self.xc = self.xc + self.speed_x
         self.yc = self.yc + self.speed_y
+
+        if len( self.trajectory_list ) >= _PLANET_CONFIG.MAX_TRAJECTORY_HISTORY and not( _PLANET_CONFIG.MAX_TRAJECTORY_HISTORY ) == -1 :
+            self.trajectory_list.pop( 0 )
+        
+        self.trajectory_list.append( ( self.xc , self.yc ) )
         
     def impose_pos( self , new_pos : list ) :
         self.xc = new_pos[ 0 ]

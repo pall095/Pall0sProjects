@@ -7,42 +7,60 @@ from Circle import Circle
 import time
 import random
 import utils as utl
-from threading import Thread
+from tkinter import filedialog
+import json
 import app_data.Configs.game_config as _GAME_CONFIG
+
 
 
 
 class Game :
 
-    def __init__( self , object_list : list ) :
+    def __init__( self : list ) :
         
         self.game_speed = _GAME_CONFIG.GAME_SPEED
         self.WIDTH = _GAME_CONFIG.GAME_WIDTH
-        self.HEIGHT = _GAME_CONFIG.GAME_WIDTH
+        self.HEIGHT = _GAME_CONFIG.GAME_HEIGHT
         self.screen = None
-        self.background = pygame.transform.scale( pygame.image.load( _GAME_CONFIG.BG_PATH ) , ( self.WIDTH , self.HEIGHT ) )
-        self.object_list = object_list
-        self.isRunning = False
-        self.thread = None
-        
-    def __del__( self ) :
+        self.bg_image = pygame.image.load( _GAME_CONFIG.BG_PATH )
+        self.background = pygame.transform.scale( self.bg_image , ( self.WIDTH , self.HEIGHT ) )
         self.object_list = list( )
-        print( "Destructor called! - Resetting object list")
+        
+        self.is_running = False
+        self.is_initialized = False
+        self.draw_tail_setting = _GAME_CONFIG.DRAW_TAIL
+        self.tail_radius_setting = _GAME_CONFIG.TAIL_RADIUS
+        self.rest_on_closure_setting = _GAME_CONFIG.RESET_ON_CLOSURE
         
         
     def start( self ) :
 
-        if len( self.object_list ) == 0 :
-            raise RuntimeError( "Planet list is empty!" )
+        if not( self.is_initialized ) :     
+            raise RuntimeError( "Game is not initialized!")
         else :
             self.game_loop( )
+
+    def handle_closure( self ) :
+
+        self.is_running = False 
+        
+        if self.rest_on_closure_setting :
+            print( "Reset setting ON. Re-initialize for next run!" )
+            self.is_initialized = False 
+            self.object_list = list( )
+        else :
+            print( "Reset setting OFF. No need to re-initialize at next run!" )
+
+        pygame.quit( )
+        return 
 
     def game_loop( self ) :
         
         # Run until the user asks to quit
-        self.screen = pygame.display.set_mode([ self.WIDTH , self.HEIGHT ] )
-        self.isRunning = True
-        while self.isRunning :
+        self.screen = pygame.display.set_mode([ self.WIDTH , self.HEIGHT ] , pygame.RESIZABLE )
+        self.is_running = True
+
+        while self.is_running :
         
             self.screen.blit( self.background , (0, 0) )
         
@@ -60,19 +78,41 @@ class Game :
             time.sleep( self.game_speed )
 
             for event in pygame.event.get() :
-                if event.type == pygame.QUIT or self.isRunning == False:
-                    self.isRunning = False 
-                    pygame.quit()
+                if event.type == pygame.QUIT or self.is_running == False:
+                    self.handle_closure( )
                     break
          
         return
     
 
+    def ask_for_planet_files( self ) -> list :
+
+        filenames = filedialog.askopenfilenames( ) 
+        planet_dict_list = list( )
+
+        for filename in filenames :
+            with open( filename , "r" ) as file :
+                data = json.load( file ) 
+                planet_dict_list.append( data )
+
+        return planet_dict_list
+
+    def load_from_list( self ) :
+
+        planet_dict_list = self.ask_for_planet_files( )
+
+        for planet_dict in planet_dict_list :   
+            circle = Circle.init_from_dict( planet_dict )
+            circle.offset_pos( ( _GAME_CONFIG.GAME_WIDTH / 2 , _GAME_CONFIG.GAME_HEIGHT / 2 ) )
+            self.object_list.append( circle )
+
+        self.is_initialized = True 
+
+
     def add_planet( self , new_circle : Circle ) :
         self.object_list.append( new_circle )
     
     def draw_planet( self , circle : Circle ) :
-
         # Drawign planet
         pygame.draw.circle( self.screen , circle.rgb , circle.get_current_pos( ) , circle.get_radius( ) )
 
@@ -81,6 +121,10 @@ class Game :
 
         # Drawing acceleration vector
         pygame.draw.line( self.screen , _GAME_CONFIG.ACC_VECTOR_RGB , circle.get_current_pos( ) , circle.get_acc_vector( _GAME_CONFIG.VECTORS_RESCALE_FACTOR ) )
+        
+        if self.draw_tail_setting :
+            for point in circle.trajectory_list :
+                pygame.draw.circle( self.screen , circle.rgb , point , self.tail_radius_setting )
 
     # --- GAME PHYSICS --- #
     def compute_gravitiy( self ) :    
