@@ -1,0 +1,14 @@
+{
+    "name": "SUN2",
+    "mass": 500.0,
+    "radius": 10.0,
+    "rgb": "100:200:100",
+    "initial_pos_x": 0.0,
+    "initial_pos_y": 0.0,
+    "initial_speed_x": 0.0,
+    "initial_speed_y": 0.0,
+    "initial_acc_x": 0.0,
+    "initial_acc_y": 0.0,
+    "check_collision_flag": true,
+    "check_gravity_flag": false
+}

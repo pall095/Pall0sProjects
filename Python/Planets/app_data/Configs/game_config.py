@@ -11,5 +11,5 @@ ACC_VECTOR_RGB = [ 0 , 0 , 255 ]
 
 # Behavior
 RESET_ON_CLOSURE = True # If true, when terminating a run, need to re-load all the planets.
-DRAW_TAIL = False # Allow to draw the tail of planets (i.e. the trajectory ) 
+DRAW_TAIL = True # Allow to draw the tail of planets (i.e. the trajectory ) 
 TAIL_RADIUS = 1 # Radius of the tail "circle"
