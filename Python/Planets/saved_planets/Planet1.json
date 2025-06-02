@@ -1,0 +1,14 @@
+{
+    "name": "Hearth",
+    "mass": 1.0,
+    "radius": 5.0,
+    "rgb": "255:0:255",
+    "initial_pos_x": 50.0,
+    "initial_pos_y": 50.0,
+    "initial_speed_x": 1.0,
+    "initial_speed_y": -1.0,
+    "initial_acc_x": 0.0,
+    "initial_acc_y": 0.0,
+    "check_collision_flag": false,
+    "check_gravity_flag": true
+}

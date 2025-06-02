@@ -1,0 +1,14 @@
+{
+    "name": "Pippo",
+    "mass": 3.0,
+    "radius": 2.0,
+    "rgb": "100:100:100",
+    "initial_pos_x": 10.0,
+    "initial_pos_y": 10.0,
+    "initial_speed_x": -1.0,
+    "initial_speed_y": 1.0,
+    "initial_acc_x": 0.0,
+    "initial_acc_y": 0.0,
+    "check_collision_flag": false,
+    "check_gravity_flag": true
+}
