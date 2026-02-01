@@ -1,0 +1,44 @@
+[
+    {
+        "Name" : "S0" ,
+        "Output" : 0 , 
+        "Transitions" : [
+            {
+                "Destination" : "S1" ,
+                "Trigger" : 0
+            } ,
+            {
+                "Destination" : "S1" ,
+                "Trigger" : 1 
+            }
+        ]
+    } ,
+    {
+        "Name" : "S1" ,
+        "Output" : 0 ,
+        "Transitions" : [
+            {
+                "Destination" : "S2" ,
+                "Trigger" : 0
+            } ,
+            {
+                "Destination" : "S1" ,
+                "Trigger" : 1
+            }
+        ]
+    } ,
+    {
+        "Name" : "S2" ,
+        "Output" : 1 ,
+        "Transitions" : [
+            {
+                "Destination" : "S2" ,
+                "Trigger" : 0
+            } ,
+            {
+                "Destination" : "S1" ,
+                "Trigger" : 1 
+            }
+        ]
+    }
+]

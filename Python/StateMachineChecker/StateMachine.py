@@ -14,8 +14,6 @@ class StateMachine :
         
         for state_dict in definition_list :
             obj.state_list.append( State.allocate_from_dict( state_dict ) ) 
-
-        obj.set_state( obj.state_list[ 0 ] )
     
         return obj
 
@@ -36,10 +34,18 @@ class StateMachine :
     def run( self ) :
 
         self.is_running = True 
+        self.set_state( self.state_list[ 0 ] )
 
         while self.is_running :
             self.print_status( )
             self.process_input( )
+
+    def reset( self ) :
+
+        self.input_sequence = list( )
+        self.is_running = False
+        self.match_count = 0 
+        self.time = 0 
 
     # Evaluates which state to go based on current input.
     def eval( self , current_input ) :
@@ -60,21 +66,24 @@ class StateMachine :
 
     def process_input( self ) :
 
-        current_input = int( input( "Provide input:" ) )
+        current_input = int( input( "Provide input (-1 to stop, -2 to reset):" ) )
         self.input_sequence.append( current_input )
 
         if current_input == -1 :
-            self.is_running = False 
+            self.is_running = False
+        
+        elif current_input == -2 :
+            self.is_running = False
+            self.reset( )
+            self.run( )
         else :
             self.eval( current_input )
 
         self.time += 1 
         return
+    
 
-
-
-        
-        
+    
     # SETTERS 
     # Sets the current state.
     # State request can either be a string (plain state name) or a State object
@@ -84,7 +93,7 @@ class StateMachine :
         elif type( state_req ) is str :
             self.set_state_by_name( state_req )
         else :
-            raise AttributeError( "The state argument to \"set_state\" must be of typ \"str\" or \"Stat\"")
+            raise AttributeError( "The state argument to \"set_state\" must be of typ \"str\" or \"State\"")
         
         self.update_count( )
         

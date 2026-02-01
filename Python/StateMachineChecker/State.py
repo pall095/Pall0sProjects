@@ -3,6 +3,7 @@ from Transition import Transition
 class State :
 
     NAME_KEY = "Name"
+    BITMASK_KEY = "Bitmask"
     TRANSITION_KEY = "Transitions"
     OUTPUT_KEY = "Output"
 

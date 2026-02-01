@@ -1,26 +1,31 @@
 import math
 
 
-def eval( current_comb ) :
+def eval( current_comb , use_int = True ) :
 
     X0 = current_comb[ 0 ]
     Y0 = current_comb[ 1 ]
     I = current_comb[ 2 ]
 
-    if X0 and Y0 :
-        return
+    X1 = ( not( I ) and not( X0 ) and Y0 ) or ( I and X0 and not( Y0 ) )
+    Y1 = I
+    Z = I and X0 and not( Y0 )
 
-    X1 = ( I and Y0 ) or ( I and X0 )
-    Y1 = I and not( X0 ) and not( Y0 )
-    Z = X1
+    if use_int : 
+        X0 = int( X0 )
+        Y0 = int( Y0 )
+        I = int( I )
+        X1 = int( X1 )
+        Y1 = int( Y1 )
+        Z = int( Z )
 
-    print( f" X0: { X0 } - Y0: { Y0 } - I: { I } | X1: { X1 } - Y1: { Y1 } - Z: { Z } - ")
+        print( f" X0: { X0 } - Y0: { Y0 } - I: { I } | X1: { X1 } - Y1: { Y1 } - Z: { Z } - ")
 
 
 
 def eval_r ( current_comb , values , combin_len , depth ) :
 
-    if depth >= comb_len :
+    if depth >= combin_len :
         eval( current_comb )
         return 
 
