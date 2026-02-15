@@ -1,0 +1,134 @@
+ECOMMERCE:
+Amazon
+
+INVESTIMENTI:
+To Instant Access Savings
+To Robo portfolio
+To pocket EUR Salvadanaio from EUR
+To Bold Stack portfolio
+To investment account
+
+RITORNI:
+Interest earned - Instant Access Savings
+From Instant Access Savings
+
+FOOD:
+Pam Panorama
+Carrefour
+Ok Market Millesimo
+Coop
+Esselunga
+ALDI
+PENNY
+
+LOCALI&DELIVERY:
+Proncii
+Sushisound
+Glovo
+Open Baladin
+Ristorante
+Pub
+Sushi
+El Centenario
+Rockburger
+The 1870 Huntsman Pub
+Pasticceria Pastorino
+Gelateria La Romana T.
+Pastis
+Mollica
+Pantarei Ristorante
+La Berbora
+Sushisound S.n.c. Di H
+Jolly Pub
+Memorial Giacomo Briano
+Caffetteria Regio Di R
+Starbucks
+Peterbacco
+Capodoglio Murazzi
+Supersonic
+La Choza Srls
+The Isle Of Skye
+Birreria Petrarc
+Just Eat
+Himi
+Mulo
+Mercato Centrale
+Donbury House
+Il Mulo
+Sushi Time
+Astoria
+Istar Istanbul Kebap
+Pulled Factory
+Toccalmatto
+Bike Cafe Srl Semplifi
+Alibi
+Ã LA VOLÃE
+Yamamoto
+Se.da.ste Sn
+BAR IMBARCHI
+Rifugio Cascina Miera
+Capri
+I Love Poke Casalecchi
+Pastis Wip Work
+Pizzeria Al Bunker
+B-evolution
+Loris Caffe
+Horas Social Food Di .
+Birreria Petrarca
+
+SUBSCRIPTIONS:
+OpenAI
+Google One
+
+FUMO:
+Tabacchi
+Tabaccheria
+The Vaping Company
+Bar Tabacchi 21
+Bonino Lucrezia
+Tabaccheria di Martorana Barbara
+
+MOVIMENTO:
+Bird
+Cooltra
+Knet
+Europam
+Eni
+Centro Calor
+IP
+Trenitalia
+SATAP
+
+EVENTI&VIAGGI:
+TicketSms
+Saily
+Echollective
+EasyJet
+
+HOBBY&SHOPPING:
+Amazon Kindle
+Decathlon
+Snipes
+LaFeltrinelli
+H&M
+Pila Snowland
+Intimissimi
+Mondadori
+ABYstyle
+La Rinascente
+
+GIROCONTI:
+Payment from PALLOMO MATTEO
+
+PAGAMENTI_RICEVUTI:
+Transfer from SIMONE SARDO
+Transfer from NOEMI BIANCO
+
+PAGAMENTI_MANDATI:
+Transfer to SIMONE SARDO
+Transfer to Revolut user
+
+CURAPERSONALE:
+Angelo Parrucchiere
+Farmacia San Nazaro
+Farmacia Madonna Dell'

@@ -1,0 +1,57 @@
+﻿Type,Product,Started Date,Completed Date,Description,Amount,Fee,Currency,State,Balance
+Transfer,Current,2025-12-31 18:28:27,2025-12-31 18:28:33,To Robo portfolio,-0.05,0,EUR,COMPLETED,2208.06
+Transfer,Current,2026-01-01 3:33:40,2026-01-01 3:33:45,To Robo portfolio,-5,0,EUR,COMPLETED,2203.06
+Card Payment,Current,2025-12-31 18:28:27,2026-01-01 3:46:05,Bird,-2.99,0,EUR,COMPLETED,2200.07
+Card Payment,Current,2026-01-01 3:33:39,2026-01-01 17:33:46,Club Supermarket,-10,0,EUR,COMPLETED,2190.07
+Transfer,Current,2026-01-02 10:21:23,2026-01-02 10:21:23,To Instant Access Savings,-20,0,EUR,COMPLETED,2170.07
+Transfer,Current,2026-01-03 10:22:32,2026-01-03 10:22:32,To Robo portfolio,-20,0,EUR,COMPLETED,2150.07
+Transfer,Current,2026-01-03 19:42:39,2026-01-03 19:42:45,To Robo portfolio,-0.05,0,EUR,COMPLETED,2150.02
+Card Payment,Current,2026-01-03 19:42:39,2026-01-04 3:30:38,Amazon,-4.99,0,EUR,COMPLETED,2145.03
+Transfer,Current,2026-01-05 17:18:45,2026-01-05 17:18:50,To Robo portfolio,-2.95,0,EUR,COMPLETED,2142.08
+Card Payment,Current,2026-01-05 17:18:44,2026-01-07 9:46:31,Pam Panorama,-47.41,0,EUR,COMPLETED,2094.67
+Transfer,Current,2026-01-08 19:53:40,2026-01-08 19:53:45,To Robo portfolio,-5,0,EUR,COMPLETED,2089.67
+Card Payment,Current,2026-01-08 19:53:39,2026-01-09 3:46:46,OpenAI,-8,0,EUR,COMPLETED,2081.67
+Transfer,Current,2026-01-09 10:23:17,2026-01-09 10:23:17,To Instant Access Savings,-20,0,EUR,COMPLETED,2061.67
+Transfer,Current,2026-01-09 17:23:55,2026-01-09 17:24:01,To Robo portfolio,-2.25,0,EUR,COMPLETED,2059.42
+Transfer,Current,2026-01-10 10:25:10,2026-01-10 10:25:11,To Robo portfolio,-20,0,EUR,COMPLETED,2039.42
+Card Payment,Current,2026-01-09 17:23:54,2026-01-10 11:25:02,Pam Panorama,-3.55,0,EUR,COMPLETED,2035.87
+Transfer,Current,2026-01-10 20:00:41,2026-01-10 20:00:46,To Robo portfolio,-5,0,EUR,COMPLETED,2030.87
+Transfer,Current,2026-01-10 21:41:08,2026-01-10 21:41:13,To Robo portfolio,-1.5,0,EUR,COMPLETED,2029.37
+Card Payment,Current,2026-01-10 20:00:40,2026-01-11 10:44:20,Maior Service,-5,0,EUR,COMPLETED,2024.37
+Transfer,Current,2026-01-11 15:20:14,2026-01-11 15:20:19,To Robo portfolio,-2.55,0,EUR,COMPLETED,2021.82
+Transfer,Current,2026-01-11 15:27:17,2026-01-11 15:27:22,To Robo portfolio,-1.5,0,EUR,COMPLETED,2020.32
+Card Payment,Current,2026-01-10 21:41:07,2026-01-12 3:53:03,Sushisound S.n.c. Di H,-32.7,0,EUR,COMPLETED,1987.62
+Card Payment,Current,2026-01-11 15:20:13,2026-01-12 10:27:32,Pam Panorama,-56.49,0,EUR,COMPLETED,1931.13
+Card Payment,Current,2026-01-11 15:27:16,2026-01-12 15:25:52,Bar Tabacchi 21,-7.7,0,EUR,COMPLETED,1923.43
+Card Payment,Current,2026-01-13 11:03:46,,Amazon,-249.99,0,EUR,REVERTED,
+Transfer,Current,2026-01-13 11:03:46,2026-01-13 11:03:51,To Robo portfolio,-0.05,0,EUR,COMPLETED,1923.38
+Transfer,Current,2026-01-13 11:04:58,2026-01-13 11:05:03,To Robo portfolio,-0.05,0,EUR,COMPLETED,1923.33
+Card Payment,Current,2026-01-13 11:04:57,2026-01-14 3:39:36,Amazon,-249.99,0,EUR,COMPLETED,1673.34
+Transfer,Current,2026-01-14 19:35:11,2026-01-14 19:35:11,To investment account,-172.53,0,EUR,COMPLETED,1500.81
+Transfer,Current,2026-01-16 10:21:49,2026-01-16 10:21:49,To Instant Access Savings,-20,0,EUR,COMPLETED,1480.81
+Transfer,Current,2026-01-16 19:32:11,2026-01-16 19:32:16,To Robo portfolio,-4.2,0,EUR,COMPLETED,1476.61
+Card Payment,Current,2026-01-16 19:32:10,2026-01-17 3:55:21,Glovo,-27.16,0,EUR,COMPLETED,1449.45
+Transfer,Current,2026-01-17 10:17:46,2026-01-17 10:17:46,To Robo portfolio,-20,0,EUR,COMPLETED,1429.45
+Card Payment,Current,2026-01-17 15:17:46,,Pam Panorama,-39.48,0,EUR,PENDING,
+Transfer,Current,2026-01-17 15:17:47,2026-01-17 15:17:53,To Robo portfolio,-2.6,0,EUR,COMPLETED,1426.85
+Interest,Deposit,2026-01-01 2:35:20,2026-01-01 2:35:20,Interest earned - Instant Access Savings,0.06,0.01,EUR,COMPLETED,1445.13
+Interest,Deposit,2026-01-02 2:35:09,2026-01-02 2:35:09,Interest earned - Instant Access Savings,0.06,0.02,EUR,COMPLETED,1445.17
+Transfer,Deposit,2026-01-02 10:21:23,2026-01-02 10:21:23,To Instant Access Savings,20,0,EUR,COMPLETED,1465.17
+Interest,Deposit,2026-01-03 2:53:52,2026-01-03 2:53:52,Interest earned - Instant Access Savings,0.06,0.01,EUR,COMPLETED,1465.22
+Interest,Deposit,2026-01-04 2:36:01,2026-01-04 2:36:01,Interest earned - Instant Access Savings,0.06,0.02,EUR,COMPLETED,1465.26
+Interest,Deposit,2026-01-05 2:37:41,2026-01-05 2:37:41,Interest earned - Instant Access Savings,0.06,0.01,EUR,COMPLETED,1465.31
+Interest,Deposit,2026-01-06 2:43:13,2026-01-06 2:43:14,Interest earned - Instant Access Savings,0.06,0.02,EUR,COMPLETED,1465.35
+Interest,Deposit,2026-01-07 2:15:19,2026-01-07 2:15:19,Interest earned - Instant Access Savings,0.06,0.01,EUR,COMPLETED,1465.4
+Interest,Deposit,2026-01-08 2:45:10,2026-01-08 2:45:10,Interest earned - Instant Access Savings,0.06,0.02,EUR,COMPLETED,1465.44
+Interest,Deposit,2026-01-09 2:19:33,2026-01-09 2:19:33,Interest earned - Instant Access Savings,0.06,0.02,EUR,COMPLETED,1465.48
+Transfer,Deposit,2026-01-09 10:23:17,2026-01-09 10:23:17,To Instant Access Savings,20,0,EUR,COMPLETED,1485.48
+Interest,Deposit,2026-01-10 2:24:55,2026-01-10 2:24:55,Interest earned - Instant Access Savings,0.06,0.01,EUR,COMPLETED,1485.53
+Interest,Deposit,2026-01-11 2:21:18,2026-01-11 2:21:18,Interest earned - Instant Access Savings,0.06,0.02,EUR,COMPLETED,1485.57
+Interest,Deposit,2026-01-12 2:30:16,2026-01-12 2:30:16,Interest earned - Instant Access Savings,0.06,0.01,EUR,COMPLETED,1485.62
+Interest,Deposit,2026-01-13 2:18:45,2026-01-13 2:18:45,Interest earned - Instant Access Savings,0.06,0.02,EUR,COMPLETED,1485.66
+Interest,Deposit,2026-01-14 2:44:10,2026-01-14 2:44:10,Interest earned - Instant Access Savings,0.06,0.01,EUR,COMPLETED,1485.71
+Interest,Deposit,2026-01-15 2:28:39,2026-01-15 2:28:39,Interest earned - Instant Access Savings,0.06,0.02,EUR,COMPLETED,1485.75
+Interest,Deposit,2026-01-16 2:28:15,2026-01-16 2:28:15,Interest earned - Instant Access Savings,0.07,0.02,EUR,COMPLETED,1485.8
+Transfer,Deposit,2026-01-16 10:21:49,2026-01-16 10:21:49,To Instant Access Savings,20,0,EUR,COMPLETED,1505.8
+Interest,Deposit,2026-01-17 2:34:02,2026-01-17 2:34:02,Interest earned - Instant Access Savings,0.06,0.01,EUR,COMPLETED,1505.85
+Interest,Deposit,2026-01-18 2:29:16,2026-01-18 2:29:16,Interest earned - Instant Access Savings,0.06,0.02,EUR,COMPLETED,1505.89

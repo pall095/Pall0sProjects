@@ -1,0 +1,89 @@
+First day : 2025-01-01
+Last day : 2026-12-01
+Total In : 72815.93
+Total Out : -82092.48
+
+Label : Movimento
+	Count : 102
+	Amount : -2687.96
+
+Label : Stipendio
+	Count : 12
+	Amount : 34795.72
+
+Label : CasaUtenze&Tasse
+	Count : 34
+	Amount : -6823.91
+
+Label : Psicologo
+	Count : 7
+	Amount : -1297.44
+
+Label : Shopping
+	Count : 13
+	Amount : -451.97
+
+Label : Generic
+	Count : 202
+	Amount : -20515.62
+
+Label : Hobby
+	Count : 5
+	Amount : -118.32
+
+Label : Giroconto
+	Count : 90
+	Amount : -1209.33
+
+Label : AcquistiOnline
+	Count : 110
+	Amount : -3105.37
+
+Label : Investimenti&Risparmi
+	Count : 1409
+	Amount : -5781.28
+
+Label : Commissioni
+	Count : 13
+	Amount : -16.3
+
+Label : Fumo
+	Count : 30
+	Amount : -409.0
+
+Label : Viaggi
+	Count : 47
+	Amount : -2022.31
+
+Label : CuraPersonale
+	Count : 9
+	Amount : -197.63
+
+Label : Mandati
+	Count : 4
+	Amount : -512.03
+
+Label : Interessi
+	Count : 190
+	Amount : 5182.34
+
+Label : SpesaCasa
+	Count : 107
+	Amount : -2113.86
+
+Label : Pub&Locali&Eventi
+	Count : 82
+	Amount : -1554.04
+
+Label : Ristoranti&Delivery
+	Count : 44
+	Amount : -1160.16
+
+Label : Subscriptions
+	Count : 2
+	Amount : -27.99
+
+Label : Ricevuti
+	Count : 9
+	Amount : 351.89
+

@@ -1,0 +1,21 @@
+First day:2025-01-01
+Last day:2026-01-18
+Total gains:28898.90
+Total expenses:-28069.17
+Expense per category:
+	Category: SUBSCRIPTIONS - Amount: -27.99
+	Category: CURAPERSONALE - Amount: -144.10
+	Category: MOVIMENTO - Amount: -772.24
+	Category: INVESTIMENTI - Amount: -4571.68
+	Category: LOCALI&DELIVERY - Amount: -2068.08
+	Category: PAGAMENTI_MANDATI - Amount: -492.03
+	Category: GENERIC_EXPENSE - Amount: -8525.22
+	Category: GIROCONTI - Amount: 23000.00
+	Category: EVENTI&VIAGGI - Amount: -440.44
+	Category: RITORNI - Amount: 13.50
+	Category: ECOMMERCE - Amount: -2971.26
+	Category: FUMO - Amount: -403.50
+	Category: GENERIC_GAIN - Amount: 839.89
+	Category: PAGAMENTI_RICEVUTI - Amount: 71.75
+	Category: HOBBY&SHOPPING - Amount: -610.50
+	Category: FOOD - Amount: -2068.37
