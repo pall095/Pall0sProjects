@@ -1,190 +1,356 @@
 Investimenti&Risparmi:
- - To pocket
- - To Bold
- - To Instant
- - To Robo
- - To investment
- - ALLIANZ S.P.A. EX AZR Deb.700414501672338 PALLOMO MATTEO Rif.POLIZZA NR.501672338
+  - type: substring
+    content: To pocket
+  - type: substring
+    content: To Bold
+  - type: substring
+    content: To Instant
+  - type: substring
+    content: To Robo
+  - type: substring
+    content: To investment
+  - type: substring
+    content: ALLIANZ S.P.A. EX AZR Deb.700414501672338 PALLOMO MATTEO Rif.POLIZZA NR.501672338
 
 Shopping:
-  - La Rinascente
-  - Intimissimi
-  - H&M
-  - Cisalfa Sport
-  - Decathlon
-  - Pompea
-  - ABYstyle
-  - Yamamoto
-  
+
+  - type: substring
+    content: Snipes
+  - type: substring
+    content: La Rinascente
+  - type: substring
+    content: Intimissimi
+  - type: substring
+    content: H&M
+  - type: substring
+    content: Cisalfa Sport
+  - type: substring
+    content: Decathlon
+  - type: substring
+    content: Pompea
+  - type: substring
+    content: ABYstyle
+  - type: substring
+    content: Yamamoto
+  - type: substring
+    content: DOPPELGANGER- TORINO
+  - type: substring
+    content: NOBILI- SAVONA
+
+
 Hobby:
-  - Mondadori
-  - Feltrinelli
-  - Giunti al Punto Librerie
-  - Pila Snowland
+  - type: substring
+    content: Mondadori
+  - type: substring
+    content: Feltrinelli
+  - type: substring
+    content: Giunti al Punto Librerie
+  - type: substring
+    content: Pila Snowland
 
 Subscriptions:
-  - Google One
-  - OpenAI
+  - type: substring
+    content: Google One
+  - type: substring
+    content: OpenAI
 
 AcquistiOnline:
-  - Amazon
+  - type: substring
+    content: Amazon
 
 CuraPersonale:
-  - Angelo Parrucchiere
-  - Farmacia
+  - type: substring
+    content: Angelo Parrucchiere
+  - type: substring
+    content: Farmacia
 
 Psicologo:
-  - Elena Macri
+  - type: substring
+    content: Elena Macri
 
 SpesaCasa:
-  - Pam Panorama
-  - ALDI
-  - Ok Market Millesimo
-  - Carrefour
-  - PENNY
-  - in's mercato
-  - Acqua & Sapone
-  - Conad
-  - Coop
-  - Esselunga
+  - type: regex
+    content: Tigot.+
 
+  - type: substring
+    content: Pam Panorama
+  - type: substring
+    content: ALDI
+  - type: substring
+    content: Ok Market Millesimo
+  - type: substring
+    content: Carrefour
+  - type: substring
+    content: PENNY
+  - type: substring
+    content: in's mercato
+  - type: substring
+    content: Acqua & Sapone
+  - type: substring
+    content: Conad
+  - type: substring
+    content: Coop
+  - type: substring
+    content: Esselunga
+
+
+PayPal:
+  - type: substring
+    content: PayPal
+  
 CasaUtenze&Tasse:
-  - rimborso casa
-  - A FAVORE DI CONDOMINIO VIA GRAGLIA
-  - ADDEBITO FASTWEB
-  - Eni Spa - Eni Regolamento Monetario Deb.8002118100000177701580 PALLOMO MATTEO Rif.5055081320970100
+  - type: substring
+    content: pagoPA
+  - type: regex
+    content: IT72C0342549440000100116439
+  - type: substring
+    content: A FAVORE DI CONDOMINIO VIA GRAGLIA
+  - type: substring
+    content: ADDEBITO FASTWEB
+  - type: substring
+    content: Eni Spa - Eni Regolamento Monetario Deb.8002118100000177701580 PALLOMO MATTEO Rif.5055081320970100
+
 
 Ristoranti&Delivery:
-  - Donbury House
-  - Rockburger
-  - Sushi Time
-  - Pantarei Ristorante
-  - Mercato Centrale
-  - El Centenario
-  - Glovo
-  - Poke
-  - Himi
-  - Gelateria
-  - Pizzeria
-  - Mollica
-  - Supersonic
-  - Oh Crispa
-  - Sushisound
-  - Proncii
-  - La Berbora
-  - La Staffa Ristorante
-  - Sushigari
-  - Alberto Marchetti
-  - AL 78 Cafe Bistro
-  - Peterbacco
-  - Pulled Factory
-  - Just Eat
+
+  - type: regex
+    content: \b(Food|food)\b
+
+  - type: regex
+    content: \bRistorante\b
+
+  - type: regex
+    content: \bSushi.*\b
+
+  - type: regex
+    content: \b(Pizz.+)\b
+
+  - type: regex
+    content: \bGelateri[a|e]\b
+  
+  - type: substring
+    content: Donbury House
+  - type: substring
+    content: Rockburger
+
+  - type: substring
+    content: LA TAVERNETTA DI MIGLI 
+
+  - type: substring
+    content: Mercato Centrale
+  - type: substring
+    content: El Centenario
+  - type: substring
+    content: Glovo
+  - type: substring
+    content: Poke
+  - type: substring
+    content: Himi
+  - type: substring
+    content: Mollica
+  - type: substring
+    content: Supersonic
+  - type: substring
+    content: Oh Crispa
+  - type: substring
+    content: Proncii
+  - type: substring
+    content: La Berbora
+
+  - type: substring
+    content: Peterbacco
+  - type: substring
+    content: Pulled Factory
+  - type: substring
+    content: Just Eat
 
 Pub&Locali&Eventi:
-  - The 1870 Huntsman Pub
-  - Il Mulo
-  - Pasticceria
-  - The Shamrock Inn
-  - Pastis
-  - Onestmarket
-  - Open Baladin
-  - Toccalmatto
-  - B-evolution
-  - Birreria
-  - Capodoglio Murazzi
-  - Pasticceria
-  - Bar
-  - Starbucks
-  - Caffetteria
-  - Jolly Pub
-  - Memorial Giacomo Brian
-  - Soleluna Beach Village
-  - Sci Club Caire
-  - Echollective
-  - Festival Entroterraneo
-  - La Choza Srls
-  - Kebap
-  - Cafe
-  - Rifugio Cascina Miera
+
+  - type: regex
+    content: \b(Caffeé|Caffe|Cafe|Coffee|Caffetteria)\b
+
+  - type: regex
+    content: \bPub\b
+  - type: regex
+    content: \b(Bar|BAR)\b
+  
+  - type: substring
+    content: \bCaffetteria\b
+
+  - type: regex
+    content: \bPasticceria\b
+
+  - type: regex
+    content: \bBirreria\b
+
+  - type: substring
+    content: Il Mulo
+
+  - type: substring
+    content: The Shamrock Inn
+  - type: substring
+    content: Pastis
+  - type: substring
+    content: Onestmarket
+  - type: substring
+    content: Open Baladin
+  - type: substring
+    content: Toccalmatto
+  - type: substring
+    content: B-evolution
+
+  - type: substring
+    content: Capodoglio Murazzi
+  - type: substring
+    content: Starbucks
+
+  - type: substring
+    content: Memorial Giacomo Brian
+  - type: substring
+    content: Soleluna Beach Village
+  - type: substring
+    content: Sci Club Caire
+  - type: substring
+    content: Echollective
+  - type: substring
+    content: Festival Entroterraneo
+  - type: substring
+    content: La Choza Srls
+  - type: substring
+    content: Kebap
+  - type: substring
+    content: Cafe
+  - type: substring
+    content: Rifugio Cascina Miera
 
 
 Fumo:
-  - Tabaccheria
-  - The Vaping Company
-  - Bonino Lucrezia
-  - Tabacchi
+  - type: regex
+    content: .*\s?[T|a]bacch.*
+
+  - type: exact
+    content: Bonino Lucrezia
+
+  - type: exact
+    content: The Vaping Company
+
 
 Viaggi:
-  - Milan Airports Shop
-  - EasyJet
-  - Hotel
-  - Avventure nel Mondo
-  - Noor Coffee Barcelona
-  - Getyourguide
-  - Grab
-  - Umah Bali Kuno
-  - Circle K
-  - National Oil Ethiopia Plc
-  - Airalo
-  - Tanzania Immigration Department
-  - WHSmith
-  - CP Lounge Ubud
-  - Shishi Nightclub
-  - Bayside Coffee & Eat
-  - Frestive Seminyak Ho
-  - Bee Bee's Cafe Ho
-  - Potato Head Beach Club
-  - Mm Pt5
-  - Agogna Est Grill
-  - MOTTA
-  - Dufry
-  - Zhang Hui
-  - Heymondo
-  - Saily
-  - Pedrera
+  - type: regex
+    content: \b(Hotel|HOTEL)\b
 
+  - type: regex
+    content: \b(Indonesia|YOGYAKARTA|Ubud|Seminyak|IDN|Bali)\b
+  
+  - type: regex
+    content: \b(Zanzibar)\b
+
+  - type: regex
+    content: \b(Barcelona|Pedrera)\b
+
+  - type: regex
+    content: \b(Airalo|Saily)\b
+  
+  - type: regex
+    content: \b(EasyJet|Getyourguide|Avventure nel Mondo|Milan Airports Shop)\b
+
+  - type: substring
+    content: Circle K
+  - type: substring
+    content: National Oil Ethiopia Plc
+  - type: substring
+    content: Tanzania Immigration Department
+  - type: substring
+    content: WHSmith
+  - type: substring
+    content: Shishi Nightclub
+  - type: substring
+    content: Potato Head Beach Club
+  - type: substring
+    content: Mm Pt5
+  - type: substring
+    content: Agogna Est Grill
+  - type: substring
+    content: MOTTA
+  - type: substring
+    content: Dufry
+  - type: substring
+    content: Zhang Hui
+  - type: substring
+    content: Heymondo
 
 Movimento:
-  - Cooltra
-  - Eni
-  - Bird
-  - IP
-  - SATAP
-  - Centro Calor
-  - Gruppo Torinese Trasporti
-  - Knet
-  - Taxi
-  - Parcheggio
-  - Europam
-  - TELEPASS S.P.A. Deb.7013840000000221501783 PALLOMO MATTEO
+
+  - type: regex
+    content: \b(KNET|Knet)\b
+
+  - type: regex
+    content: \b(Cooltra|Grab|Bird)\b
+  
+  - type: regex
+    content: \b(Eni|IP|Bird|Centro Calor|Europam|Termocev)\b
+
+  - type: substring
+    content: SATAP
+  - type: substring
+    content: Gruppo Torinese Trasporti
+  - type: substring
+    content: Taxi
+  - type: substring
+    content: Parcheggio
+
+  - type: substring
+    content: TELEPASS S.P.A. Deb.7013840000000221501783 PALLOMO MATTEO
 
 Mandati:
-  - Transfer to
+  - type: substring
+    content: Transfer to
 
-
-# GUADAGNI
 Giroconto:
-  - Payment from PALLOMO MATTEO
-  - From Instant
-  - Exchanged
-  - Balance migration to another region or legal entity
-  - Cash withdrawal
-  - Pocket Withdrawal
-  - A FAVORE DI MATTEO PALLOMO
-  - A FAVORE DI REVOLUT MATTEO PALLOMO
-  - Satispay app top-up
+  - type: substring
+    content: A FAVORE DI MATTEO PALLOMO - FIDEURAM C. BENEF. IT98J0329601601000065066089
+  - type: substring
+    content: A FAVORE DI REVOLUTE MATTEO PALLOMO C. BENEF. LT923250084062905586
+  - type: substring
+    content: A FAVORE DI REVOLUT MATTEO PALLOMO C. BENEF. IT13H0366901600980548255698
+
+  - type: substring
+    content: Payment from PALLOMO MATTEO
+  - type: substring
+    content: From Instant
+  - type: substring
+    content: Exchanged
+  - type: substring
+    content: Balance migration to another region or legal entity
+  - type: regex
+    content: \b(Withdrawal|withdrawal)\b
+
+  - type: substring
+    content: Satispay app top-up
 
 Stipendio:
-  - ACCREDITO COMPETENZE
+  - type: substring
+    content: ACCREDITO COMPETENZE
 
 Ricevuti:
-  - Transfer from
+  - type: regex
+    content: (Transfer|Payment)\sfrom\s.*\s.*
 
 Interessi:
-  - Interest earned
-  - "Pallomo Valerio - Merlin Lucia NOTE:"
-  - MERLIN LUCIA,PALLOMO VALERIO NOTE:Interessi
+  - type: substring
+    content: Interest earned
+  - type: substring
+    content: "Pallomo Valerio - Merlin Lucia NOTE:"
+  - type: substring
+    content: MERLIN LUCIA,PALLOMO VALERIO NOTE:Interessi
 
 Commissioni:
-  - TOKEN MOBILE CANONE MENSILE
-  - Addebito commissioni su operazione di vendita valuta
+  - type: substring
+    content: TOKEN MOBILE CANONE MENSILE
+  - type: substring
+    content: Addebito commissioni su operazione di vendita valuta
+  - type: regex
+    content: \b[C|c]ommis.*\b
+  
+  - type: substring
+    content: Competenze complessive

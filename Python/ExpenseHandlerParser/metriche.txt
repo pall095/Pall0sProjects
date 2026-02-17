@@ -4,86 +4,90 @@ Total In : 72815.93
 Total Out : -82092.48
 
 Label : Movimento
-	Count : 102
-	Amount : -2687.96
-
-Label : Stipendio
-	Count : 12
-	Amount : 34795.72
-
-Label : CasaUtenze&Tasse
-	Count : 34
-	Amount : -6823.91
-
-Label : Psicologo
-	Count : 7
-	Amount : -1297.44
-
-Label : Shopping
-	Count : 13
-	Amount : -451.97
-
-Label : Generic
-	Count : 202
-	Amount : -20515.62
-
-Label : Hobby
-	Count : 5
-	Amount : -118.32
-
-Label : Giroconto
-	Count : 90
-	Amount : -1209.33
-
-Label : AcquistiOnline
-	Count : 110
-	Amount : -3105.37
-
-Label : Investimenti&Risparmi
-	Count : 1409
-	Amount : -5781.28
-
-Label : Commissioni
-	Count : 13
-	Amount : -16.3
-
-Label : Fumo
-	Count : 30
-	Amount : -409.0
-
-Label : Viaggi
-	Count : 47
-	Amount : -2022.31
+	Count : 103
+	Amount : -2581.89
 
 Label : CuraPersonale
 	Count : 9
 	Amount : -197.63
 
-Label : Mandati
-	Count : 4
-	Amount : -512.03
-
-Label : Interessi
-	Count : 190
-	Amount : 5182.34
-
-Label : SpesaCasa
-	Count : 107
-	Amount : -2113.86
-
 Label : Pub&Locali&Eventi
-	Count : 82
-	Amount : -1554.04
+	Count : 80
+	Amount : -1345.72
 
-Label : Ristoranti&Delivery
-	Count : 44
-	Amount : -1160.16
+Label : Shopping
+	Count : 16
+	Amount : -898.64
 
 Label : Subscriptions
 	Count : 2
 	Amount : -27.99
 
+Label : SpesaCasa
+	Count : 108
+	Amount : -2128.45
+
+Label : Giroconto
+	Count : 98
+	Amount : -9709.33
+
+Label : Mandati
+	Count : 4
+	Amount : -512.03
+
+Label : Ristoranti&Delivery
+	Count : 48
+	Amount : -1315.66
+
+Label : Investimenti&Risparmi
+	Count : 1409
+	Amount : -5781.28
+
+Label : AcquistiOnline
+	Count : 110
+	Amount : -3105.37
+
+Label : Psicologo
+	Count : 7
+	Amount : -1297.44
+
+Label : Generic
+	Count : 147
+	Amount : -10397.2
+
+Label : CasaUtenze&Tasse
+	Count : 37
+	Amount : -7522.17
+
+Label : PayPal
+	Count : 32
+	Amount : -421.6
+
+Label : Fumo
+	Count : 30
+	Amount : -409.0
+
+Label : Hobby
+	Count : 5
+	Amount : -118.32
+
+Label : Interessi
+	Count : 190
+	Amount : 5182.34
+
+Label : Stipendio
+	Count : 12
+	Amount : 34795.72
+
+Label : Commissioni
+	Count : 16
+	Amount : -20.52
+
+Label : Viaggi
+	Count : 42
+	Amount : -2143.47
+
 Label : Ricevuti
-	Count : 9
-	Amount : 351.89
+	Count : 27
+	Amount : 23461.89
 

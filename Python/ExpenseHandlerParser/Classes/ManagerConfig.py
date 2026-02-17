@@ -1,6 +1,5 @@
 from enum import Enum
 
-
 class FrameColumns(str, Enum):
     DATE = "Date"
     AMOUNT = "Amount" 

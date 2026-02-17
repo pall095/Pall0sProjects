@@ -83,7 +83,7 @@ class ExpenseManager :
 
     def categorize_with( self , cat_instance : Categorizer ) :
         for entry in self.entries_list :
-            labels = cat_instance.find_labels( entry )
+            labels = cat_instance.find_labels_new( entry )
             entry.add_labels( labels )
 
     def get_unique_labels( self ) :
@@ -110,7 +110,7 @@ class ExpenseManager :
         if output_format is None :
             return self.entries_list 
         elif output_format == pd.DataFrame :
-            return pd.DataFrame( self.entries_list )
+            return pd.DataFrame( [ entry.as_dict( ) for entry in self.entries_list ] )
         else :
             raise ValueError( f"The specified output format { output_format } is unknown" )
 
