@@ -2,6 +2,7 @@ from datetime import date , datetime
 from typing import override 
 from dateutil import parser
 from Classes.FinancialEntryConfig import EntryType
+from Classes.ManagerConfig import OriginatorType
 
 
 class FinancialEntry :
@@ -12,6 +13,7 @@ class FinancialEntry :
         amount: float,
         labels: list[str],
         description: str,
+        originator : OriginatorType 
     ):
         
         if isinstance(date_value, str):
@@ -31,6 +33,14 @@ class FinancialEntry :
 
         self.labels = labels
         self.description = description
+        self.originator = originator 
+
+    
+    def get_type( self ) :
+        return self.type 
+    
+    def get_originator( self ) :
+        return self.originator 
 
     def get_date( self ) :
         return self.date 
@@ -53,19 +63,22 @@ class FinancialEntry :
     def is_after(self, other_entry: "FinancialEntry") -> bool:
         return self.date > other_entry.get_date()
     
-    def as_dict( self ) :
+    def as_dict( self , ) :
         return {
+            "Originator" : self.originator ,
             "Type" : self.type , 
             "Date" : self.date ,
             "Amount" : self.amount ,
             "Description" :  self.description ,
-            "Labels": self.labels  
+            "Labels": self.labels  ,
         }
 
 
     @override
     def __str__( self ) :
-        s = f"""Type: { self.type }\n 
+        s = f"""
+                Originator: { self.originator }\n
+                Type: { self.type }\n 
                 Date : { self.date }\n
                 Amount : { self.amount }\n
                 Description : { self.description}\n

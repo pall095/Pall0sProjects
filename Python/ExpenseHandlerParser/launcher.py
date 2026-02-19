@@ -1,28 +1,35 @@
 from Classes.FileHandler import FileHandler 
 from Classes.ExpenseManager import ExpenseManager
 from Classes.Categorizer import Categorizer 
+from Classes.ManagerConfig import OriginatorType 
 import pandas as pd
  
-frames_to_process = list( )
-TEST = False
+CATEGORIZER_FILE = r"InputFIles\new_categories.yaml"
 
-if TEST :
-    input_couples = [ ( "revolut_test.csv" , "RevolutMapper.json" ) ]
-else : 
-    input_couples = [
-        ( "revolut.csv" , "RevolutMapper.json" ) ,
-        ( "Azzoaglio.csv" , "AzzoaglioMapper.json" )
+REVOLUT_MAPPER = r"InputFiles\RevolutMapper.json"
+REVOLUT_IN = r"InputFiles\revolut.csv"
+
+AZZOAGLIO_MAPPER = r"InputFiles\AzzoaglioMapper.json"
+AZZOAGLIO_IN = r"InputFiles\Azzoaglio.csv"
+
+input_triplet = [
+        ( REVOLUT_IN , REVOLUT_MAPPER , OriginatorType.REVOLUT ) ,
+        ( AZZOAGLIO_IN , AZZOAGLIO_MAPPER , OriginatorType.AZZOAGLIO )
     ]
 
-for couple in input_couples : 
-    cf = FileHandler.remap_columns( FileHandler.read_csv( couple[ 0 ] ) , FileHandler.read_json( couple[ 1 ] ) )
-    frames_to_process.append( cf )
 
-manager = ExpenseManager.from_frames( frames_to_process )
-cat = Categorizer.from_dict( FileHandler.read_yaml( "categories.yaml" ) )
+originator_list = list(  )
+
+for triplet in input_triplet : 
+    cf = FileHandler.remap_columns( FileHandler.read_csv( triplet[ 0 ] ) , FileHandler.read_json( triplet[ 1 ] ) )
+    originator_list.append(
+        ( triplet[ 2 ] , cf )
+    )
+
+manager = ExpenseManager.from_originator_list( originator_list  )
+cat = Categorizer.from_dict( FileHandler.read_yaml( CATEGORIZER_FILE ) )
 manager.categorize_with( cat )
-FileHandler.frame_to_csv( manager.get_entries( output_format = pd.DataFrame ) , "prova_out.csv" )
-FileHandler.string_to_txt( manager.get_metrics_string( ) , "metriche.txt" )  
+FileHandler.frame_to_excel( manager.get_entries( output_format = pd.DataFrame ) , "prova_out.xlsx" , sheet_name = "Data" ) 
 
  
 

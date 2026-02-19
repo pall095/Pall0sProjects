@@ -1,0 +1,517 @@
+# SPESE
+SpeseGeneriche:
+  - type: default
+    content: expense
+
+Investimenti&Risparmi:
+  - type: substring
+    content: To pocket
+  - type: substring
+    content: To Bold
+  - type: substring
+    content: To Instant
+  - type: substring
+    content: To Robo
+  - type: substring
+    content: To investment
+  - type: substring
+    content: ALLIANZ S.P.A. EX AZR Deb.700414501672338 PALLOMO MATTEO Rif.POLIZZA NR.501672338
+  - type: substring
+    content: giroconto di prova
+  - type: substring
+    content: PER TITOLI
+
+Tasse&Utenze:
+  - type: substring
+    content: pagoPA
+  - type: regex
+    content: IT72C0342549440000100116439
+  - type: substring
+    content: A FAVORE DI CONDOMINIO VIA GRAGLIA
+  - type: substring
+    content: ADDEBITO FASTWEB
+  - type: substring
+    content: Eni Spa - Eni Regolamento Monetario
+  - type: substring
+    content: WEB RETAIL DISPO - TOKEN MOBILE CANONE MENSILE
+
+Trasporti:
+  - type: regex
+    content: \b(KNET|Knet|IP|Centro Calor|Europam|Termocev|Termoceva|Becojl)\b
+  - type: exact
+    content: Eni
+  - type: exact 
+    content: C.d.m.
+  - type: substring
+    content: TELEPASS
+  - type: substring
+    content: Autotecnica 3a
+  - type: substring
+    content: ITP
+  - type: substring
+    content: Parcheggio
+  - type: regex
+    content: \b(Cooltra|Grab|Bird)\b
+  - type: regex
+    content: \b(Trenitalia|SATAP|Gruppo Torinese Trasporti)\b
+  - type: substring
+    content: Taxi
+  - type: exact
+    content: Gavio
+
+HouseCare&Grocery:
+  - type: regex
+    content: Tigot.+
+  - type: substring
+    content: Pam Panorama
+  - type: substring
+    content: ALDI
+  - type: substring
+    content: Ok Market Millesimo
+  - type: substring
+    content: Carrefour
+  - type: substring
+    content: PENNY
+  - type: substring
+    content: in's mercato
+  - type: substring
+    content: Acqua & Sapone
+  - type: substring
+    content: Conad
+  - type: substring
+    content: Coop
+  - type: substring
+    content: Esselunga
+  - type: substring
+    content: Lavasecco
+  - type: substring
+    content: MUJI
+  - type: substring
+    content: Ipersoap
+  - type: substring
+    content: Punto Simply
+
+Shopping&AcquistiOnline:
+  - type: substring
+    content: Snipes
+  - type: substring
+    content: La Rinascente
+  - type: substring
+    content: Intimissimi
+  - type: substring
+    content: H&M
+  - type: substring
+    content: Cisalfa Sport
+  - type: substring
+    content: Decathlon
+  - type: substring
+    content: Pompea
+  - type: substring
+    content: ABYstyle
+  - type: substring
+    content: Yamamoto
+  - type: substring
+    content: DOPPELGANGER- TORINO
+  - type: substring
+    content: NOBILI- SAVONA
+  - type: regex
+    content: "^Amazon(?: Kindle)?$"
+  - type: regex
+    content: \b(LaFeltrinelli|Librerie|Mondadori)\b
+  - type: substring
+    content: Maglione Srl Ads Rio.
+  - type: substring
+    content: DFS Group Ltd
+  - type: exact
+    content: Tullio Sas Di Chiauss.
+  - type: exact
+    content: La Casa de las Carcasas
+  - type: exact
+    content: Legou Mercatone
+
+
+Subscriptions:
+  - type: substring
+    content: Google One
+  - type: substring
+    content: OpenAI
+  - type: exact
+    content: Amazon Prime
+
+CuraPersonale:
+  - type: substring
+    content: Angelo Parrucchiere
+  - type: substring
+    content: Farmacia
+  - type: substring
+    content: Elena Macri
+
+Locali&Eventi:
+  - type: regex
+    content: \b(Food|food|Kebap|Kebab|Poke)\b
+  - type: regex
+    content: .*[B|b]urger.*
+  - type: regex
+    content: \bRistorante\b
+  - type: regex
+    content: \bSushi.*\b
+  - type: regex
+    content: \b(Pizz.+)\b
+  - type: regex
+    content: \bGelateri[a|e]\b
+  - type: exact
+    content: Donbury House
+  - type: exact
+    content: Salumerie Falchero
+  - type: exact 
+    content: L'uliveto
+  - type: substring
+    content: LA TAVERNETTA DI MIGLI 
+  - type: exact
+    content: Mercato Centrale
+  - type: exact
+    content: El Centenario
+  - type: exact
+    content: Glovo
+  - type: exact
+    content: Poke
+  - type: exact
+    content: Himi
+  - type: exact
+    content: Mollica
+  - type: exact
+    content: Supersonic
+  - type: exact
+    content: Oh Crispa
+  - type: exact
+    content: Proncii
+  - type: exact
+    content: La Berbora
+  - type: exact
+    content: Peterbacco
+  - type: exact
+    content: Pulled Factory
+  - type: exact
+    content: Just Eat
+  - type: regex
+    content: \b(Caffeé|Caffe|Cafe|Coffee|Caffetteria)\b
+  - type: regex
+    content: \bPub\b
+  - type: regex
+    content: \b(Bar|BAR)\b
+  - type: regex
+    content: \bPasticceria\b
+  - type: regex
+    content: \bBirreria\b
+  - type: exact
+    content: Il Mulo
+  - type: exact
+    content: The Shamrock Inn
+  - type: substring
+    content: Pastis
+  - type: exact
+    content: Onestmarket
+  - type: exact
+    content: Open Baladin
+  - type: exact
+    content: Toccalmatto
+  - type: exact
+    content: B-evolution
+  - type: regex
+    content: \b(imbarchino|Imbarchino)\b
+  - type: regex
+    content: The\sIsle\s.{2}\sSkye
+  - type: exact
+    content: Capodoglio Murazzi
+  - type: exact
+    content: Starbucks
+  - type: exact
+    content: Memorial Giacomo Brian
+  - type: exact
+    content: Soleluna Beach Village
+  - type: exact
+    content: Vini Pregiati Roero Ma
+  - type: exact
+    content: Astoria
+  - type: exact
+    content: B House Srl Via Miche.
+  - type: exact
+    content: Officina Musicale 2.0
+  - type: exact
+    content: TicketSms
+  - type: exact
+    content: Festival Entroterraneo
+  - type: exact
+    content: Echollective
+  - type: exact
+    content: La Choza Srls
+  - type: regex
+    content: Panf.{2}
+  - type: exact
+    content: Biraghi
+  - type: regex
+    content: .{2}\sLA\sVOL.{2}E
+  - type: exact
+    content: Dazero
+  - type: exact
+    content: Dispensa Emilia
+  - type: exact
+    content: La Rovira
+  - type: exact
+    content: La Terrazza Di Renza
+  - type: exact
+    content: La Terrrazza
+  - type: exact
+    content: Alibi
+  - type: exact
+    content: Mi.to Di Lorenzo Tuffa
+  - type: exact
+    content: Arteria
+  - type: exact
+    content: Miah Noor Alam
+  - type: exact
+    content: Con Calma Snc
+  - type: exact
+    content: Minimarket Di Matubba.
+  - type: exact
+    content: Sky Dream Center Scuol
+  - type: exact
+    content: Freevolo
+  - type: exact
+    content: Daz Meridiana
+  - type: exact
+    content: B63
+  - type: exact
+    content: ChefExpress
+  - type: exact
+    content: La Bomba
+  - type: exact
+    content: Rifugio Cascina Miera
+  - type: exact
+    content: Chef Express
+  - type: exact
+    content: Da Enzo Di Bozkus Enve
+  - type: exact
+    content: Insomma
+
+Fumo:
+  - type: regex
+    content: .*\s?[T|a]bacch.*
+
+  - type: exact
+    content: Bonino Lucrezia
+
+  - type: exact
+    content: The Vaping Company
+
+Viaggi:
+  - type: regex
+    content: \b(Hotel|HOTEL)\b
+  - type: regex
+    content: \b(Indonesia|YOGYAKARTA|Ubud|Seminyak|IDN|Bali)\b
+  - type: regex
+    content: \b(Zanzibar)\b
+  - type: regex
+    content: \b(Barcelona|Pedrera|Catalana|Heliogabal)\b
+  - type: regex
+    content: \b(Airalo|Saily)\b
+  - type: regex
+    content: \b(EasyJet|Getyourguide|Avventure nel Mondo|Milan Airports Shop)\b
+  - type: exact
+    content: Premier Inn
+  - type: exact
+    content: Https://hotelvillaelia
+  - type: exact
+    content: Circle K
+  - type: exact
+    content: National Oil Ethiopia Plc
+  - type: exact
+    content: Tanzania Immigration Department
+  - type: exact
+    content: WHSmith
+  - type: exact
+    content: Shishi Nightclub
+  - type: exact
+    content: Potato Head Beach Club
+  - type: exact 
+    content: Agogna Est Grill
+  - type: exact
+    content: MOTTA
+  - type: exact
+    content: Dufry
+  - type: exact
+    content: Zhang Hui
+  - type: exact
+    content: Heymondo
+  - type: exact
+    content: Pila Snowland
+  - type: exact
+    content: Baraka Restaurant
+  - type: exact
+    content: Kaanankira Saulo Mbis
+  - type: exact
+    content: Khosravi Maryam
+  - type: exact
+    content: Asaduzzaman Sy
+  - type: exact
+    content: Inti Dufree Promosindo
+  - type: exact
+    content: Coccobello
+  - type: exact
+    content: A M Sani Di Mukhtar Ar
+  - type: exact
+    content: Sita Vinc
+  - type: exact
+    content: Sum Amiri Snc
+  - type: exact
+    content: Sum Kimbo
+  
+    
+
+# GUADAGNI
+
+GuadagniGenerici:
+  - type: default
+    content: income
+   
+Stipendio:
+  - type: substring
+    content: ACCREDITO COMPETENZE
+  - type: substring
+    content : :Jaguar Land Rover Italia S.p.A
+
+RitornoInvestimenti:
+  - type: substring
+    content: Interest earned
+  - type: substring
+    content: "Pallomo Valerio - Merlin Lucia NOTE:"
+  - type: substring
+    content: MERLIN LUCIA,PALLOMO VALERIO NOTE:Interessi
+
+Regali&Transfer:
+  - type: regex
+    content: ^Transfer to [A-Za-z]+\s[A-Za-z]+$
+  - type: exact
+    content: Ink 360
+  - type: substring
+    content: Debora Vaccino & Edoardo Dascoli
+  
+#GIROCONTI
+Giroconti:
+  - type: regex 
+    content: \b(giroconto)\b
+  - type: substring
+    content: A FAVORE DI REVOLUT MATTEO PALLOMO
+  - type: substring
+    content: From Instant Access Savings 
+  - type: substring
+    content: Exchanged to GBP
+
+Cash:
+  - type: regex
+    content: \b(Withdrawal|withdrawal)\b
+
+NeedsTracing:
+  - type: substring
+    content: PayPal
+  - type: substring
+    content: matteo pallomo Rif.Satispay app top-up
+  - type: substring
+    content: Balance migration to another region or legal entity
+
+DontKnow:
+  - type: substring
+    content: Commissione per pagamento Europay
+  - type: substring
+    content: Addebito commissioni su operazione di vendita valuta
+  - type: substring
+    content: Addebito controvalore operazione di vendita valuta
+  - type: substring
+    content: Associazione P
+
+  - type: substring
+    content: Best Price
+  - type: substring
+    content: Bonade' Silvana
+  - type: substring
+    content: Capri
+  - type: substring
+    content: Celebrity Di Arvat Pao
+  - type: substring
+    content: Club Supermarket
+  - type: substring
+    content: Condis
+  - type: substring
+    content: Country Trading Plc E
+  - type: substring
+    content: Erreeffe
+  - type: substring
+    content: Estanco
+  - type: substring
+    content: Feed Srls
+  - type: substring
+    content: Gruppo Negozi
+  - type: substring
+    content: Hobbista Con A
+  - type: substring
+    content: Leonardo Da Vinci
+  - type: substring
+    content: Maior Service
+  - type: substring
+    content: Mazza Vincenzo
+  - type: substring
+    content: Milda Shop
+  - type: substring
+    content: Mm Pt5
+  - type: substring
+    content: Moivaro Investment & T
+  - type: substring
+    content: Negro Francesca
+  - type: substring
+    content: Nexi
+  - type: substring
+    content: Nolasco
+  - type: substring
+    content: Olding
+  - type: substring
+    content: Oratorio
+  - type: substring
+    content: P.a. C.b. Cairo Monten
+  - type: substring
+    content: Pincopallino
+  - type: substring
+    content: Procino Lucia
+  - type: substring
+    content: Recupero imposta di bollo per invio rendiconto del rapporto 010 330 0116620 riferito al periodo dal 01/01/2024 al 31/12/2024
+  - type: substring
+    content: Roccabianca Denise
+  - type: substring
+    content: Ruatti Sara Livia
+  - type: substring
+    content: Sagioma Front Of305770
+  - type: substring
+    content: Se.da.ste Snc
+  - type: substring
+    content: Sedici Associazione Culturale
+  - type: substring
+    content: Superstruct Merchandis
+  - type: substring
+    content: The Iconic
+  - type: substring
+    content: TMB
+  - type: substring
+    content: Trive Group
+  - type: substring
+    content: Underpressure Touring
+  - type: substring
+    content: Vale20 Srl 2
+  - type: substring
+    content: Vitolli Theo
+  - type: substring
+    content: Vivz Investiment099562
+  - type: substring
+    content: Worldpay
+  - type: substring
+    content: Www.softsolutions
+  - type: substring
+    content: Ayo

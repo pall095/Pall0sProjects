@@ -11,9 +11,10 @@ Investimenti&Risparmi:
     content: To investment
   - type: substring
     content: ALLIANZ S.P.A. EX AZR Deb.700414501672338 PALLOMO MATTEO Rif.POLIZZA NR.501672338
+  - type: substring
+    content: giroconto di prova
 
 Shopping:
-
   - type: substring
     content: Snipes
   - type: substring
@@ -92,6 +93,8 @@ SpesaCasa:
     content: Coop
   - type: substring
     content: Esselunga
+  - type: substring
+    content: Ayo
 
 
 PayPal:
@@ -132,6 +135,8 @@ Ristoranti&Delivery:
     content: Donbury House
   - type: substring
     content: Rockburger
+  - type: substring 
+    content: L'uliveto
 
   - type: substring
     content: LA TAVERNETTA DI MIGLI 
@@ -199,6 +204,12 @@ Pub&Locali&Eventi:
   - type: substring
     content: B-evolution
 
+  - type: regex
+    content: \b(imbarchino|Imbarchino)\b
+
+  - type: substring
+    content: The Isle of Skye
+
   - type: substring
     content: Capodoglio Murazzi
   - type: substring
@@ -222,6 +233,9 @@ Pub&Locali&Eventi:
     content: Cafe
   - type: substring
     content: Rifugio Cascina Miera
+  
+  - type: substring
+    content: TicketSms
 
 
 Fumo:
@@ -246,13 +260,19 @@ Viaggi:
     content: \b(Zanzibar)\b
 
   - type: regex
-    content: \b(Barcelona|Pedrera)\b
+    content: \b(Barcelona|Pedrera|Catalana)\b
 
   - type: regex
     content: \b(Airalo|Saily)\b
   
   - type: regex
     content: \b(EasyJet|Getyourguide|Avventure nel Mondo|Milan Airports Shop)\b
+
+  - type: exact
+    content: Premier Inn
+  
+  - type: exact
+    content: Https://hotelvillaelia
 
   - type: substring
     content: Circle K
@@ -279,25 +299,27 @@ Viaggi:
   - type: substring
     content: Heymondo
 
-Movimento:
+BirdOnly:
+  - type: regex 
+    content: \bBird\b
+
+Carburante:
+  - type: regex
+    content: \b(KNET|Knet|Eni|IP|Centro Calor|Europam|Termocev|Termoceva)\b
 
   - type: regex
-    content: \b(KNET|Knet)\b
-
-  - type: regex
-    content: \b(Cooltra|Grab|Bird)\b
+    content: \b(Cooltra|Grab)\b
   
   - type: regex
-    content: \b(Eni|IP|Bird|Centro Calor|Europam|Termocev)\b
-
-  - type: substring
-    content: SATAP
-  - type: substring
-    content: Gruppo Torinese Trasporti
+    content: \b(Trenitalia|SATAP|Gruppo Torinese Trasporti)\b
+  
   - type: substring
     content: Taxi
   - type: substring
     content: Parcheggio
+
+  - type: exact 
+    content: C.d.m.
 
   - type: substring
     content: TELEPASS S.P.A. Deb.7013840000000221501783 PALLOMO MATTEO
@@ -331,6 +353,8 @@ Giroconto:
 Stipendio:
   - type: substring
     content: ACCREDITO COMPETENZE
+  - type: substring
+    content : :Jaguar Land Rover Italia S.p.A
 
 Ricevuti:
   - type: regex

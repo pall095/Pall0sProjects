@@ -49,4 +49,19 @@ class FileHandler :
                     file_out.writelines( content ) 
             else :
                 raise TypeError( f"content must be a string or a list of strings" )
-        
+    
+
+    @staticmethod 
+    def frame_to_excel( frame : pd.DataFrame , file_path : str , sheet_name : str = None ) :
+
+        if not( file_path.endswith( ".xlsx" ) ) :
+            raise ValueError( "file_path must end with .xlsx" ) 
+
+        if sheet_name is None :
+            frame.to_excel( file_path ) 
+        else :
+            with pd.ExcelWriter( file_path , 
+                                engine = "openpyxl" ,
+                                mode = "a" ,
+                                if_sheet_exists = "replace" ) as writer :
+                                frame.to_excel( writer , sheet_name = sheet_name , index = False )

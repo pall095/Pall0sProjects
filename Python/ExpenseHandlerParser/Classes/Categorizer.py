@@ -1,5 +1,6 @@
 from Classes.FinancialEntry import FinancialEntry 
 from Classes.CategorizerConfig import Ruleset , RuleType , Rule
+from Classes.FinancialEntryConfig import EntryType
 import re
 
 
@@ -15,9 +16,8 @@ class Categorizer :
         self.categories_dict = dict( )
 
     def set_rules( self , rules_dict  : dict ) :
-        self.ruleset = Ruleset( rules_dict ) 
-
-    
+        self.ruleset = Ruleset.model_validate( rules_dict )
+ 
     def find_labels_new( self , entry : FinancialEntry ) :
         label_set = set( )
         for category , rules in self.ruleset.root.items( ) :
@@ -26,8 +26,11 @@ class Categorizer :
                     label_set.add( category )
 
         if len( label_set ) == 0 :
-            return set( [ "Generic" ] ) 
-    
+            if entry.get_type( ) is EntryType.EXPENSE :
+                return [ self.ruleset.get_default_category( EntryType.EXPENSE.value ) ]
+            else : 
+                return [ self.ruleset.get_default_category( EntryType.INCOME.value ) ]
+
         return label_set 
 
     def match( self , entry_description : str , rule : Rule ) -> bool :
@@ -37,6 +40,8 @@ class Categorizer :
             return self.match_substring( entry_description , rule.content )
         elif rule.type == RuleType.REGEX :
             return self.match_regex( entry_description , rule.content )
+        elif rule.type == RuleType.DEFAULT :
+            return False
         else :
             raise TypeError( "Invalid rule type!" )
 
