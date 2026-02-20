@@ -18,20 +18,22 @@ class Categorizer :
     def set_rules( self , rules_dict  : dict ) :
         self.ruleset = Ruleset.model_validate( rules_dict )
  
-    def find_labels_new( self , entry : FinancialEntry ) :
-        label_set = set( )
-        for category , rules in self.ruleset.root.items( ) :
-            for rule in rules :
-                if( self.match( entry.get_description( ) , rule ) ) :
-                    label_set.add( category )
+    def find_labels_new(self, entry: FinancialEntry):
+        label_set = set()
+        description = entry.get_description()
 
-        if len( label_set ) == 0 :
-            if entry.get_type( ) is EntryType.EXPENSE :
-                return [ self.ruleset.get_default_category( EntryType.EXPENSE.value ) ]
-            else : 
-                return [ self.ruleset.get_default_category( EntryType.INCOME.value ) ]
+        for category, category_config in self.ruleset.root.items():
+            for rule in category_config.rules:
+                if self.match(description, rule):
+                    label_set.add(category)
 
-        return label_set 
+        if len(label_set) == 0:
+            if entry.get_type() is EntryType.EXPENSE:
+                return [self.ruleset.get_default_category(EntryType.EXPENSE.value)]
+            else:
+                return [self.ruleset.get_default_category(EntryType.INCOME.value)]
+
+        return label_set
 
     def match( self , entry_description : str , rule : Rule ) -> bool :
         if rule.type == RuleType.EXACT :
@@ -70,3 +72,38 @@ class Categorizer :
         If the regex matches anywhere, return True.
         """
         return re.search(rule_content, entry_description) is not None
+    
+    def check_annihilation( self , income : FinancialEntry , expense : FinancialEntry , date_th : int = 3 ) :
+
+        annihilatable_cat = self.ruleset.get_annihilable_categories( )
+
+        for income_label in income.get_labels( ) :
+            if not( income_label in annihilatable_cat ) :
+                return False
+        
+        for expense_label in expense.get_labels( ) :
+            if not( expense_label in annihilatable_cat ) :
+                return False
+
+        if not( income.get_amount( ) == -expense.get_amount( ) ) :
+            return False 
+
+        if not( abs( income.compare_date( expense ) ) <= date_th ) :
+            return False 
+    
+        return True
+
+    def annihilate_expenses( self , income_list : list[ FinancialEntry ] , expense_list : list[ FinancialEntry ] , verbose : bool = False ) :
+
+        for income in income_list :
+            for expense in expense_list :
+                if self.check_annihilation( income , expense ) :
+                    
+                    if verbose : 
+                        print( "Possible annihilation found:" ) 
+                        print( income ) 
+                        print( expense )
+                        input( )
+                        
+                    income.reset_labels( ["Annihilated"] )
+                    expense.reset_labels( ["Annihilated"] )

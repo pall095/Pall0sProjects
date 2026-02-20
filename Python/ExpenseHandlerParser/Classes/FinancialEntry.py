@@ -13,6 +13,7 @@ class FinancialEntry :
         amount: float,
         labels: list[str],
         description: str,
+        specific_type : str , 
         originator : OriginatorType 
     ):
         
@@ -31,11 +32,17 @@ class FinancialEntry :
         else :
             self.type = EntryType.EXPENSE
 
+        self.specific_type = specific_type 
         self.labels = labels
         self.description = description
         self.originator = originator 
 
     
+    def reset_labels( self , new_labels : list ) :
+        if not( isinstance( new_labels , list ) ) :
+            raise AttributeError( "new labels must be a list" )
+        self.labels = new_labels 
+
     def get_type( self ) :
         return self.type 
     
@@ -57,27 +64,26 @@ class FinancialEntry :
     def get_description( self ) :
         return self.description 
     
-    def is_before(self, other_entry: "FinancialEntry") -> bool:
-        return self.date < other_entry.get_date()
-
-    def is_after(self, other_entry: "FinancialEntry") -> bool:
-        return self.date > other_entry.get_date()
+    def compare_date( self , other_entry : FinancialEntry ) :
+        delta = self.date - other_entry.get_date( ) 
+        return delta.days 
     
     def as_dict( self , ) :
         return {
             "Originator" : self.originator ,
             "Type" : self.type , 
+            "Specific Type" : self.specific_type , 
             "Date" : self.date ,
             "Amount" : self.amount ,
             "Description" :  self.description ,
             "Labels": self.labels  ,
         }
 
-
     @override
     def __str__( self ) :
         s = f"""
-                Originator: { self.originator }\n
+                Originator: { self.originator }\n   
+                Specific Type : { self.specific_type }\n 
                 Type: { self.type }\n 
                 Date : { self.date }\n
                 Amount : { self.amount }\n

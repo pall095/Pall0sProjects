@@ -29,7 +29,8 @@ for triplet in input_triplet :
 manager = ExpenseManager.from_originator_list( originator_list  )
 cat = Categorizer.from_dict( FileHandler.read_yaml( CATEGORIZER_FILE ) )
 manager.categorize_with( cat )
-FileHandler.frame_to_excel( manager.get_entries( output_format = pd.DataFrame ) , "prova_out.xlsx" , sheet_name = "Data" ) 
+cat.annihilate_expenses( manager.get_incomes( ) , manager.get_expenses( ) , verbose = False ) 
+FileHandler.frame_to_excel( manager.get_entries( output_format = pd.DataFrame ) , "data_out.xlsx" , sheet_name = "Data" ) 
 
  
 

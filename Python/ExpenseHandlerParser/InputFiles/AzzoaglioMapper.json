@@ -1,5 +1,6 @@
 {
     "Data movimento" : "Date" ,
     "Descrizione operazione" : "Description" ,
-    "Importo" : "Amount" 
+    "Importo" : "Amount" , 
+    "Causale" : "SpecificType"
 }

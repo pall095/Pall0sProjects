@@ -1,5 +1,6 @@
 {
     "Started Date" : "Date" ,
     "Description" : "Description" ,
-    "Amount" : "Amount" 
+    "Amount" : "Amount" , 
+    "Type" : "SpecificType"
 }

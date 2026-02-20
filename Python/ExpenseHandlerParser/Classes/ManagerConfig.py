@@ -8,6 +8,7 @@ class FrameColumns(str, Enum):
     AMOUNT = "Amount" 
     LABELS = "labels"
     DESCR = "Description"
+    SPECIFIC_TYPE = "SpecificType"
 
     @classmethod
     def mandatory_as_list(cls) -> list[str]:

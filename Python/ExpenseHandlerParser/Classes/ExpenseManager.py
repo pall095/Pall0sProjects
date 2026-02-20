@@ -17,9 +17,6 @@ class ExpenseManager :
                 return False 
         return True
     
-
-
-    
     @staticmethod
     def from_originator_list( originator_list : list[ tuple( OriginatorType , pd.DataFrame ) ] ) : # type: ignore
         manager = ExpenseManager( )
@@ -54,6 +51,7 @@ class ExpenseManager :
                     row_content[ FrameColumns.AMOUNT ] ,
                     list( ) ,
                     row_content[ FrameColumns.DESCR ] ,
+                    row_content[ FrameColumns.SPECIFIC_TYPE ] ,
                     originator 
                 )
 
@@ -65,41 +63,25 @@ class ExpenseManager :
     def __init__( self ) :
         self.entries_list = list( )
 
+    def get_expenses( self ) :
+        expense_list = list( )
+        for entry in self.entries_list :
+            if entry.get_type( ) is EntryType.EXPENSE :
+                expense_list.append( entry )
+        return expense_list 
+    
+    def get_incomes( self ) :
+        income_list = list( )
+        for entry in self.entries_list :
+            if entry.get_type( ) is EntryType.INCOME :
+                income_list.append( entry )
+        return income_list 
+    
+
     def add_entry( self , e : FinancialEntry ) :
         self.entries_list.append( e ) 
 
-    def get_metrics_string( self ) :
-
-        first_entry = self.entries_list[ 0 ] 
-        last_entry = self.entries_list[ 0 ] 
-        total_in = 0 
-        total_out = 0 
-
-        for entry in self.entries_list :
-            
-            if entry.get_type( ) is  EntryType.INCOME :
-                total_in += entry.get_amount( )
-            
-            if entry.get_type( ) is EntryType.EXPENSE :
-                total_out += entry.get_amount( )
-            
-            if entry.is_before( first_entry ) :
-                first_entry = entry 
-            if entry.is_after( last_entry ) :
-                last_entry = entry
-        
-        s = ""
-        s = s + f"First day : { first_entry.get_date( ) }\n"
-        s = s + f"Last day : { last_entry.get_date( ) }\n"
-        s = s + f"Total In : { round( total_in , 2 ) }\n"
-        s = s + f"Total Out : { round( total_out , 2 ) }\n"
-        s = s + "\n"
-        for label , label_dict in self.get_metrics_per_label( ).items( ) :
-            s = s + f"Label : { label }\n\tCount : { label_dict[ "count" ] }\n\tAmount : { round( label_dict[ "amount" ] , 2 ) }\n\n"
-        
-        return s 
     
-
     def categorize_with( self , cat_instance : Categorizer ) :
         for entry in self.entries_list :
             labels = cat_instance.find_labels_new( entry )
