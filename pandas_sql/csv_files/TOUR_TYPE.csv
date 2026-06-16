@@ -1,0 +1,7 @@
+TourTypeCode,Monument,Duration,City
+TT01,Colosseum,2,Rome
+TT02,Duomo Cathedral,1.5,Milan
+TT03,Uffizi Gallery,3,Florence
+TT04,St Mark Basilica,2,Venice
+TT05,Leaning Tower,1,Pisa
+TT06,Pompeii Ruins,4,Naples
