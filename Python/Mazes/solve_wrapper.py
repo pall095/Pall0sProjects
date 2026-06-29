@@ -1,10 +1,10 @@
 from tkinter import *
 #from Grid import Grid
-from Grid_refactor import Grid
-from Cell_refactor import Cell
+from Grid import Grid
+from Cell import Cell
 import datetime
             
-def solve_maze( ROW , COL , CELL_SIZE , generation_method , solving_method , save_output , wall_thr ) :
+def solve_maze( ROW , COL , CELL_SIZE , generation_method , solving_method , save_output , wall_thr , autoclose = False ) :
 
     grid = Grid( ROW , COL , CELL_SIZE , wall_thr )
     grid.generateMaze( method = generation_method )
@@ -29,8 +29,13 @@ def solve_maze( ROW , COL , CELL_SIZE , generation_method , solving_method , sav
         now = datetime.datetime.now( )
         output_file = "output_mazes/" + now.strftime("%Y-%m-%d_%H%M%S_out") + solve_suffix + ".txt"  
         grid.saveMaze( output_file )
+
+    if autoclose :
+        print( "Destroying")
+        grid.ROOT.destroy( )
         
     grid.ROOT.mainloop()
+
 
 
 # DEBUG

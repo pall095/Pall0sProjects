@@ -5,6 +5,7 @@ from copy import deepcopy
 from math import dist
 from State import State
 from tkinter.filedialog import askopenfilename
+import Grid_config as _CONFIG
 
 
 class Grid:
@@ -13,13 +14,29 @@ class Grid:
     HEIGHT = 0 
     CANVAS = 0
     ROOT = 0
+    CELL_SIZE = 0 
     WALL_THR = 0
     
-    def __init__( self , ROW , COL , WALL_THR ) :
+    def __init__( self , ROW , COL , CELL_SIZE , WALL_THR ) :
         
-        self.ROW = ROW
+        self.ROW = ROW 
         self.COL = COL
-        self.WALL_THR = WALL_THR 
+
+        while ROW * CELL_SIZE >= _CONFIG.WINDOW_LIMIT or COL * CELL_SIZE >= _CONFIG.WINDOW_LIMIT :
+            print( f"Curent cell size of { CELL_SIZE } size will make the window bigger than { _CONFIG.WINDOW_LIMIT }. Rescaling cell size..." )
+            CELL_SIZE = int( CELL_SIZE - _CONFIG.REUCTION_FACTOR * CELL_SIZE )
+
+        self.CELL_SIZE = CELL_SIZE
+        self.WIDTH = ROW * CELL_SIZE
+        self.HEIGHT = COL * CELL_SIZE
+        print( f"Final dimension - WIDTH : { self.WIDTH } - HEIGHT : { self.HEIGHT } - CELL_SIZE : { self.CELL_SIZE }" )
+
+        self.CELL_SIZE = CELL_SIZE 
+        self.WALL_THR = WALL_THR
+
+        self.ROOT = Tk( )
+        self.CANVAS = Canvas( self.ROOT , width = self.WIDTH , height = self.HEIGHT ) 
+
         self.grid = [ ]
         self.start_x = 0
         self.start_y = 0
@@ -27,6 +44,7 @@ class Grid:
         self.end_y = 0
         self.queue = [ ]
         self.expandedNodes = 0
+
         for x in range( self.ROW ) : 
             tmp = [ ]
             for y in range( self.COL ) :              
@@ -110,14 +128,15 @@ class Grid:
         for off in offset :
             
             temp = self.moveTo( row + off[ 0 ] , col + off[ 1 ] )
-            if temp != None : temp.path = path 
-            if temp == None : continue 
-            else :
+            if temp != None : 
+                temp.path = path 
                 temp.depth = self.getDepth( row , col ) + 1 
                 temp.path.append( ( row , col ) )
                 temp.cost = temp.depth + self.updateCost( temp.row , temp.col , method )
                 if temp.state != State.EXPANDED and temp.state != State.START and temp.state != State.WALL  :
-                    self.queue.append( temp )                      
+                    self.queue.append( temp )
+            else : 
+                continue 
         self.updateQueu( method )
         
     # Return the Cell specified by the values of x and y (row and column).
@@ -147,12 +166,14 @@ class Grid:
             return dist( [ x , y ] ,  [ self.end_x , self.end_y ] )
         if method == "Depth First" or method == "Breath First" :
             return 0
+        else :
+            raise ValueError( "Invalid solving method specified!" )
         
     # Sorts the queue based on the search method.
     # By default sorts by cost in ascending order (lowest cost at the beginning)
     def updateQueu( self , method ) :
         
-        if method == "depth" :
+        if method == "Depth First" :
             self.queue.sort( reverse = True , key = lambda item : item.depth )
             
         else:
@@ -165,23 +186,24 @@ class Grid:
     # It is called in "setState", so everytime a cell value is updated, also the output does so.
     def updateCell( self , x , y ) :
         
-        x1 = x * self.WIDTH / self.COL
-        x2 = x1 + self.WIDTH / self.COL
-        y1 = y * self.HEIGHT / self.ROW
-        y2 = y1 + self.HEIGHT / self.ROW
+        x1 = x * self.CELL_SIZE
+        y1 = y * self.CELL_SIZE
+        color_string = ""
           
         if self.getState( x , y ) == State.FREE :
-            self.CANVAS.create_rectangle( x1 , y1 , x2 , y2 , fill = "white" )
+            color_string = "white"
         elif self.getState( x , y ) == State.WALL :
-            self.CANVAS.create_rectangle( x1 , y1 , x2 , y2 , fill = "black" )
+            color_string = "black"
         elif self.getState( x , y ) == State.START :
-            self.CANVAS.create_rectangle( x1 , y1 , x2 , y2 , fill = "green" )
+            color_string = "green"
         elif self.getState( x , y ) == State.END :
-            self.CANVAS.create_rectangle( x1 , y1 , x2 , y2 , fill = "red" )
+            color_string = "red"
         elif self.getState( x , y ) == State.EXPANDED :
-            self.CANVAS.create_rectangle( x1 , y1 , x2 , y2 , fill = "yellow" )    
+            color_string = "yellow"  
         elif self.getState( x , y ) == State.SOLUTION :
-            self.CANVAS.create_rectangle( x1 , y1 , x2 , y2 , fill = "blue" )    
+            color_string = "blue"  
+
+        self.CANVAS.create_rectangle( x1 , y1 , x1 + self.CELL_SIZE , y1 + self.CELL_SIZE , fill = color_string )
                        
         self.CANVAS.pack( )
         
@@ -248,7 +270,7 @@ class Grid:
         for x in range( self.ROW):
             for y in range( self.COL ):
                 state_temp = rand.random( )
-                if state_temp > self.WALL_THR :
+                if state_temp > ( 1 - self.WALL_THR ) :
                     self.setState( x , y , State.WALL ) 
                 else :
                     self.setState( x , y , State.FREE )

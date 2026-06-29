@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
-import app_config_refactor as _APPCONFIG    
-from solve_wrapper_refactor import *
+import app_config as _APPCONFIG    
+from solve_wrapper import *
 
 
 root = tk.Tk( )
