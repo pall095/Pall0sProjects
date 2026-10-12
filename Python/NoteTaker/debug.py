@@ -1,7 +1,7 @@
 from src.database_manager.DatabaseManager import DatabaseManager
 from src.database_manager.NoteInterpreter import NoteInterpreter
+from src.database_manager.Note import Note
 
-db = DatabaseManager( r"tests\debug_db.db" )
 
-for note in db.execute( "SELECT * FROM notes" ) :
-    NoteInterpreter.dump( "output.txt" , note )
+manager = DatabaseManager( r"tests\debug_db.db" )
+print( manager.get_notes_with_tags( ) )

@@ -4,6 +4,7 @@ from pathlib import Path
 import uuid
 from contextlib import closing
 import src.database_manager.MANAGER_QUERIES as _QUERIES
+from src.database_manager.Note import Note
 
 class DatabaseManager( ):
 
@@ -13,131 +14,81 @@ class DatabaseManager( ):
         self.db_path = Path(db_path)
         self.initialize_database()
 
-    def count_notes( self ) :
-        _ , rows = self.execute( f"SELECT COUNT( * ) FROM notes"  )
-        return rows[ 0 ][ 0 ]
+    def get_notes_id( self ) :
+        return [ entry[ "note_id" ] for entry in self.execute_query( "SELECT note_id FROM NOTES" ) ]
+        
 
-    def execute(self, query: str, params=()):
-        """Execute a query and return headers and rows for SELECTs."""
-        with closing( sqlite3.connect(self.db_path) )  as connection:
+    def print_notes_with_tags( self ) :
+        for note in self.get_notes_with_tags( ) :
+            print( Note.from_dict( note ) )
+
+    def count_notes( self ) :
+        rows = self.execute_query("SELECT COUNT(*) AS total FROM notes")
+        return rows[0]["total"]
+
+    def get_notes_with_tags( self ) :
+        return self.execute_query( "SELECT * FROM notes_with_tags" ) 
+
+    def execute_query(self, query: str, params=()) -> list[dict]:
+        """Execute a SELECT query and return rows as dictionaries."""
+        with closing(sqlite3.connect(self.db_path)) as connection:
+            connection.row_factory = sqlite3.Row
             connection.execute("PRAGMA foreign_keys = ON")
             cursor = connection.execute(query, params)
+            return [dict(row) for row in cursor.fetchall()]
 
-            if cursor.description is not None:
-                headers = [column[0] for column in cursor.description]
-                rows = cursor.fetchall()
-                return headers, rows
+    def execute_command(self, query: str, params=()) -> int:
+        """Execute an INSERT, UPDATE or DELETE and commit the transaction."""
+        with closing(sqlite3.connect(self.db_path)) as connection:
+            connection.execute("PRAGMA foreign_keys = ON")
 
-            return cursor.lastrowid
+            with connection:
+                cursor = connection.execute(query, params)
+                return cursor.rowcount
 
     def initialize_database(self):
-        with closing( sqlite3.connect(self.db_path) )as connection:
-            connection.execute("PRAGMA foreign_keys = ON")
-            connection.execute( _QUERIES.CREATE_NOTES_TABLE )
-            connection.execute( _QUERIES.CREATE_TAGS_TABLE )
-            connection.execute( _QUERIES.CREATE_TAG_NOTE_TABLE )
+            self.execute_command( "PRAGMA foreign_keys = ON" )
+            self.execute_command( _QUERIES.CREATE_NOTES_TABLE )
+            self.execute_command( _QUERIES.CREATE_TAGS_TABLE )
+            self.execute_command( _QUERIES.CREATE_TAG_NOTE_TABLE )
+            self.execute_command( _QUERIES.CREATE_NOTES_WITH_TAG_VIEW )
 
-    def print_db(self, mode: str):
-        if mode == "joined":
-            
-            query = _QUERIES.JOINED_NOTE_TAG_NOTE_TABLE
-            headers, rows = self.execute(query)
+    def insert_multiple_notes( self , notes_list : list ) :
+        for note in notes_list :
+            self.insert_note( note )
 
-            print("\n=== Notes with tags ===")
-            print(" | ".join(headers))
-
-            if not rows:
-                print("No notes found.")
-                return
-
-            for row in rows:
-                print(" | ".join(
-                    str(value) if value is not None else "-"
-                    for value in row
-                ))
-
-        elif mode == "raw":
-            tables = ["notes", "tags", "note_tags"]
-
-            for table in tables:
-                headers, rows = self.execute(
-                    f"SELECT * FROM {table}"
-                )
-
-                print(f"\n=== Table: {table} ===")
-                print(" | ".join(headers))
-
-                if not rows:
-                    print("Empty table.")
-                    continue
-
-                for row in rows:
-                    print(" | ".join(
-                        str(value) if value is not None else "-"
-                        for value in row
-                    ))
-
-        else:
-            raise ValueError(
-                f"Invalid mode '{mode}'. Use 'joined' or 'raw'."
-            )
-
-    def note_exists(self, note_id: int) -> bool:
-        _, rows = self.execute(
-            "SELECT EXISTS(SELECT 1 FROM notes WHERE note_id = ?)",
-            (note_id,)
-        )
-        return rows[0][0] == 1
-
-
-    def insert_note(self, note_dict: dict):
-        missing = set(self.NOTE_FIELDS) - note_dict.keys()
-        if missing:
-            raise ValueError(
-                f"Note definition requires: {', '.join(sorted(missing))}"
-            )
-
-        tags = note_dict["tags"]
-
-        if isinstance(tags, str):
-            raise TypeError("Tags must be a list of strings, not a string.")
-
-        if not all(isinstance(tag, str) and tag.strip() for tag in tags):
-            raise ValueError("Every tag must be a non-empty string.")
-
-        note_id = str(uuid.uuid4())
-
+        
+    def insert_note(self , note : Note ):
+        
         with closing(sqlite3.connect(self.db_path)) as connection:
             with connection:
-                connection.execute("PRAGMA foreign_keys = ON")
+                self.execute_command("PRAGMA foreign_keys = ON")
 
-                connection.execute(
+                self.execute_command(
                     _QUERIES.INSERT_NOTE_PARAM ,
                     (
-                        note_id,
-                        note_dict["title"],
-                        note_dict["content"],
-                        note_dict["created_at"],
+                        note.note_id ,
+                        note.title ,
+                        note.content ,
+                        note.created_at ,
                     ),
                 )
 
-                for tag in {tag.strip() for tag in tags}:
-                    connection.execute(
+                for tag in {tag.strip() for tag in note.tags }:
+                    self.execute_command(
                         _QUERIES.INSERT_TAG_PARAM ,
                         (str(uuid.uuid4()), tag),
                     )
 
-                    tag_id = connection.execute(
+                    tag_id = self.execute_query(
                         "SELECT tag_id FROM tags WHERE name = ?",
                         (tag,),
-                    ).fetchone()[0]
+                    )[ 0 ][ "tag_id" ]
 
-                    connection.execute(
+                    self.execute_command(
                         _QUERIES.INSERT_NOTE_TAG_PARAM ,
-                        (note_id, tag_id),
+                        ( note.note_id , tag_id),
                     )
-
-        return note_id
 
 
     def delete_ids(self, ids_list: list[int]):
@@ -149,8 +100,9 @@ class DatabaseManager( ):
             print(f"Note {note_id} does not exist.")
             return
 
-        self.execute(
+        self.execute_command(
             "DELETE FROM notes WHERE note_id = ?",
             (note_id,)
         )
         print(f"Note {note_id} deleted.")
+
