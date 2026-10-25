@@ -1,8 +1,0 @@
-
-set title: Test_no_date
-
-start content:
-no content here
-end content:
-
-set tags: test_tag_2

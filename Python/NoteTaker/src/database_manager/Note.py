@@ -1,59 +1,49 @@
-from datetime import datetime, timezone
-import uuid
-from typing import override
+from datetime import datetime
+from pathlib import Path
+from uuid import uuid4
 
-class Note :
+import yaml
+from pydantic import BaseModel, Field, ConfigDict
 
-    MANDATORY = [
-        "title" ,
-        "content"
-    ]
 
-    def __init__( self , note_id , title , content , tags , created_at ) :
-        self.note_id = note_id 
-        self.title = title
-        self.content = content
-        self.tags = tags 
-        self.created_at = created_at
+class Note(BaseModel):
 
-    @override
-    def __str__( self ) :
-        string_list = list( )
-        string_list.append( f"note_id: { self.note_id}\n" )
-        string_list.append( f"title: { self.title}\n" )
-        string_list.append( f"tags: { self.tags}\n" )
-        string_list.append( f"content: { self.content}\n" )
-        string_list.append( f"created_at: { self.created_at}\n" )
-        return "".join( string_list )
+    model_config = ConfigDict(extra="forbid")
 
-    def __dict__( self ) :
-        return {
-            "note_id" : self.note_id , 
-            "title" : self.title , 
-            "tags" : self.tags , 
-            "content" : self.content , 
-            "created_at" : self.created_at
-        }
+    note_id: str = Field(default_factory=lambda: str(uuid4()))
+    title: str
+    content: str
+    tags: list[str] = Field(default_factory=list)
+    created_at: datetime = Field(default_factory=lambda: datetime.now().astimezone())
 
     @classmethod
-    def from_dict( cls , note_dict : dict ) :
+    def from_yaml(cls, path: str | Path) -> "Note":
+        with Path(path).open("r", encoding="utf-8") as file:
+            data = yaml.safe_load(file)
 
-        if "created_at" not in note_dict.keys( ) :
-            note_dict["created_at"] = datetime.now().astimezone().isoformat()
+        if not isinstance(data, dict):
+            raise ValueError("YAML file must contain a mapping.")
 
-        if "note_id" not in note_dict.keys( ) :
-            note_dict[ "note_id" ] = str(uuid.uuid4())
+        return cls.model_validate(data)
 
 
-        missing = cls.MANDATORY - note_dict.keys()
+    def to_yaml(self, path: str | Path) -> None:
+        data = self.model_dump(mode="json")
+        data["content"] = data["content"].rstrip("\n")
 
-        if missing:
-            raise ValueError(f"Missing fields: {', '.join(sorted(missing))}")
+        with Path(path).open("w", encoding="utf-8") as file:
+            yaml.safe_dump(
+                data,
+                file,
+                sort_keys=False,
+                allow_unicode=True
+            )
 
-        return cls( 
-            note_id = note_dict[ "note_id" ] ,
-            title = note_dict[ "title" ] ,
-            content = note_dict[ "content" ] ,
-            tags = note_dict[ "tags" ] ,
-            created_at = note_dict[ "created_at" ]  
+    def __str__(self) -> str:
+        return (
+            f"note_id: { self.note_id }\n"
+            f"title: { self.title }\n"
+            f"tags: { self.tags }\n"
+            f"content: { self.content }\n"
+            f"created_at: {self.created_at.strftime('%Y-%m-%d %H:%M:%S')}\n"
         )

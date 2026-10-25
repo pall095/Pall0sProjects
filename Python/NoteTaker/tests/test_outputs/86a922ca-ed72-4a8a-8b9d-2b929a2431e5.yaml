@@ -1,0 +1,8 @@
+note_id: 86a922ca-ed72-4a8a-8b9d-2b929a2431e5
+title: Implement YAML support
+content: This is the content.
+tags:
+- pydantic
+- python
+- yaml
+created_at: '2026-01-01T00:00:00'
