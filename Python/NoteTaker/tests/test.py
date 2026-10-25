@@ -32,7 +32,6 @@ def test_dump( db , output_dir ):
         SELECT *
         FROM Notes
     """
-
     db.dump_query_to_yaml(
         query=query,
         output_dir = str(output_dir)
@@ -40,3 +39,11 @@ def test_dump( db , output_dir ):
     output_files = list(output_dir.glob("*.yaml"))
 
     assert len(output_files) == 2
+
+def test_update_note(db):
+    note = Note.from_yaml(r"tests\test_files\note3.yaml")
+    db.insert_note(note)
+    note.content = "Content 3 post update."
+    db.update_note(note)
+    updated_note = db.get_note(note.note_id)
+    assert updated_note.content == note.content
