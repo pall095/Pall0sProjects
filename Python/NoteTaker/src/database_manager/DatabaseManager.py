@@ -248,16 +248,19 @@ class DatabaseManager( ):
         for file in files_list :
 
             if file.suffix == ".yaml" :
-                stored_note = self.get_note( file.stem )
-            else :
-                continue 
+
+                try :
+                    updated_note = updated_note = Note.from_yaml( file )
+                    stored_note = self.get_note( updated_note.note_id )
+                except Exception as e :
+                    print( e )
+                    continue
 
             if stored_note is None :
-                print( f"Note { file.stem } not found!" ) 
+                print( f"Note { updated_note.note_id } not found!" ) 
                 continue
 
-            print( f"Note { file.stem } FOUND. " , end = "" )
-            updated_note = Note.from_yaml( file )
+            print( f"Note { updated_note.note_id  } FOUND. " , end = "" )
             if stored_note == updated_note :
                 print( "Notes are identical. Skipping update." )
                 continue
@@ -266,6 +269,6 @@ class DatabaseManager( ):
 
             try :
                 self.update_note( updated_note )
-                print(f"Note {file.stem} successfully updated!")
+                print(f"Note { updated_note.note_id } successfully updated!")
             except ValueError :
                 print( "Note update failed" )
