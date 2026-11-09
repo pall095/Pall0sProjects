@@ -14,15 +14,9 @@ def main():
 
     # BASIC ARGUMENTS
     parser.add_argument(
-        "--db",
-        default="notes.db",
-        help="Path to the SQLite database (default: notes.db)"
-    )
-
-    parser.add_argument(
-        "--out_folder" ,
-        required = True ,
-        help = "Destnation folder in which the database will dump"
+        "--db_config",
+        required = True , 
+        help="Yaml file containing the database configuration."
     )
 
     subparsers = parser.add_subparsers(
@@ -70,10 +64,7 @@ def main():
 
     args = parser.parse_args() 
     command = args.command
-    db = DatabaseManager(
-        db_path = args.db ,
-        output_folder = args.out_folder 
-    )
+    db = DatabaseManager.from_yaml( args.db_config )
 
     if command == "init" :
         db.initialize( ) 

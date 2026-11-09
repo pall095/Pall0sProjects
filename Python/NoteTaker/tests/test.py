@@ -36,7 +36,6 @@ def test_insert_notes_from_path_and_dump( db ):
     db.insert_multiple_notes( notes ) 
     assert db.count_notes( ) == 2
 
-    
     query = """
         SELECT *
         FROM Notes
@@ -45,6 +44,7 @@ def test_insert_notes_from_path_and_dump( db ):
         query=query
     )
     output_files = list( db.output_folder.glob("*.yaml"))
+    print( output_files )
     assert len(output_files) == 2
 
 def test_update_note(db):

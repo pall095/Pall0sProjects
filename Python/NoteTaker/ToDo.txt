@@ -1,6 +1,12 @@
 
 
-- Valutare se mantenere un view che sia più "human oriented".
+
+
+
+- Valutare se mantenere un view che sia più "human oriented
+
+
+".
 - Printare con titoli ed ovviamente gestire il suggessivo re-parsing.
 
 

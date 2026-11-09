@@ -238,13 +238,15 @@ class DatabaseManager( ):
 
         for row in rows:
             note = self._row_to_note(row)
-            note.to_yaml( self.output_folder / f"{note.note_id}.yaml")
+            title_mod = note.title.replace( " " , "_" )
+            note.to_yaml( self.output_folder / f"{note.note_id}_{ title_mod }.yaml")
 
         return len(rows)
 
     def sync( self ) :
         # List all contents (files and folders)
         files_list = list( self.output_folder.iterdir() )
+        
         for file in files_list :
 
             if file.suffix == ".yaml" :
