@@ -47,3 +47,16 @@ class Note(BaseModel):
             f"content: { self.content }\n"
             f"created_at: {self.created_at.strftime('%Y-%m-%d %H:%M:%S')}\n"
         )
+
+    def __eq__(self, other):
+        if self.note_id != other.note_id:
+            return False
+        if self.title != other.title:
+            return False
+        if self.tags != other.tags:
+            return False
+        if self.content != other.content:
+            return False
+        if self.created_at != other.created_at:
+            return False
+        return True

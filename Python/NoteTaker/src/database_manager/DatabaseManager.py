@@ -8,6 +8,7 @@ from src.database_manager.Note import Note
 from typing import Any
 from pathlib import Path
 import shutil
+import yaml
 
 
 
@@ -18,6 +19,24 @@ class DatabaseManager( ):
     def __init__(self, db_path: str , output_folder : str ):
         self.db_path = Path(db_path)
         self.output_folder = Path( output_folder )
+
+    @classmethod
+    def from_yaml(cls, config_path: str | Path):
+
+        config_path = Path(config_path)
+
+        with config_path.open("r", encoding="utf-8") as file:
+            config = yaml.safe_load(file)
+
+        base_path = config_path.parent
+
+        db_path = base_path / config["database"]["path"]
+        output_folder = base_path / config["storage"]["output_folder"]
+
+        return cls(
+            db_path=db_path,
+            output_folder=output_folder
+    )
  
     def count_notes( self ) :
         rows = self.execute_query("SELECT COUNT(*) AS total FROM notes")
@@ -83,7 +102,7 @@ class DatabaseManager( ):
                 cursor = connection.execute(query, params)
                 return cursor.rowcount
 
-    def initialize_database(self):
+    def initialize(self):
 
         if self.output_folder.exists():
             shutil.rmtree( self.output_folder )
@@ -103,94 +122,103 @@ class DatabaseManager( ):
         for note in notes_list :
             self.insert_note( note )
 
-    def insert_note(self, note: Note) -> None:
+    def insert_note(self, note: Note | str ) -> None:
+        
+        if isinstance( note , str ) :
+            note = Note.from_yaml( note )
+        elif isinstance( note , Note ) :
+            pass 
+        else :
+            raise AttributeError( "note parameter passed to insert note must be either a not or a path to a yaml file" )
+
+        
         with sqlite3.connect(self.db_path) as connection:
             connection.execute("PRAGMA foreign_keys = ON")
 
-            connection.execute(
-                _QUERIES.INSERT_NOTE_PARAM,
-                (
-                    note.note_id,
-                    note.title,
-                    note.content,
-                    note.created_at.isoformat(),
-                ),
-            )
-
-            for tag in {tag.strip() for tag in note.tags if tag.strip()}:
-                connection.execute(
-                    """
-                    INSERT INTO tags (tag_id, name)
-                    VALUES (?, ?)
-                    ON CONFLICT(name) DO NOTHING
-                    """,
-                    (str(uuid.uuid4()), tag),
-                )
-
-                tag_id = connection.execute(
-                    "SELECT tag_id FROM tags WHERE name = ?",
-                    (tag,),
-                ).fetchone()[0]
+            with connection :
 
                 connection.execute(
-                    _QUERIES.INSERT_NOTE_TAG_PARAM,
-                    (note.note_id, tag_id),
+                    _QUERIES.INSERT_NOTE_PARAM,
+                    (
+                        note.note_id,
+                        note.title,
+                        note.content,
+                        note.created_at.isoformat(),
+                    ),
                 )
+
+                for tag in {tag.strip() for tag in note.tags if tag.strip()}:
+                    connection.execute(
+                        """
+                        INSERT INTO tags (tag_id, name)
+                        VALUES (?, ?)
+                        ON CONFLICT(name) DO NOTHING
+                        """,
+                        (str(uuid.uuid4()), tag),
+                    )
+
+                    tag_id = connection.execute(
+                        "SELECT tag_id FROM tags WHERE name = ?",
+                        (tag,),
+                    ).fetchone()[0]
+
+                    connection.execute(
+                        _QUERIES.INSERT_NOTE_TAG_PARAM,
+                        (note.note_id, tag_id),
+                    )
 
     def update_note(self, note: Note) -> None:
         with sqlite3.connect(self.db_path) as connection:
             connection.execute("PRAGMA foreign_keys = ON")
 
-            cursor = connection.execute(
-                """
-                UPDATE notes
-                SET title = ?, content = ?, created_at = ?
-                WHERE note_id = ?
-                """,
-                (
-                    note.title,
-                    note.content,
-                    note.created_at.isoformat(),
-                    note.note_id,
-                ),
-            )
-
-            if cursor.rowcount == 0:
-                raise ValueError(f"Note {note.note_id} does not exist.")
-
-            connection.execute(
-                "DELETE FROM note_tags WHERE note_id = ?",
-                (note.note_id,),
-            )
-
-            for tag in {tag.strip() for tag in note.tags if tag.strip()}:
-                connection.execute(
+            with connection :
+                cursor = connection.execute(
                     """
-                    INSERT INTO tags (tag_id, name)
-                    VALUES (?, ?)
-                    ON CONFLICT(name) DO NOTHING
+                    UPDATE notes
+                    SET title = ?, content = ?, created_at = ?
+                    WHERE note_id = ?
                     """,
-                    (str(uuid.uuid4()), tag),
+                    (
+                        note.title,
+                        note.content,
+                        note.created_at.isoformat(),
+                        note.note_id,
+                    ),
                 )
 
-                tag_id = connection.execute(
-                    "SELECT tag_id FROM tags WHERE name = ?",
-                    (tag,),
-                ).fetchone()[0]
+                if cursor.rowcount == 0:
+                    raise ValueError(f"Note {note.note_id} does not exist.")
 
                 connection.execute(
-                    _QUERIES.INSERT_NOTE_TAG_PARAM,
-                    (note.note_id, tag_id),
+                    "DELETE FROM note_tags WHERE note_id = ?",
+                    (note.note_id,),
                 )
+
+                for tag in {tag.strip() for tag in note.tags if tag.strip()}:
+                    connection.execute(
+                        """
+                        INSERT INTO tags (tag_id, name)
+                        VALUES (?, ?)
+                        ON CONFLICT(name) DO NOTHING
+                        """,
+                        (str(uuid.uuid4()), tag),
+                    )
+
+                    tag_id = connection.execute(
+                        "SELECT tag_id FROM tags WHERE name = ?",
+                        (tag,),
+                    ).fetchone()[0]
+
+                    connection.execute(
+                        _QUERIES.INSERT_NOTE_TAG_PARAM,
+                        (note.note_id, tag_id),
+                    )
 
     def delete_ids(self, ids_list: list[int]):
         for note_id in ids_list:
             self.delete_id(note_id)
 
     def delete_id(self, note_id: int):
-        if not self.note_exists(note_id):
-            print(f"Note {note_id} does not exist.")
-            return
 
         self.execute_command(
             "DELETE FROM notes WHERE note_id = ?",
@@ -202,17 +230,42 @@ class DatabaseManager( ):
     def dump_query_to_yaml(
         self,
         query: str,
-        output_dir: str | Path,
         params: tuple = (),
     ) -> int:
         """Dump each note returned by a query into a separate YAML file."""
-        output_dir = Path(output_dir)
-        output_dir.mkdir(parents=True, exist_ok=True)
 
         rows = self.execute_query(query, params)
 
         for row in rows:
             note = self._row_to_note(row)
-            note.to_yaml(output_dir / f"{note.note_id}.yaml")
+            note.to_yaml( self.output_folder / f"{note.note_id}.yaml")
 
         return len(rows)
+
+    def sync( self ) :
+        # List all contents (files and folders)
+        files_list = list( self.output_folder.iterdir() )
+        for file in files_list :
+
+            if file.suffix == ".yaml" :
+                stored_note = self.get_note( file.stem )
+            else :
+                continue 
+
+            if stored_note is None :
+                print( f"Note { file.stem } not found!" ) 
+                continue
+
+            print( f"Note { file.stem } FOUND. " , end = "" )
+            updated_note = Note.from_yaml( file )
+            if stored_note == updated_note :
+                print( "Notes are identical. Skipping update." )
+                continue
+
+            print( "Notes are different, attempting update. " , end = "" )
+
+            try :
+                self.update_note( updated_note )
+                print(f"Note {file.stem} successfully updated!")
+            except ValueError :
+                print( "Note update failed" )

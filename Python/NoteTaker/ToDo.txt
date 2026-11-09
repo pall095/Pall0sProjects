@@ -1,0 +1,14 @@
+
+
+- Valutare se mantenere un view che sia più "human oriented".
+- Printare con titoli ed ovviamente gestire il suggessivo re-parsing.
+
+
+- Aggiungere metodi di ricerca più user friendly.
+- Aggiungere auto backup.
+
+Esistenziali:
+- Assicurarti che l'IO del manager sia consistente (stringe e Note o solo Note)?
+- Mettere una cache?
+
+

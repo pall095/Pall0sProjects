@@ -1,0 +1,5 @@
+database:
+  path: 'C:\Users\matte\Desktop\Git\Pall0sProjects\Python\NoteTaker\tests\test_notes.db'
+
+storage:
+  output_folder: 'C:\Users\matte\Desktop\Git\Pall0sProjects\Python\NoteTaker\tests\test_outputs'

@@ -1,7 +1,6 @@
-title: This is Note2
-content: |
-  Content 2.
+note_id: 0775bbbf-c9a9-48b4-b040-88e913b05949
+title: Implement YAML support
+content: This is the content.
 tags:
-  - tag2
-  - tag3
-created_at: 2026-12-31T00:00:00
+- pydantic
+created_at: '2026-01-01T00:00:00'

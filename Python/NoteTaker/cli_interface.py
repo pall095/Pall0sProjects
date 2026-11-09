@@ -3,8 +3,8 @@ import argparse
 import json
 import sys
 
-from src.database_manager.NoteInterpreter import NoteInterpreter
 from src.database_manager.DatabaseManager import DatabaseManager
+from src.database_manager.Note import Note
 
 
 def main():
@@ -12,10 +12,17 @@ def main():
         description="CLI for managing notes."
     )
 
+    # BASIC ARGUMENTS
     parser.add_argument(
         "--db",
         default="notes.db",
         help="Path to the SQLite database (default: notes.db)"
+    )
+
+    parser.add_argument(
+        "--out_folder" ,
+        required = True ,
+        help = "Destnation folder in which the database will dump"
     )
 
     subparsers = parser.add_subparsers(
@@ -23,87 +30,68 @@ def main():
         required=True
     )
 
-    initialize_parser = subparsers.add_parser(
-        "init" ,
+    # ADD
+    add_parser = subparsers.add_parser(
+        name ="add",
+        help = "Allow to add a note to the databset"
+    )
+
+    add_parser.add_argument(
+        "--note_path" ,
+        required = True , 
+        help = "Note to yaml file containing the note."
+    )
+
+    # Initialize
+    add_parser = subparsers.add_parser(
+        name ="init",
         help = "Initializes database"
     )
 
-    list_parser = subparsers.add_parser(
-        "list",
-        help="Print database contents"
-    )
-    list_parser.add_argument(
-        "--mode",
-        choices=["joined", "raw"],
-        default="joined",
-        help="Output mode (default: joined)"
+    #Dump
+    dump_parser = subparsers.add_parser(
+        name = "dump" ,
+        help = "Dump results of the query to output folder" 
     )
 
-    # Add a note from a JSON file
-    add_parser = subparsers.add_parser(
-        "add",
-        help="Add a note from a txt file"
-    )
-    add_parser.add_argument(
-        "--txt-path",
-        help="Path to the txt file containing the note"
+    dump_parser.add_argument(
+        "--query" ,
+        required = True ,
+        help = "Query to execute and dump" 
     )
 
-    # Delete a note by ID
-    delete_parser = subparsers.add_parser(
-        "delete",
-        help="Delete a note by ID"
+    #Sync
+    sync_parser = subparsers.add_parser(
+        name = "sync" ,
+        help = "Syncs output folder to databse" 
     )
 
-    delete_parser.add_argument(
-        "note_id",
-        type=int,
-        help="ID of the note to delete"
+
+
+    args = parser.parse_args() 
+    command = args.command
+    db = DatabaseManager(
+        db_path = args.db ,
+        output_folder = args.out_folder 
     )
 
-    # Add a note from a JSON file
-    execute_parser = subparsers.add_parser(
-        "execute",
-        help="Executes a query and return the results."  
-    )
+    if command == "init" :
+        db.initialize( ) 
 
-    execute_parser.add_argument( "--query" ,
-                                help = "Query to be executed" ,
-                                required = True )
+    elif command == "add" :
+        db.insert_note( Note.from_yaml( args.note_path ) )
 
-    args = parser.parse_args()
+    elif command == "dump" :
+        db.dump_query_to_yaml(
+            query = args.query 
+        )
+    elif command == "sync" :
+        db.sync( )
 
-    db = DatabaseManager(args.db)
-
-    if args.command == "list":
-        db.print_db(args.mode)
-
-    elif args.command == "init" :
-        db.initialize_database( )
-
-    elif args.command == "add":
-
-        note = NoteInterpreter.parse( args.txt_path )
-        try:
-            note_id = db.insert_note(note)
-        except (ValueError, TypeError, KeyError) as exc:
-            parser.error(f"Could not insert note: {exc}")
-
-        print(f"Note inserted successfully. ID: {note_id}")
 
         
-    elif args.command == "delete":
-        if not db.note_exists(args.note_id):
-            print(f"Note {args.note_id} does not exist.")
-            sys.exit(1)
-
-        db.delete_id(args.note_id)
-        print(f"Note {args.note_id} deleted.")
-
-    elif args.command == "execute" :
-        for result in db.execute( query = args.query ) :
-            print( result )
 
 
+    
 if __name__ == "__main__":
     main()
