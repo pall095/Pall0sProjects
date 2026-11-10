@@ -3,3 +3,6 @@ database:
 
 storage:
   output_folder: 'C:\Users\matte\Desktop\Git\Pall0sProjects\Python\NoteTaker\tests\test_outputs'
+
+settings:
+  autoclear_output: True

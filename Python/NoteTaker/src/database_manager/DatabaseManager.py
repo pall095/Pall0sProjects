@@ -9,6 +9,7 @@ from typing import Any
 from pathlib import Path
 import shutil
 import yaml
+from src.database_manager.config.Settings import AppConfig
 
 
 
@@ -16,9 +17,16 @@ class DatabaseManager( ):
 
     NOTE_FIELDS = ["title", "content", "tags"]
 
-    def __init__(self, db_path: str , output_folder : str ):
+    def __init__(self, db_path: str , output_folder : str , autoclear_output : bool ):
         self.db_path = Path(db_path)
         self.output_folder = Path( output_folder )
+        self.autocelar_output = autoclear_output 
+
+
+    def clear_output_folder( self ) :
+        if self.output_folder.exists():
+            for file in self.output_folder.glob("*.yaml"):
+                file.unlink()
 
     @classmethod
     def from_yaml(cls, config_path: str | Path):
@@ -26,18 +34,20 @@ class DatabaseManager( ):
         config_path = Path(config_path)
 
         with config_path.open("r", encoding="utf-8") as file:
-            config = yaml.safe_load(file)
+            raw_config = yaml.safe_load(file)
 
+        config = AppConfig.model_validate(raw_config)
         base_path = config_path.parent
 
-        db_path = base_path / config["database"]["path"]
-        output_folder = base_path / config["storage"]["output_folder"]
+        db_path = base_path / config.database.path
+        output_folder = base_path / config.storage.output_folder
 
         return cls(
             db_path=db_path,
-            output_folder=output_folder
-    )
- 
+            output_folder=output_folder,
+            autoclear_output=config.settings.autoclear_output
+        )
+    
     def count_notes( self ) :
         rows = self.execute_query("SELECT COUNT(*) AS total FROM notes")
         return rows[0]["total"]
@@ -106,6 +116,9 @@ class DatabaseManager( ):
 
         if self.output_folder.exists():
             shutil.rmtree( self.output_folder )
+
+        if self.autocelar_output :
+            self.clear_output_folder( )
 
         self.output_folder.mkdir(parents=True)
 
@@ -233,6 +246,10 @@ class DatabaseManager( ):
         params: tuple = (),
     ) -> int:
         """Dump each note returned by a query into a separate YAML file."""
+
+
+        if self.autocelar_output :
+            self.clear_output_folder( )
 
         rows = self.execute_query(query, params)
 
