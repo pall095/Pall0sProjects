@@ -1,0 +1,9 @@
+database:
+  path: 'C:\Users\matte\Desktop\Git\Pall0sProjects\Python\NoteTaker\databases\notes.db'
+
+storage:
+  output_folder: 'C:\Users\matte\Desktop\Git\Pall0sProjects\Python\NoteTaker\outputs'
+
+settings:
+  autoclear_output: True
+  verbosity_level: INFO

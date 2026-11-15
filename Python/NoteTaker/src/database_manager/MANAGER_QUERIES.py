@@ -30,6 +30,18 @@ FOREIGN KEY (tag_id)
 )
 """
 
+CREATE_LINKS_TABLE = """
+CREATE TABLE IF NOT EXISTS note_links (
+    link_id TEXT PRIMARY KEY,
+    note_id TEXT NOT NULL,
+    url TEXT NOT NULL,
+
+    FOREIGN KEY (note_id)
+        REFERENCES notes(note_id)
+        ON DELETE CASCADE
+)
+"""
+
 CREATE_NOTES_WITH_TAG_VIEW = """
     CREATE VIEW IF NOT EXISTS notes_with_tags AS
     SELECT
