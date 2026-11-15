@@ -1,22 +1,20 @@
 import pytest
 from pathlib import Path
-from src.database_manager.DatabaseManager import DatabaseManager
-
+from src.note_taker.note_taker import NoteTaker
 import pytest
-from src.database_manager.DatabaseManager import DatabaseManager
+
 
 
 @pytest.fixture
-def db(tmp_path):
+def taker(tmp_path):
 
-    database = DatabaseManager.from_yaml(
-        r"tests\test_database_config.yaml"
+    taker = NoteTaker.from_yaml(
+        r"configurations\test_database_config.yaml"
     )
 
     # Override configuration paths for testing
-    database.db_path = tmp_path / "test_notes.db"
-    database.output_folder = tmp_path / "test_files"
+    taker.override_db_path( tmp_path / "test_notes.db" )
+    taker.override_output_folder( tmp_path / "test_files" )
+    taker.initialize( )
 
-    database.initialize()
-
-    yield database
+    yield taker
