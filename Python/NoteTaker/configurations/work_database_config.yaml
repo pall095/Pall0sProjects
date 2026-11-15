@@ -1,0 +1,9 @@
+database:
+  path: 'C:\Users\mpallomo\000-Git\Pall0sProjects\Python\NoteTaker\databases\work_notes.db'
+
+storage:
+  output_folder: 'C:\Users\mpallomo\000-Git\Pall0sProjects\Python\NoteTaker\outputs'
+
+settings:
+  autoclear_output: True
+  verbosity_level: INFO

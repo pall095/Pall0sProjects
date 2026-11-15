@@ -1,0 +1,16 @@
+note_id: 1b6fea05-baf5-4b2f-9587-a65b0e646782
+title: Git Rebase
+content: |-
+  1) Switcho sulla branch da rebaseare.
+  2) git fetch origin
+  3) git pull
+  4) git rebase origin/main
+  Se tutto ok. Snnò devi risolvere i conflitti, cioè andare sui file che hanno conflitti ed accettare gli incoming o no.
+  Non ricordo mai che nome da a cosa.
+  Quando li accetti poi devi committare e poi puoi continuare rebase.
+  5) git push --force-with-lease
+tags:
+- GIT
+- HOW_TO
+links: []
+created_at: '2026-11-15T19:48:52.129535+01:00'

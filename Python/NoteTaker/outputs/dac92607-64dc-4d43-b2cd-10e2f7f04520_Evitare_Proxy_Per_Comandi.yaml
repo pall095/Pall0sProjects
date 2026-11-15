@@ -1,0 +1,12 @@
+note_id: dac92607-64dc-4d43-b2cd-10e2f7f04520
+title: Evitare Proxy Per Comandi
+content: |-
+  git -c http.proxy= -c https.proxy= fetch
+  git -c http.proxy= -c https.proxy= pull
+  git -c http.proxy= -c https.proxy= push
+  git -c http.proxy= -c https.proxy= clone https://github.com/pall095/Pall0sProjects.git
+tags:
+- GIT
+- HOW_TO
+links: []
+created_at: '2026-11-15T19:47:37.592390+01:00'

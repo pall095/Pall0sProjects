@@ -156,21 +156,28 @@ class NoteTaker( ) :
         return [self._row_to_note(row) for row in rows]
 
     @action_decorator
-    def get_notes_by_tags( self , tags : list ) :
+    def get_notes_by_tags(self, tags: list):
         if not tags:
             return []
 
+        # Create safe placeholders for the IN clause (e.g., "?, ?, ?")
         placeholders = ", ".join("?" for _ in tags)
+
         query = f"""
-            SELECT DISTINCT n.*
+            SELECT n.*
             FROM notes AS n
             JOIN note_tags AS nt ON nt.note_id = n.note_id
             JOIN tags AS t ON t.tag_id = nt.tag_id
             WHERE t.name IN ({placeholders})
+            GROUP BY n.note_id
+            HAVING COUNT(DISTINCT t.name) = ?
             ORDER BY n.created_at DESC
         """
 
-        rows = self.db_manager.execute_query(query, tuple(tags))
+        # Pass the tags for the IN clause, plus the total count for the HAVING clause
+        params = list(tags) + [len(tags)]
+
+        rows = self.db_manager.execute_query(query, params)
         return [self._row_to_note(row) for row in rows]
 
     @action_decorator
