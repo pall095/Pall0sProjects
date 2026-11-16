@@ -1,3 +1,0 @@
-Atlantis,7,15
-Great Barrier Reef,4,8
-Mariana Trench,10,12
