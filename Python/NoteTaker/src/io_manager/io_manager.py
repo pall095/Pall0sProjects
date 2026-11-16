@@ -43,7 +43,7 @@ class IOManager( IOStatic ):
     def save_notes( self , notes : list ) -> int:
         """Dump each note returned by a query into a separate YAML file."""
         if self.autocelar_output :
-            IOStatic.clear_folder_from( self.output_folder , ".yaml" )
+            IOStatic.clear_folder_from( self.output_folder , "yaml" )
 
         for note in notes :
 

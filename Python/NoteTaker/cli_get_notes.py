@@ -18,7 +18,6 @@ parser.add_argument(
     "--method",
     required=True,
     choices=[ 
-             "recap" ,
              "stats" ,
              "all_notes", 
              "all_tags" , 
@@ -52,9 +51,9 @@ parser.add_argument(
 parser.add_argument(
     "--actions",
     required = False ,
-    choices = [ "print" , "save" ] ,
+    choices = [ "print" , "save" , "recap" ] ,
     nargs="+" ,
-    default = [ "print" ] ,
+    default = [ "recap" ] ,
     help="Action to perform on executed search."
 )
 
@@ -72,9 +71,6 @@ elif args.method == "all_titles" :
 
 elif args.method == "all_links" :
     notes = taker.get_links( actions = args.actions )
-
-elif args.method == "recap" :
-    notes = taker.create_recap( )
 
 elif args.method == "stats" :
     notes = taker.create_statistics( )
