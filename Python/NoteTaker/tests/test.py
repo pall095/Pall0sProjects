@@ -14,6 +14,7 @@ def test_parse_complete_note( ):
         "content": "This is the content.",
         "tags": {"tag1" , "tag2" , "tag3" } ,
         "created_at": datetime(2026, 1, 1, 0, 0) ,
+        "updated_at": datetime(2026, 1, 1, 0, 0) ,
         "links" : {
             r'C:\Users\matte\Desktop\Git\Pall0sProjects\Python\NoteTaker_test_link_1' ,
             r'C:\Users\matte\Desktop\Git\Pall0sProjects\Python\NoteTaker_test_link_2'
@@ -25,6 +26,7 @@ def test_parse_complete_note( ):
     assert note.content == expected_note[ "content" ]
     assert note.tags == expected_note[ "tags" ] 
     assert note.created_at == expected_note[ "created_at" ]
+    assert note.updated_at == expected_note[ "updated_at" ]
     assert note.note_id == expected_note[ "note_id" ]
     assert note.links == expected_note[ "links" ]
 
@@ -44,6 +46,8 @@ def test_parse_incomplete_note( ):
     assert note.content == expected_note[ "content" ]
     assert note.tags == expected_note[ "tags" ] 
     assert isinstance( note.created_at , datetime )
+    assert isinstance( note.updated_at , datetime )
+    assert note.updated_at == note.updated_at
     assert note.note_id != ""
     assert note.links == expected_note[ "links" ]
 
@@ -93,19 +97,23 @@ def test_insert_notes_from_path_and_dump( taker ):
     print( output_files )
     assert len(output_files) == 2
 
+# Here I use 
 def test_update_note(taker):
     note_path = r"tests\test_files\note3_complete.yaml"
-    note = Note.from_yaml(note_path)
+    original_note = Note.from_yaml(note_path)
+    copy_of_original_note = copy.deepcopy( original_note ) 
     taker.insert_note(note_path)
 
-    note.content = "Content 3 post update."
-    note.tags.add("new_tag")
-    note.links.add("new_link")
+    copy_of_original_note.content = "Content 3 post update."
+    copy_of_original_note.tags.add("new_tag")
+    copy_of_original_note.links.add("new_link")
 
-    taker.db_manager.update_note(note)
+    taker.db_manager.update_note( copy_of_original_note )
+    updated_note = taker.get_note( original_note.note_id)
+    assert copy_of_original_note == updated_note
+    assert updated_note.created_at == original_note.created_at
+    assert updated_note.updated_at != original_note.updated_at
 
-    updated_note = taker.get_note(note.note_id)
-    assert note == updated_note 
 
 def test_sync(taker, tmp_path, monkeypatch):
 

@@ -13,6 +13,7 @@ class Note(BaseModel):
     content: str
     tags: set[str] = Field(default_factory=list)
     links: set[str] = Field(default_factory=list)
+    updated_at: datetime = Field(default_factory=lambda: datetime.now().astimezone())
     created_at: datetime = Field(default_factory=lambda: datetime.now().astimezone())
 
     @classmethod
@@ -37,11 +38,12 @@ class Note(BaseModel):
             f"tags: { self.tags }\n"
             f"content: { self.content }\n"
             f"created_at: {self.created_at.strftime('%Y-%m-%d %H:%M:%S')}\n"
+            f"updated at: {self.updated_at.strftime('%Y-%m-%d %H:%M:%S')}\n"
             f"links: { self.links }\n" 
         )
 
     def recap_note( self ) :
-        return f"Note id: { self.note_id } | Created At: { self.created_at } | Title: { self.title } | Tags: { self.tags } | Num Links: { len( self.links )} "
+        return f"Id: { self.note_id } Created At: { self.created_at } Title: { self.title } Tags: { self.tags } Num Links: { len( self.links ) } Last Update: { self.updated_at }"
 
     def __eq__(self, other):
 
@@ -57,6 +59,8 @@ class Note(BaseModel):
         if self.content != other.content:
             return False
         if self.created_at != other.created_at:
+            return False
+        if self.updated_at != other.updated_at :
             return False
         if self.links != other.links:
             return False

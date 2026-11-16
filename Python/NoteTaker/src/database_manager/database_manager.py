@@ -5,10 +5,8 @@ import uuid
 from contextlib import closing
 import src.database_manager.MANAGER_QUERIES as _QUERIES
 from src.note.note import Note
-
+from datetime import datetime
 from src.logger.logger import AppLogger
-
-
 
 class DatabaseManager( ):
 
@@ -81,6 +79,7 @@ class DatabaseManager( ):
                         note.title,
                         note.content,
                         note.created_at.isoformat(),
+                        note.created_at.isoformat()
                     ),
                 )
 
@@ -126,6 +125,7 @@ class DatabaseManager( ):
 
     def update_note(self, note: Note) -> None:
         self.logger.info( f"Attempting update of note { note.note_id }.")
+        note.updated_at = datetime.now().astimezone()
         with sqlite3.connect(self.db_path) as connection:
             connection.execute("PRAGMA foreign_keys = ON")
 
@@ -133,13 +133,14 @@ class DatabaseManager( ):
                 cursor = connection.execute(
                     """
                     UPDATE notes
-                    SET title = ?, content = ?, created_at = ?
+                    SET title = ?, content = ?, created_at = ? , updated_at = ?
                     WHERE note_id = ?
                     """,
                     (
                         note.title,
                         note.content,
                         note.created_at.isoformat(),
+                        note.updated_at.isoformat(),
                         note.note_id,
                     ),
                 )

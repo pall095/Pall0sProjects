@@ -4,7 +4,8 @@ CREATE TABLE IF NOT EXISTS notes (
     note_id TEXT PRIMARY KEY,
     title TEXT NOT NULL,
     content TEXT NOT NULL ,
-    created_at TEXT NOT NULL 
+    created_at TEXT NOT NULL ,
+    updated_at TEXT NOT NULL 
 )
 """
 
@@ -61,8 +62,8 @@ CREATE_NOTES_WITH_TAG_VIEW = """
 """
 
 INSERT_NOTE_PARAM = """
-INSERT INTO notes (note_id, title, content, created_at)
-VALUES (?, ?, ?, ?)
+INSERT INTO notes (note_id, title, content, created_at,updated_at)
+VALUES (?, ?, ?, ?, ?)
 """
 
 INSERT_TAG_PARAM = """
