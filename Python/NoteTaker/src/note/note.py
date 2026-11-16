@@ -40,21 +40,24 @@ class Note(BaseModel):
             f"links: { self.links }\n" 
         )
 
-def __eq__(self, other):
+    def recap_note( self ) :
+        return f"Note id: { self.note_id } | Created At: { self.created_at } | Title: { self.title } | Tags: { self.tags } | Num Links: { len( self.links )} "
 
-    if not isinstance(other, Note):
-        return NotImplemented
+    def __eq__(self, other):
 
-    if self.note_id != other.note_id:
-        return False
-    if self.title != other.title:
-        return False
-    if self.tags != other.tags:
-        return False
-    if self.content != other.content:
-        return False
-    if self.created_at != other.created_at:
-        return False
-    if self.links != other.links:
-        return False
-    return True
+        if not isinstance(other, Note):
+            return NotImplemented
+
+        if self.note_id != other.note_id:
+            return False
+        if self.title != other.title:
+            return False
+        if self.tags != other.tags:
+            return False
+        if self.content != other.content:
+            return False
+        if self.created_at != other.created_at:
+            return False
+        if self.links != other.links:
+            return False
+        return True

@@ -65,6 +65,11 @@ class NoteTaker( ) :
                         print( item ) 
                     elif action == "save" :
                         items_to_save.append( item )
+                    elif action == "recap" :
+                        if isinstance( item , Note ) : 
+                            print( item.recap_note( ) )
+                        else :
+                            self.logger.warning( f"Cannot recap an object of type { type( item ) }" )    
                     else : 
                         self.logger.warning( f"Unknown action { action }" )
             self.io_manager.save_notes( items_to_save )
@@ -190,7 +195,7 @@ class NoteTaker( ) :
     def create_recap( self ) :
         notes = self.get_all_notes( ) 
         for note in notes :
-            print( f"Note id: { note.note_id } | Title: { note.title } | Tags: { note.tags } | Num Links: { len( note.links )}" )
+            print( note.recap_note( ) )
 
     def create_statistics( self ) :
         

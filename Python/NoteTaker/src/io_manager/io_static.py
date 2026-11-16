@@ -67,18 +67,6 @@ class IOStatic:
         """Normalize input into a Path object."""
         return Path(path).expanduser()
 
-    @staticmethod
-    def _normalize_extensions(
-        extensions: Iterable[str] | None
-    ) -> set[str] | None:
-
-        if extensions is None:
-            return None
-
-        return {
-            ext.lower().lstrip(".")
-            for ext in extensions
-        }
 
     # --------------------------------------------------
     # Folder operations
@@ -104,7 +92,6 @@ class IOStatic:
             )
             raise NotADirectoryError(path)
 
-        extensions = IOStatic._normalize_extensions(extensions)
 
         for file in path.iterdir():
 
@@ -117,7 +104,7 @@ class IOStatic:
             ):
                 IOStatic.logger.debug(f"Deleting {file}")
                 file.unlink()
-
+            
     # --------------------------------------------------
     # YAML operations
     # --------------------------------------------------
