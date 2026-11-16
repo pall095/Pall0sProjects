@@ -58,6 +58,9 @@ class NoteTaker( ) :
             if actions is None:
                 return result
 
+            if "stats" in actions :
+                self.create_statistics( result )
+
             for item in result : 
                 for action in actions :
 
@@ -70,8 +73,6 @@ class NoteTaker( ) :
                             print( item.recap_note( ) )
                         else :
                             self.logger.warning( f"Cannot recap an object of type { type( item ) }" )    
-                    else : 
-                        self.logger.warning( f"Unknown action { action }" )
             self.io_manager.save_notes( items_to_save )
             return result
 
@@ -137,6 +138,24 @@ class NoteTaker( ) :
         if not rows:
             return None
         return self._row_to_note(rows[0])
+
+    @action_decorator
+    def get_notes(self, note_ids: list[str]) -> list[Note]:
+        """Retrieve notes by their IDs."""
+
+        if not note_ids:
+            return []
+
+        placeholders = ", ".join("?" for _ in note_ids)
+
+        query = f"""
+            SELECT * FROM notes
+            WHERE note_id IN ({placeholders})
+        """
+
+        rows = self.db_manager.execute_query(query, note_ids)
+
+        return [self._row_to_note(row) for row in rows]
     
     @action_decorator
     def get_all_notes(self) -> list[Note]:
@@ -197,23 +216,30 @@ class NoteTaker( ) :
         for note in notes :
             print( note.recap_note( ) )
 
-    def create_statistics( self ) :
-        
-        print( f"Total number of notes: { self.count_notes( ) }" ) 
-        print( f"Total number of links: { len( self.get_links( ) ) }" ) 
-        print( f"Total number of tags: { len( self.get_tags( ) ) }" )  
-        print( "Total notes per tag:" )
-        query = """
-        SELECT T.name ,
-                COUNT( * ) AS NumNotes 
-        FROM tags as T 
-        JOIN note_tags AS NT ON NT.tag_id = T.tag_id
-        GROUP BY T.tag_id , T.name
-        """
-        num_notes_per_tags = self.db_manager.execute_query( query )
-        for row in num_notes_per_tags :
-            print( f"\t - { row[ "name" ] }: { row[ "NumNotes" ] }" )
+    def create_statistics( self , notes : list[ Note ]) :
 
+        tags_metrics_dict = dict()
+        total_links = 0
+        
+        for note in notes :
+            if not( isinstance( note , Note ) ) :
+                self.logger.warning( f"Cannot create stats for an item of type { type( Note ) } " )
+            
+            total_links += len( note.links )
+        
+            for tag in note.tags :
+                if tag in tags_metrics_dict.keys( ) :
+                    tags_metrics_dict[ tag ] += 1
+                else :
+                    tags_metrics_dict[ tag ] = 1 
+
+        print( f"Total number of notes: { len( notes ) }" )
+        print( f"Total number of links: { total_links }" )
+        print( f"Total number of tags: { len( tags_metrics_dict.keys( ) ) }" )
+        print( f"Metics per tag:" )
+        for tag , count in tags_metrics_dict.items( ) :
+            print( f"\t { tag }: { count }" )
+        
     def sync_database( self ) :
 
         self.logger.info( f"Syncing database against { self.io_manager.output_folder }")

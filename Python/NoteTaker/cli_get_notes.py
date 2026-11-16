@@ -18,16 +18,23 @@ parser.add_argument(
     "--method",
     required=True,
     choices=[ 
-             "stats" ,
              "all_notes", 
              "all_tags" , 
              "all_titles" , 
              "all_links" ,
+             "by_ids" ,
              "by_tags", 
              "by_title", 
              "by_query" ],
     help="Search method."
 )
+
+parser.add_argument(
+    "--ids",
+    nargs="+",
+    help="One or more note id to search for."
+)
+
 
 parser.add_argument(
     "--tags",
@@ -51,7 +58,7 @@ parser.add_argument(
 parser.add_argument(
     "--actions",
     required = False ,
-    choices = [ "print" , "save" , "recap" ] ,
+    choices = [ "print" , "save" , "recap" , "stats" ] ,
     nargs="+" ,
     default = [ "recap" ] ,
     help="Action to perform on executed search."
@@ -80,10 +87,14 @@ elif args.method == "by_tags":
         parser.error("--tags is required when method is 'by_tags'")
     notes = taker.get_notes_by_tags(args.tags , actions = args.actions )
 
+elif args.method == "by_ids":
+    if not args.ids:
+        parser.error("--ids is required when method is 'by_ids'")
+    notes = taker.get_notes(args.ids , actions = args.actions )
+
 elif args.method == "by_title":
     if not args.title:
         parser.error("--title is required when method is 'by_title'")
-
     notes = taker.get_notes_by_title(args.title , actions = args.actions) 
 
 elif args.method == "by_query":
