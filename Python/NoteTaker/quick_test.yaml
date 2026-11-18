@@ -1,7 +1,6 @@
-title: SILC ROV Precond
+title: Abort by VAL Digging
 content: |-
-  Capire se questi di NIM ti danno un feedback su sti log.
-  Se non ti aiutano dirlo a Kav.
+  Controllare, dalla dashbaord, se c'è qualche caso di aggolmerati di abort by val che si può in qualche modo migliorare.
 tags:
 - TO_DO
 - LOG_ANALISI

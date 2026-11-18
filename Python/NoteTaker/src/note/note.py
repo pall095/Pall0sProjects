@@ -42,9 +42,6 @@ class Note(BaseModel):
             f"links: { self.links }\n" 
         )
 
-    def recap_note( self ) :
-        return f"Id: { self.note_id } Created At: { self.created_at } Title: { self.title } Tags: { self.tags } Num Links: { len( self.links ) } Last Update: { self.updated_at }"
-
     def __eq__(self, other):
 
         if not isinstance(other, Note):

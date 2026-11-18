@@ -9,7 +9,7 @@ from src.logger.logger import AppLogger
 from src.note.note import Note
 from functools import wraps
 from typing import Any
-
+from collections import Counter
 
 class NoteTaker( ) :
 
@@ -61,6 +61,9 @@ class NoteTaker( ) :
             if "stats" in actions :
                 self.create_statistics( result )
 
+            if "recap" in actions :
+                self.create_recap_table( result )
+
             for item in result : 
                 for action in actions :
 
@@ -68,11 +71,6 @@ class NoteTaker( ) :
                         print( item ) 
                     elif action == "save" :
                         items_to_save.append( item )
-                    elif action == "recap" :
-                        if isinstance( item , Note ) : 
-                            print( item.recap_note( ) )
-                        else :
-                            self.logger.warning( f"Cannot recap an object of type { type( item ) }" )    
             self.io_manager.save_notes( items_to_save )
             return result
 
@@ -216,29 +214,59 @@ class NoteTaker( ) :
         for note in notes :
             print( note.recap_note( ) )
 
-    def create_statistics( self , notes : list[ Note ]) :
+    def create_statistics(self, notes: list[Note]):
 
-        tags_metrics_dict = dict()
+        tag_counter = Counter()
         total_links = 0
-        
-        for note in notes :
-            if not( isinstance( note , Note ) ) :
-                self.logger.warning( f"Cannot create stats for an item of type { type( Note ) } " )
-            
-            total_links += len( note.links )
-        
-            for tag in note.tags :
-                if tag in tags_metrics_dict.keys( ) :
-                    tags_metrics_dict[ tag ] += 1
-                else :
-                    tags_metrics_dict[ tag ] = 1 
 
-        print( f"Total number of notes: { len( notes ) }" )
-        print( f"Total number of links: { total_links }" )
-        print( f"Total number of tags: { len( tags_metrics_dict.keys( ) ) }" )
-        print( f"Metics per tag:" )
-        for tag , count in tags_metrics_dict.items( ) :
-            print( f"\t { tag }: { count }" )
+        for note in notes:
+
+            if not isinstance(note, Note):
+                self.logger.warning(
+                    f"Cannot create stats for item of type {type(note)}"
+                )
+                continue
+
+            total_links += len(note.links)
+            tag_counter.update(note.tags)
+
+        print()
+        print("=" * 30)
+        print("NOTES STATISTICS")
+        print("=" * 30)
+        print(f"Total notes       : {len(notes)}")
+        print(f"Total links       : {total_links}")
+        print(f"Unique tags       : {len(tag_counter)}")
+
+        print("TAGS")
+        print("-" * 30)
+
+        for tag, count in tag_counter.most_common():
+            print(f"{tag:<20} {count:>5}")
+
+        print("=" * 30)
+
+    def create_recap_table( self , notes : list[ Note ] ):
+        fmt = "{:<36} {:<35} {:<25} {:<5} {:<19} {:<19}"
+
+        rows = [
+            fmt.format("ID", "TITLE", "TAGS", "LINKS", "CREATED", "UPDATED"),
+            "-" * 150,
+        ]
+
+        for note in notes:
+            rows.append(
+                fmt.format(
+                    note.note_id,
+                    note.title[:30],
+                    ",".join(note.tags)[:20],
+                    len(note.links),
+                    str(note.created_at.strftime("%Y-%m-%d %H:%M") ) ,
+                    str(note.updated_at.strftime("%Y-%m-%d %H:%M") ),
+                )
+            )
+
+        print( "\n".join(rows) )
         
     def sync_database( self ) :
 
