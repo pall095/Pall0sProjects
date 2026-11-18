@@ -214,10 +214,14 @@ class NoteTaker( ) :
         for note in notes :
             print( note.recap_note( ) )
 
-    def create_statistics(self, notes: list[Note]):
+
+    def create_statistics(self, notes: list[Note]) -> None:
 
         tag_counter = Counter()
+        tagset_counter = Counter()
         total_links = 0
+
+        valid_notes = 0
 
         for note in notes:
 
@@ -227,46 +231,72 @@ class NoteTaker( ) :
                 )
                 continue
 
+            valid_notes += 1
             total_links += len(note.links)
+
             tag_counter.update(note.tags)
 
-        print()
-        print("=" * 30)
-        print("NOTES STATISTICS")
-        print("=" * 30)
-        print(f"Total notes       : {len(notes)}")
-        print(f"Total links       : {total_links}")
-        print(f"Unique tags       : {len(tag_counter)}")
+            # Count exact tag combinations
+            tagset = tuple(sorted(note.tags))
+            tagset_counter[tagset] += 1
 
-        print("TAGS")
-        print("-" * 30)
+        print()
+        print("=" *55)
+        print("NOTES STATISTICS")
+        print("=" *55)
+        print(f"Total notes        : {valid_notes}")
+        print(f"Total links        : {total_links}")
+        print(f"Unique tags        : {len(tag_counter)}")
+        print(
+            f"Average links/note : {total_links / valid_notes:.2f}"
+            if valid_notes
+            else "Average links/note : 0.00"
+        )
+
+        print()
+        fmt = "{:<15} {:<5}"
+        print( fmt.format( "TAG" , "COUNT" ) )
+        print("-" *55)
 
         for tag, count in tag_counter.most_common():
-            print(f"{tag:<20} {count:>5}")
+            print( fmt.format( tag , count ) )
 
-        print("=" * 30)
+        print()
+        fmt = "{:<40} {:<5}"
+        print( fmt.format( "TAG" , "COMBINATION" ) )
+        print("-" *55)
+        for tagset, count in tagset_counter.most_common():
+
+            if tagset:
+                combination = ", ".join(tagset)
+            else:
+                combination = "<NO TAGS>"
+
+            print(fmt.format( combination , count ) )
+
+        print("=" *55)
 
     def create_recap_table( self , notes : list[ Note ] ):
-        fmt = "{:<36} {:<35} {:<25} {:<5} {:<19} {:<19}"
+            fmt = "{:<36} {:<35} {:<25} {:<5} {:<19} {:<19}"
 
-        rows = [
-            fmt.format("ID", "TITLE", "TAGS", "LINKS", "CREATED", "UPDATED"),
-            "-" * 150,
-        ]
+            rows = [
+                fmt.format("ID", "TITLE", "TAGS", "LINKS", "CREATED", "UPDATED"),
+                "-" * 150,
+            ]
 
-        for note in notes:
-            rows.append(
-                fmt.format(
-                    note.note_id,
-                    note.title[:30],
-                    ",".join(note.tags)[:20],
-                    len(note.links),
-                    str(note.created_at.strftime("%Y-%m-%d %H:%M") ) ,
-                    str(note.updated_at.strftime("%Y-%m-%d %H:%M") ),
+            for note in notes:
+                rows.append(
+                    fmt.format(
+                        note.note_id,
+                        note.title[:30],
+                        ",".join(note.tags)[:20],
+                        len(note.links),
+                        str(note.created_at.strftime("%Y-%m-%d %H:%M") ) ,
+                        str(note.updated_at.strftime("%Y-%m-%d %H:%M") ),
+                    )
                 )
-            )
 
-        print( "\n".join(rows) )
+            print( "\n".join(rows) )
         
     def sync_database( self ) :
 
